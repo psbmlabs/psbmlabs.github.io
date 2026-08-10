@@ -1,29 +1,17 @@
-# PSBM Labs Website
+# PSBM Labs — Website
 
-> Official website for PSBM Labs, built with GitHub Pages.
+Multi-page site for PSBM Labs (Prothes Barai & Shreyasi Madhu).
 
-![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Active-success)
+## Pages
+- `index.html` — Home
+- `services.html` — Services, engagement models, FAQ
+- `projects.html` — Full portfolio (filterable)
+- `about.html` — Founders, company story, values
+- `contact.html` — Contact channels, business details, inquiry form
 
----
+## Deploy to GitHub Pages
+1. Replace the contents of your `psbmlabs.github.io` repo with these files (keep the `.git` folder).
+2. Commit and push to `main`.
+3. Site goes live at https://psbmlabs.github.io within a few minutes.
 
-## 📖 Overview
-
-This repository contains the source code for the **PSBM Labs** website. It is designed to provide information about the organization, showcase projects, and serve as the official online presence using GitHub Pages.
-
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 👨‍💻 Author
-
-**PSBM Labs**
-
-GitHub:
-https://github.com/psbmlabs
-
----
-
-⭐ If you like this project, don't forget to star the repository.
+No build step — plain HTML/CSS/JS, Bootstrap 5 + jQuery via CDN.
