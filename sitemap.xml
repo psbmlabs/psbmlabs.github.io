@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<<<<<<< HEAD
   <url><loc>https://psbmlabs.github.io/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://psbmlabs.github.io/services.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://psbmlabs.github.io/projects.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -9,6 +8,18 @@
   <url><loc>https://psbmlabs.github.io/contact.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://psbmlabs.github.io/blog/flutter-app-development-cost-bangladesh.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://psbmlabs.github.io/blog/best-software-company-in-barisal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/web-application-development-cost-bangladesh.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/wordpress-vs-custom-software.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/pos-system-development-retail-bangladesh.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/bkash-nagad-payment-gateway-integration.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/native-vs-flutter-mobile-tech-stack.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/signs-you-need-custom-software.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/hiring-software-development-team-bangladesh.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/mobile-app-maintenance-cost-after-launch.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/ecommerce-platform-roadmap-bangladesh.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/firebase-vs-custom-backend.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/common-mistakes-outsourcing-app-development.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/blog/ui-ux-design-fundamentals-bangladeshi-startups.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://psbmlabs.github.io/projects/setu-pos.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://psbmlabs.github.io/projects/krishi-bazar.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://psbmlabs.github.io/projects/notun-khata.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -16,31 +27,4 @@
   <url><loc>https://psbmlabs.github.io/projects/freighttrack-bd.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://psbmlabs.github.io/projects/eduportal.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://psbmlabs.github.io/projects/text-studio.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-=======
-  <url>
-    <loc>https://psbmlabs.github.io/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://psbmlabs.github.io/services.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://psbmlabs.github.io/projects.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://psbmlabs.github.io/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://psbmlabs.github.io/contact.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
->>>>>>> ece30bded9f8a4b8c68fd1fae5da4cd4be201c88
 </urlset>

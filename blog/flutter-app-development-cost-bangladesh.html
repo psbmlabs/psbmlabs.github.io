@@ -55,7 +55,12 @@
   .cost-table th, .cost-table td{ border:1px solid var(--line); padding:.7rem .9rem; text-align:left; }
   .cost-table th{ color:var(--text); font-family:'Sora',sans-serif; background:rgba(255,255,255,.03); }
   .cost-table td{ color:var(--text-dim); }
-  .article-meta{ font-family:'JetBrains Mono',monospace; font-size:.78rem; color:var(--text-faint); margin-bottom:1.6rem; }
+  .article-meta{ font-family:'JetBrains Mono',monospace; font-size:.78rem; color:var(--text-faint); margin-bottom:1rem; }
+  .post-author{ display:flex; align-items:center; gap:.65rem; margin-bottom:1.8rem; padding-bottom:1.6rem; border-bottom:1px solid var(--line); text-decoration:none; }
+  .post-author img{ width:42px; height:42px; border-radius:50%; object-fit:cover; border:1px solid var(--line-bright); }
+  .post-author .pa-name{ color:var(--text); font-family:'Sora',sans-serif; font-weight:600; font-size:.92rem; display:block; }
+  .post-author .pa-role{ color:var(--text-faint); font-family:'JetBrains Mono',monospace; font-size:.7rem; letter-spacing:.04em; }
+  .post-author:hover .pa-name{ color:var(--teal); }
 </style>
 </head>
 <body>
@@ -103,6 +108,13 @@
     <div class="article-body reveal">
 
       <p class="article-meta">PSBM Labs · Updated 2026 · 8 min read</p>
+      <a class="post-author" href="https://prothesbarai.github.io/" target="_blank" rel="noopener">
+        <img src="../assets/prothes.jpg" alt="Prothes Barai">
+        <span>
+          <span class="pa-name">Prothes Barai</span>
+          <span class="pa-role">Founder & Engineer, PSBM Labs</span>
+        </span>
+      </a>
 
       <p>If you've asked three different agencies for a Flutter app quote, you've probably gotten three very different numbers. That's not because anyone is lying to you — app pricing genuinely depends on variables that are invisible until you write down requirements. This guide breaks down what actually moves the price, based on projects we've scoped and built out of our studio in Barisal.</p>
 
@@ -201,7 +213,7 @@
   "headline": "Flutter App Development Cost in Bangladesh (2026)",
   "description": "A real-world breakdown of Flutter app development cost in Bangladesh: what drives the price, rough ranges by app type, and how to get an accurate quote.",
   "image": "https://psbmlabs.github.io/assets/team-banner-desktop.png",
-  "author": { "@type": "Organization", "name": "PSBM Labs" },
+  "author": { "@type": "Person", "name": "Prothes Barai", "url": "https://prothesbarai.github.io/" },
   "publisher": {
     "@type": "Organization",
     "name": "PSBM Labs",
