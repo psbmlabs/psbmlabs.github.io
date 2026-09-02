@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://psbmlabs.github.io/sitemap.xml
