@@ -1,0 +1,142 @@
+{
+  "slug": "unified-analytics-kit",
+  "name": "unified_analytics_kit",
+  "order": 1,
+  "status": "beta",
+  "version": "v0.0.1",
+  "license": "MIT",
+  "platform": "Flutter",
+  "repo": "https://github.com/psbmlabs/unified_analytics_kit",
+  "tagline": "One API that sends events to Firebase, Facebook and your own backend.",
+  "summary": "A Flutter analytics toolkit that sends events to Firebase, Facebook App Events and your own backend through one API — with a persistent device ID, an offline queue and per-provider user consent.",
+  "features": [
+    {
+      "t": "One API, many destinations",
+      "d": "logEvent reaches Firebase, Facebook and your own backend."
+    },
+    {
+      "t": "Consent first",
+      "d": "Denied by default and tracked per provider."
+    },
+    {
+      "t": "Persistent device ID",
+      "d": "Survives reinstall where the OS allows it."
+    },
+    {
+      "t": "Offline queue",
+      "d": "Hive-backed batching, retry, backoff and Retry-After support."
+    },
+    {
+      "t": "Fault isolated",
+      "d": "One failing provider never affects the others."
+    },
+    {
+      "t": "Validated events",
+      "d": "Names and parameters follow Firebase and Facebook rules."
+    }
+  ],
+  "steps": [
+    {
+      "t": "1 · Install",
+      "d": "Add it from GitHub and pin a tag so updates never break your app.",
+      "code": "dependencies:\n  unified_analytics_kit:\n    git:\n      url: https://github.com/psbmlabs/unified_analytics_kit.git\n      ref: v0.0.1"
+    },
+    {
+      "t": "2 · Initialise",
+      "d": "Call it once at startup, then log events anywhere.",
+      "code": "await Firebase.initializeApp();\nawait AnalyticsManager.instance.initialize(\n  AnalyticsConfig(\n    enableFirebase: true,\n    enableFacebook: true,\n    enableDatabase: true,\n    databaseEndpoint: Uri.parse('https://api.example.com/v1/events'),\n    apiKey: 'your-public-app-key',\n  ),\n);"
+    },
+    {
+      "t": "3 · Log events",
+      "d": "",
+      "code": "AnalyticsManager.instance.logEvent('app_open');\nAnalyticsManager.instance.logEvent('product_viewed',\n  parameters: {'product_id': 'p_42', 'price': 9.5});\nAnalyticsManager.instance.logScreenView(screenName: 'Home');"
+    },
+    {
+      "t": "4 · Ask for consent",
+      "d": "",
+      "code": "if (!analytics.hasConsentDecision) {\n  await analytics.setConsent(const AnalyticsConsent.all());\n}"
+    }
+  ],
+  "sections": [
+    {
+      "tag": "Routing",
+      "title": "Choose where data goes",
+      "text": "An event reaches a provider only when it is enabled in config, the user granted consent, and the call allows that destination. Priority: <b>call</b> → <b>screen</b> → <b>app default</b>.",
+      "code": "logEvent('purchase',\n  destinations: {AnalyticsDestination.facebook});\n\nfinal screen = AnalyticsManager.instance.forScreen(\n  'ProductDetails',\n  destinations: {AnalyticsDestination.database});"
+    },
+    {
+      "tag": "Backend",
+      "title": "Simple JSON contract",
+      "text": "The database provider POSTs batches with <code>device_id</code>, <code>device</code> info and <code>events[]</code> (each with a UUID <code>id</code> so you can ignore duplicates). 2xx removes events; 400/413/422 drops the batch; 429/5xx/timeouts retry with backoff (5 s → 5 min).",
+      "note": "The <code>apiKey</code> ships inside your app, so it is <b>not a secret</b>. Validate payloads and rate-limit on your server."
+    }
+  ],
+  "config": {
+    "title": "Key options",
+    "rows": [
+      [
+        "enableFirebase",
+        "true",
+        "Send to Firebase Analytics"
+      ],
+      [
+        "enableFacebook",
+        "true",
+        "Send to Facebook App Events"
+      ],
+      [
+        "enableDatabase",
+        "false",
+        "Send to your backend (needs databaseEndpoint)"
+      ],
+      [
+        "batchSize",
+        "20",
+        "Events per request (1–500)"
+      ],
+      [
+        "flushInterval",
+        "30 s",
+        "Automatic upload interval (min 5 s)"
+      ],
+      [
+        "maxQueueSize",
+        "1000",
+        "Oldest events dropped beyond this"
+      ],
+      [
+        "maxRetries",
+        "5",
+        "Failures before pausing until next launch"
+      ],
+      [
+        "requestTimeout",
+        "15 s",
+        "Per-request timeout"
+      ]
+    ]
+  },
+  "lists": [
+    {
+      "title": "Privacy & store policies",
+      "items": [
+        "Declare device-ID collection in the Google Play Data safety form.",
+        "Publish a privacy policy covering Firebase, Facebook and your backend.",
+        "On iOS, show the App Tracking Transparency prompt before enabling Facebook.",
+        "Never pass emails or phone numbers as user IDs or parameters."
+      ]
+    },
+    {
+      "title": "Known limitations",
+      "items": [
+        "Firebase assigns its own event time; timestamp is kept only in your database.",
+        "Logging out offline uploads queued events later without user_id.",
+        "iOS cannot guarantee device-ID persistence after uninstall."
+      ]
+    }
+  ],
+  "cta": [
+    "Need analytics wired into your app?",
+    "We integrate, test and ship it for you — Firebase, Facebook and custom backends."
+  ]
+}

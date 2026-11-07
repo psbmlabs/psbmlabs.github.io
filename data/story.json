@@ -1,0 +1,57 @@
+{
+  "intro": [
+    "We learned to code the hard way — late nights, free tutorials and a lot of broken layouts. Along the way we realised the best products come from two people who trust each other enough to say “this isn’t good enough yet.”",
+    "That trust is how PSBM Labs runs today: shared responsibility for every release, honest status updates, and support that doesn’t end at launch. Angkan Barai, Prothes’s younger brother, keeps our shipped products stable after release.",
+    "Working from Barisal, we want to show that world-class apps and software can be built by a small, dedicated team in Bangladesh."
+  ],
+  "chapters": [
+    {
+      "year": "2020",
+      "title": "Two paths into web development",
+      "text": "Prothes and Shreyasi begin learning and building websites on their own — HTML, CSS and JavaScript first, using free resources like FreeCodeCamp and W3Schools.",
+      "image": ""
+    },
+    {
+      "year": "2021–2023",
+      "title": "From websites to full-stack",
+      "text": "Shreyasi moves into full-stack development and WordPress; Prothes grows into WordPress, databases and Android development.",
+      "image": ""
+    },
+    {
+      "year": "2022",
+      "title": "Prothes completes B.Sc in CSE",
+      "text": "Software engineering becomes his full-time focus, including Android apps and AI projects. Shreyasi continues her B.Sc in CSE at BSMRSTU.",
+      "image": ""
+    },
+    {
+      "year": "2023–2024",
+      "title": "First products go live",
+      "text": "Setu POS, Krishi Bazar and Notun Khata ship for small businesses in and around Barisal.",
+      "image": ""
+    },
+    {
+      "year": "2025–2026",
+      "title": "PSBM Labs is formed",
+      "text": "The two practices combine into one studio, with Angkan Barai joining as primary maintainer.",
+      "image": ""
+    }
+  ],
+  "faq": [
+    [
+      "Who founded PSBM Labs?",
+      "PSBM Labs was founded by Prothes Barai and Shreyasi Madhu, a husband-and-wife team of software engineers based in Barisal, Bangladesh. Angkan Barai is co-founder and primary maintainer."
+    ],
+    [
+      "Why does a married couple running a studio help clients?",
+      "Every build gets two independent technical perspectives, shared accountability and no account managers in between — the engineers who scope your project are the ones who build and support it."
+    ],
+    [
+      "What does each founder focus on?",
+      "Prothes leads app and software development (Flutter, Kotlin, Firebase, databases, WordPress). Shreyasi focuses on full-stack web, WordPress, Django and SEO."
+    ],
+    [
+      "Where is the studio based?",
+      "Barisal, Bangladesh. We work with clients across Bangladesh and internationally, mostly over email and video calls."
+    ]
+  ]
+}

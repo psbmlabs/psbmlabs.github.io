@@ -1,0 +1,58 @@
+{
+  "_comment": "Copy this file, rename to your-package.json, edit, then run: python3 tools/build_packages.py. status: stable | beta | planned (planned = card only, no detail page). Files starting with _ are ignored.",
+  "slug": "my-package",
+  "name": "my_package",
+  "order": 10,
+  "status": "planned",
+  "version": "",
+  "license": "MIT",
+  "platform": "Flutter",
+  "repo": "https://github.com/psbmlabs/my_package",
+  "pubdev": "",
+  "tagline": "One-line description.",
+  "summary": "Two-sentence description for the hero and Google.",
+  "features": [
+    {
+      "t": "Feature",
+      "d": "What it does."
+    }
+  ],
+  "steps": [
+    {
+      "t": "1 · Install",
+      "d": "",
+      "code": "dependencies:\n  my_package: ^0.0.1"
+    }
+  ],
+  "sections": [
+    {
+      "tag": "Usage",
+      "title": "Title",
+      "text": "Text (HTML allowed).",
+      "code": "",
+      "note": ""
+    }
+  ],
+  "config": {
+    "title": "Options",
+    "rows": [
+      [
+        "option",
+        "default",
+        "description"
+      ]
+    ]
+  },
+  "lists": [
+    {
+      "title": "Notes",
+      "items": [
+        "Item"
+      ]
+    }
+  ],
+  "cta": [
+    "Need this built for you?",
+    "We integrate and ship it."
+  ]
+}

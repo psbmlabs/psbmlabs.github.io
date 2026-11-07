@@ -1,0 +1,43 @@
+[
+  {
+    "img": "prothes.jpg",
+    "name": "Prothes Barai",
+    "role": "Founder · Software Engineer",
+    "href": "prothes.html",
+    "bio": "Leads app and software development at the studio — Flutter, Kotlin, Firebase, databases and WordPress — and teaches every client how to manage what he delivers.",
+    "tags": [
+      "Flutter",
+      "Kotlin",
+      "WordPress",
+      "Databases",
+      "AI"
+    ]
+  },
+  {
+    "img": "shreyasi_madhu_shampa.jpg",
+    "name": "Shreyasi Madhu",
+    "role": "Co-founder · Full-Stack Developer",
+    "href": "shreyasi.html",
+    "bio": "Focuses on responsive web, Django, WordPress and SEO, and reviews every build with a second technical eye before it ships.",
+    "tags": [
+      "HTML/CSS",
+      "JavaScript",
+      "Django",
+      "WordPress",
+      "SEO"
+    ]
+  },
+  {
+    "img": "angkan.jpg",
+    "name": "Angkan Barai",
+    "role": "Co-founder · Primary Maintainer",
+    "href": "angkan.html",
+    "bio": "Keeps the studio's shipped products stable after launch — monitoring, bug fixes, version updates and day-to-day support.",
+    "tags": [
+      "Maintenance",
+      "Monitoring",
+      "QA",
+      "Support"
+    ]
+  }
+]
