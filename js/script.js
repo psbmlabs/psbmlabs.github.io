@@ -177,7 +177,8 @@ $(function () {
       $(this).addClass('was-validated');
       return;
     }
-    $('#formNote').css('color', 'var(--teal)').text('Thanks, ' + name + ' — we\'ll reply within one business day. For urgent enquiries, call or email us directly.');
+    var bn = document.documentElement.lang === 'bn';
+    $('#formNote').css('color', 'var(--teal)').text(bn ? 'ধন্যবাদ, ' + name + ' — আমরা এক কার্যদিবসের মধ্যে উত্তর দেব। জরুরি প্রয়োজনে সরাসরি ফোন বা ইমেইল করুন।' : 'Thanks, ' + name + ' — we\'ll reply within one business day. For urgent enquiries, call or email us directly.');
     this.reset();
     $(this).removeClass('was-validated');
   });

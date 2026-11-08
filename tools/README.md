@@ -1,9 +1,5 @@
-# Adding a new package
-1. Copy `data/packages/_template.json` -> `data/packages/<your-package>.json` and edit it.
-   - status: `stable`, `beta` (detail page generated) or `planned` (card only).
-2. Run from the repo root:  `python3 tools/build_packages.py`
-3. Commit and push. `packages.html`, `packages/<slug>.html` and `sitemap.xml` update automatically.
-
-# Founders & Our Story page
-Edit `data/story.json` (chapters: year, title, text, optional image in /assets) and `data/founders.json`, then run
-`python3 tools/build_founders.py`. Individual profiles: `prothes.html`, `shreyasi.html` (opened by clicking a name).
+# Tools
+- `python3 tools/build_pages.py` — regenerates the sheet-driven shells (packages, package, apps, projects, project). Run after changing the nav/footer in index.html.
+- `python3 tools/build_founders.py` — rebuilds founders.html from data/founders.json + data/story.json.
+- `python3 tools/extract_strings.py` — lists text without a curated Bangla translation.
+Data for packages/apps/projects lives in the Google Sheet (see SHEET-SETUP.md).

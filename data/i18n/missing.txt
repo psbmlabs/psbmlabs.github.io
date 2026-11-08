@@ -1,0 +1,662 @@
+about.html	0.45× scope
+about.html	0.85× scope
+about.html	1.0× scope
+about.html	1.3× scope
+about.html	1.6× scope
+about.html	A note on how we work together
+about.html	A quick, non-binding estimate based on how PSBM Labs actually works — spiral-model iterations, a QA testing pass for every feature, and a fixed publish target. Move the slider and pick a platform.
+about.html	A shipped product still needs updates and fixes. We stay on as the team that already knows the codebase.
+about.html	Abdul Haque
+about.html	About Us — PSBM Labs— Professional Software & Business Solutions Labs
+about.html	Android native · Kotlin + Go backend
+about.html	Backend Developer
+about.html	Both founders spent years building websites and apps independently before combining that work under one name.
+about.html	Both founders started freelance web design and development work separately, taking on small business and portfolio sites.
+about.html	Bug Fixes
+about.html	Combined mobile + web builds share backend and design work, so the estimate isn't simply additive. WordPress builds skip most custom engineering, so they scope faster and cost less than a bespoke app.
+about.html	Core features / modules
+about.html	Creative designer specializing in modern interfaces and user experience design. 5+ years crafting beautiful digital products with attention to detail.
+about.html	Cross‑platform iOS & Android · Flutter
+about.html	Custom web app · Python + Django
+about.html	Each iteration ships a testable slice of the product, so risk and rework get caught early instead of at final QA.
+about.html	Email ↗
+about.html	Estimate your build
+about.html	Estimated path to launch
+about.html	Estimates are directional. Final scope, cost, and timeline are confirmed together on a short discovery call before anything is booked.
+about.html	Experience
+about.html	Experienced Flutter developer specializing in cross-platform mobile applications. Passionate about creating smooth, performant apps with beautiful UI and reliable backend integration.
+about.html	Firebase
+about.html	Flutter
+about.html	Flutter App Developer
+about.html	Flutter app + web dashboard · shared Go/Python backend
+about.html	From individual freelance work to a shared studio
+about.html	Full-stack Web
+about.html	Full-stack backend engineer with expertise in cloud architecture and database optimization. Passionate about building scalable systems and mentoring junior developers.
+about.html	How the lab started
+about.html	How we operate
+about.html	Independent web design work begins
+about.html	Java
+about.html	JavaScript
+about.html	Keeps the studio's shipped products stable after launch — owns monitoring, bug fixes, version updates, and the day-to-day support that keeps every release running smoothly.
+about.html	Kotlin
+about.html	Leads app and software development at the studio, from architecture through to release and support. Focused on Flutter and Kotlin app builds, backend systems, and taking products from first commit to a published, maintained release.
+about.html	Maintenance
+about.html	Managed content site · WordPress
+about.html	Mehedi Hasan
+about.html	Mobile + Web
+about.html	Mobile App
+about.html	Monitoring
+about.html	Move into software development
+about.html	Native Mobile
+about.html	No hand-offs
+about.html	No sales team in between — reach out and one of us will reply personally.
+about.html	Our trusted collaborators
+about.html	PSBM Labs formed
+about.html	PSBM Labs is run directly by its two founders — no account managers, no outsourced development. The people who scope a project are the people who write and ship the code.
+about.html	Plain, direct communication
+about.html	Platform & tech stack
+about.html	Prothes and Shreyasi are also married. That partnership carries directly into how the studio runs — two independent, hands-on perspectives on every technical decision, shared accountability for what ships, and work divided by skill set rather than by seniority. Angkan is Prothes's own younger brother — which makes him Shreyasi's Brother-in-law — so the trust that holds the founding partnership together extends naturally to the person keeping every release stable after launch. It's part of why PSBM Labs operates without account managers or a hierarchy in between: the people building and maintaining the product are also the people who trust each other most to call out a problem early.
+about.html	Python
+about.html	QA & Testing
+about.html	QA testing units run
+about.html	REST APIs
+about.html	Recommended stack for this build
+about.html	Retail, agriculture, and finance products ship
+about.html	SPH Shuvo
+about.html	See roughly how we'd scope your project
+about.html	Setu POS, Krishi Bazar, and Notun Khata went live, each solving a specific problem for small businesses in and around Barisal.
+about.html	Ship the smallest useful version
+about.html	Spiral iterations
+about.html	Starting investment
+about.html	Status updates say what's done, what's blocked, and what's next — no padded reports written to look busy.
+about.html	Studio in numbers
+about.html	Support doesn't end at launch
+about.html	Talented individuals we work with
+about.html	The engineer who scopes a project is the one who builds it — nothing gets passed to an unfamiliar team midway.
+about.html	The experience figure updates itself every year — it's calculated from each founder's start date, not typed in by hand.
+about.html	The two practices combined under a single studio name, PSBM Labs, formalizing joint work on logistics, education, healthcare, and app-focused projects like Text Studio.
+about.html	Two engineers who
+about.html	UI/UX
+about.html	UI/UX Designer
+about.html	View Portfolio ↗
+about.html	WHO WE ARE
+about.html	Want to work directly with the founders?
+about.html	We partner with skilled professionals who bring expertise and dedication to every project. Meet the people making our work better.
+about.html	We'd rather launch a focused first release and iterate than delay for a feature list no one's asked to use yet.
+about.html	Web Platform
+about.html	What guides the work
+about.html	What the team has built so far
+about.html	WordPress
+about.html	WordPress / CMS
+about.html	Work expanded from websites into full software builds — custom backends, admin systems, and the first mobile app projects.
+about.html	Works alongside on product direction and engineering across the studio's projects, with a background in full-stack web development and WordPress. Brings a second, independent technical eye to every build before it ships.
+about.html	Years building software
+about.html	build together.
+about.html	features demoed pre-signoff
+about.html	from kickoff to first public release
+about.html	tests / iteration
+about.html	weeks
+about.html	wks / iteration
+about.html	⚙️ System Design
+about.html	🎨 Design & Branding
+about.html	💻 Web & Mobile UI
+about.html	📱 Flutter Development
+about.html	🔁 Why spiral, not waterfall?
+about.html	🔧 Mobile App Architecture
+about.html	🗄️ Database Architecture
+angkan.html	A shipped product still needs updates and fixes. Angkan makes sure the studio’s releases keep working as devices, operating systems and user needs change.
+angkan.html	Angkan Barai — Co-founder & Primary Maintainer, PSBM Labs
+angkan.html	Angkan is Prothes Barai’s younger brother. Meet
+angkan.html	Ask about our maintenance retainer — monitoring, updates and fixes by the team that built it.
+angkan.html	Bug Fixing
+angkan.html	Bug Triage & Fixes
+angkan.html	CO-FOUNDER · PSBM LABS
+angkan.html	Co-founder of PSBM Labs who keeps every shipped product stable after launch — owning monitoring, bug fixes, version updates and day-to-day support.
+angkan.html	Crash Reporting
+angkan.html	Documentation
+angkan.html	Facebook
+angkan.html	Fix
+angkan.html	Focus areas
+angkan.html	How a fix reaches users
+angkan.html	Keeps live apps and web products running smoothly after release, with regular update cycles.
+angkan.html	Monitor
+angkan.html	Monitoring & Crash Tracking
+angkan.html	Need a product kept stable after launch?
+angkan.html	OS, library and SDK updates handled on a regular cadence.
+angkan.html	Personal portfolio
+angkan.html	Post-launch Maintenance
+angkan.html	Primary Maintainer · QA & Support
+angkan.html	Prothes →
+angkan.html	QA & Release Testing
+angkan.html	Release
+angkan.html	Release Checks
+angkan.html	Reproduces, prioritises and fixes bugs within an agreed response window.
+angkan.html	Responsibilities
+angkan.html	Role at the studio
+angkan.html	Shreyasi →
+angkan.html	Skills
+angkan.html	Test
+angkan.html	Tests every release candidate before it reaches the Play Store or production.
+angkan.html	The first point of contact for users and clients after launch.
+angkan.html	Triage
+angkan.html	User Support
+angkan.html	Version & Dependency Updates
+angkan.html	Watches uptime and crash rates so issues are caught before users report them.
+angkan.html	What Angkan looks after
+angkan.html	Why maintenance matters
+angkan.html	Workflow
+angkan.html	or read
+angkan.html	our story →
+angkan.html	— patch in the same codebase the team built
+angkan.html	— rank issues by user impact
+angkan.html	— ship the update and confirm it is stable
+angkan.html	— track crashes, errors and uptime
+angkan.html	— verify on real devices before release
+angkan.html	← Founders
+apps.html	Android
+apps.html	Bangla
+apps.html	Download Apps — PSBM Labs
+apps.html	Install from Google Play, or download the APK directly to try the latest builds before they reach the store.
+apps.html	Offline-first
+apps.html	Only download APKs from this page. Android may show a warning for apps installed outside Google Play — that is normal for direct installs.
+blog.html	6 min read
+blog.html	7 min read
+blog.html	8 min read
+blog.html	A Founder's Guide to Hiring a Software Development Team in Bangladesh
+blog.html	A honest comparison of when WordPress is the right call, and when it starts working against you.
+blog.html	A real breakdown of what shapes the price of a Flutter app — screens, backend complexity, integrations, and timeline — with rough ranges by app type.
+blog.html	API access, sandbox testing, callbacks, and reconciliation — a practical MFS integration guide.
+blog.html	App Development · Cost Guide
+blog.html	Blog — PSBM Labs | Software & App Development Insights
+blog.html	Building an E-commerce Platform in Bangladesh: A Practical Roadmap
+blog.html	Business Guide · Software Strategy
+blog.html	Catalog, checkout, local payments, and delivery logistics — a realistic roadmap for launching an online store here.
+blog.html	Clarity, trust, and local usability habits — practical design fundamentals, not generic design-trend advice.
+blog.html	Common Mistakes Startups Make When Outsourcing App Development
+blog.html	Design · Fundamentals
+blog.html	E-commerce · Roadmap
+blog.html	Firebase vs Custom Backend: What Should Power Your App?
+blog.html	Flutter App Development Cost in Bangladesh (2026)
+blog.html	Guide
+blog.html	Guides on
+blog.html	Have a project in mind?
+blog.html	Hiring Guide · For Founders
+blog.html	Hiring · Local Guide
+blog.html	How Much Does It Cost to Maintain a Mobile App After Launch?
+blog.html	How to Build a POS System for Retail Businesses in Bangladesh
+blog.html	How to Choose the Best Software Company in Barisal
+blog.html	How to tell when generic tools have stopped fitting your workflow, and custom software is worth the cost.
+blog.html	Independent software and app development studio based in Barisal, Bangladesh — building products end to end, from first commit to release day.
+blog.html	Inventory sync, offline-first design, receipts, and local payment support — what a real POS build involves.
+blog.html	Maintenance · Cost Guide
+blog.html	NOTES FROM THE LAB
+blog.html	Native vs Flutter: Choosing the Right Mobile Tech Stack
+blog.html	OS updates, bug fixes, hosting, and store compliance — the ongoing costs founders forget to budget for.
+blog.html	PSBM Labs
+blog.html	Payments · Integration Guide
+blog.html	Performance, cost, timeline, and long-term maintenance — how to actually decide between native and Flutter.
+blog.html	Practical, no-fluff writing on app development cost, tech choices, and how we work — based on projects we've actually shipped out of Barisal.
+blog.html	Recurring, avoidable mistakes we've seen across projects we've been asked to rescue or take over.
+blog.html	Retail Tech · Build Guide
+blog.html	Signs Your Business Needs Custom Software (Not Off-the-Shelf)
+blog.html	Speed, cost, scalability, and control — the trade-offs that actually decide this choice.
+blog.html	Startup Guide · Outsourcing
+blog.html	Tech Choices · Backend
+blog.html	Tech Choices · Mobile
+blog.html	Tech Choices · Platform Guide
+blog.html	Tell us about it — we'll reply with next steps within one business day.
+blog.html	UI/UX Design Fundamentals for Bangladeshi Startups
+blog.html	Web Application Development Cost in Bangladesh (2026)
+blog.html	Web Development · Cost Guide
+blog.html	What a custom web app actually costs — by project type, backend complexity, and the features clients usually underestimate.
+blog.html	What to actually check before hiring a local software team — portfolio depth, code ownership, communication, and red flags to watch for.
+blog.html	What to check beyond the portfolio — code ownership, communication, and how pricing structure predicts project risk.
+blog.html	WordPress vs Custom Software: Which One Do You Need?
+blog.html	bKash & Nagad Payment Gateway Integration Guide
+blog.html	building software
+blog.html	engr.prothes@gmail.com
+blog.html	engr.shreyasimadhushampa@gmail.com
+blog.html	that ships.
+contact.html	Agailjhara, Barisal — 8242,
+contact.html	App & Software Development
+contact.html	Bangladesh
+contact.html	Bangladesh (BD)
+contact.html	Barisal
+contact.html	Contact PSBM Labs— Professional Software & Business Solutions Labs
+contact.html	House 762, Somaipar, Paisarhat-8242,
+contact.html	Play Store
+contact.html	Reach us directly by phone or email, or send project details through the form below — we reply within one business day.
+contact.html	Within one business day, Saturday–Thursday. Messages sent Friday are answered the next business day.
+founders.html	A husband-and-wife engineering team and a trusted co-founder — building apps and software from Barisal, Bangladesh.
+founders.html	AI
+founders.html	B.Sc in CSE, BSMRSTU
+founders.html	Barisal, Bangladesh. We work with clients across Bangladesh and internationally, mostly over email and video calls.
+founders.html	Databases
+founders.html	Every build gets two independent technical perspectives, shared accountability and no account managers in between — the engineers who scope your project are the ones who build and support it.
+founders.html	Flutter, Kotlin, Firebase, WordPress
+founders.html	Focuses on responsive web, Django, WordPress and SEO, and reviews every build with a second technical eye before it ships.
+founders.html	Founders & Co-founders — Prothes Barai & Shreyasi Madhu | PSBM Labs
+founders.html	HTML/CSS
+founders.html	HTML/CSS, JavaScript, Django, WordPress
+founders.html	Keeps the studio's shipped products stable after launch — monitoring, bug fixes, version updates and day-to-day support.
+founders.html	Leads app and software development at the studio — Flutter, Kotlin, Firebase, databases and WordPress — and teaches every client how to manage what he delivers.
+founders.html	PSBM Labs was founded by Prothes Barai and Shreyasi Madhu, a husband-and-wife team of software engineers based in Barisal, Bangladesh. Angkan Barai is co-founder and primary maintainer.
+founders.html	Prothes and Shreyasi begin learning and building websites on their own — HTML, CSS and JavaScript first, using free resources like FreeCodeCamp and W3Schools.
+founders.html	Prothes leads app and software development (Flutter, Kotlin, Firebase, databases, WordPress). Shreyasi focuses on full-stack web, WordPress, Django and SEO.
+founders.html	QA
+founders.html	SEO
+founders.html	Setu POS, Krishi Bazar and Notun Khata ship for small businesses in and around Barisal.
+founders.html	Shreyasi moves into full-stack development and WordPress; Prothes grows into WordPress, databases and Android development.
+founders.html	Software engineering becomes his full-time focus, including Android apps and AI projects. Shreyasi continues her B.Sc in CSE at BSMRSTU.
+founders.html	That trust is how PSBM Labs runs today: shared responsibility for every release, honest status updates, and support that doesn’t end at launch. Angkan Barai, Prothes’s younger brother, keeps our shipped products stable after release.
+founders.html	The two practices combine into one studio, with Angkan Barai joining as primary maintainer.
+founders.html	We learned to code the hard way — late nights, free tutorials and a lot of broken layouts. Along the way we realised the best products come from two people who trust each other enough to say “this isn’t good enough yet.”
+founders.html	Why does a married couple running a studio help clients?
+founders.html	Working from Barisal, we want to show that world-class apps and software can be built by a small, dedicated team in Bangladesh.
+index.html	"EduPortal has cut our attendance and reporting work down considerably. Clear communication throughout."
+index.html	"Setu POS replaced three separate notebooks in our shop. Support has been fast whenever we've needed a fix."
+index.html	"The team scoped Krishi Bazar tightly and shipped the first working version faster than we expected."
+index.html	A sample of products designed and engineered in-house. See the full portfolio for the complete list, tech stacks, and case notes.
+index.html	AnalyticsManager.instance.logEvent( 'product_viewed', parameters: {'product_id': 'p_42'}, );
+index.html	Android and cross-platform apps designed, built, and published — including ongoing maintenance after release.
+index.html	Bootstrap 5
+index.html	Fleet and shipment tracking dashboard for regional logistics operators, with route history and alerts.
+index.html	Go
+index.html	KB
+index.html	KI
+index.html	Kamrul Islam
+index.html	Keeps the studio's shipped products stable — owns maintenance, monitoring, and updates after launch.
+index.html	Marketplace app connecting farmers directly with local buyers, with price alerts and order tracking.
+index.html	NH
+index.html	NK
+index.html	Nasrin Haque
+index.html	One API that sends events to Firebase, Facebook and your own backend — with consent control, a persistent device ID and an offline queue. Built and used by PSBM Labs.
+index.html	PSBM Labs is a small, independent studio building mobile apps and custom software — from the first line of code through to release and support. No account managers, no hand-offs — the people who scope your project are the people who build it.
+index.html	PSBM Labs— Professional Software & Business Solutions Labs, Software & App Development Studio, Barisal
+index.html	Point-of-sale and inventory system for small retail shops, with offline billing and stock sync.
+index.html	Program lead, agri-cooperative
+index.html	Prothes Barai · Shreyasi Madhu
+index.html	RA
+index.html	Rafiqul Alam
+index.html	SP
+index.html	School administrator
+index.html	Shop owner, Barisal
+index.html	TS
+index.html	Version updates, bug fixes, and monitoring after launch, so products keep running without surprises.
+index.html	We work as a small, hands-on team — one point of contact from planning through to a published, maintained product.
+index.html	accepting new work
+index.html	active_projects
+index.html	focus
+index.html	founders
+index.html	location
+index.html	organization
+index.html	organization.status
+index.html	status
+insights.html	+880 1870-988995 · engr.prothes@gmail.com
+insights.html	8-point checklist for clients
+insights.html	A quick, honest comparison to help you choose before you talk to anyone.
+insights.html	AFTER LAUNCH
+insights.html	AVOID MISTAKES
+insights.html	Allow “install unknown apps” only for the browser you used, then switch it off again.
+insights.html	Android + iOS from one codebase
+insights.html	Android / mobile apps
+insights.html	Ask to see live products, not just screenshots.
+insights.html	Ask what post-launch support is included and for how long.
+insights.html	Ask who owns the source code and design files.
+insights.html	Based on the 7 products listed on our Projects page.
+insights.html	Before you hire anyone
+insights.html	Best for
+insights.html	Beta builds can have bugs — report them by email and we fix them.
+insights.html	Budget
+insights.html	Build timeline vs. number of features
+insights.html	Business sites, blogs, simple stores
+insights.html	COST
+insights.html	Check the app name and developer shown during install.
+insights.html	Compare
+insights.html	Confirm who handles Play Store / hosting accounts.
+insights.html	Count of projects using each tool (from project tech stacks).
+insights.html	Custom web (Django/Laravel)
+insights.html	DECISION
+insights.html	Dashboards, portals, internal tools
+insights.html	Decide the smallest version worth launching first.
+insights.html	Direct contact
+insights.html	Download only from
+insights.html	Everything here comes from our own portfolio and scoping model — no inflated counters. Use it to plan your build, compare options and verify who we are.
+insights.html	Fast
+insights.html	Fastest
+insights.html	Flexibility
+insights.html	Flutter app
+insights.html	Founders’ code
+insights.html	Get scope, milestones and price in writing.
+insights.html	GitHub — Prothes
+insights.html	GitHub — Shreyasi
+insights.html	Google Play developer page ↗
+insights.html	Hardware-heavy, smallest app size
+insights.html	Helpful guides
+insights.html	High
+insights.html	Higher
+insights.html	Highest (Android)
+insights.html	House 762, Somaipar, Paisarhat-8242, Agailjhara, Barisal, Bangladesh
+insights.html	Insights, Guides & Transparency — PSBM Labs
+insights.html	Installing an APK safely
+insights.html	Line chart from our scoping model (same formula as the estimator on the About page). Directional, not a quote.
+insights.html	Line chart — how scope and platform choice move the starting budget.
+insights.html	List who will use it and on which devices.
+insights.html	Live today · 1 in development
+insights.html	Lowest
+insights.html	Medium
+insights.html	Medium–High
+insights.html	Native Kotlin
+insights.html	Never share OTPs or passwords with any app that asks outside its login screen.
+insights.html	Numbers, guides & transparency
+insights.html	Option
+insights.html	Portfolio by platform
+insights.html	Products designed & built in-house
+insights.html	Proprietor
+insights.html	Read before you decide
+insights.html	STUDIO INSIGHTS
+insights.html	Send a few lines — we reply with next steps within one business day.
+insights.html	Speed
+insights.html	Starting investment vs. scope (৳)
+insights.html	Stay safe
+insights.html	TECH
+insights.html	Technologies used across projects
+insights.html	Verify PSBM Labs yourself
+insights.html	Want a scoped plan for your idea?
+insights.html	Web platforms & dashboards
+insights.html	Which approach fits your project?
+insights.html	Write the one problem the product must solve.
+insights.html	or our Google Play page.
+insights.html	psbmlabs.github.io/apps
+our-story.html	Our Story — PSBM Labs
+package.html	FLUTTER PACKAGE
+package.html	Package — PSBM Labs
+packages.html	MIT
+packages.html	One API that sends events to Firebase, Facebook and your own backend.
+packages.html	Open-Source Flutter Packages & Developer Tools | PSBM Labs
+packages.html	Open-source Flutter packages we build for our own apps and share with the community. 1 available now, more on the way.
+packages.html	unified_analytics_kit
+packages/unified-analytics-kit.html	(each with a UUID
+packages/unified-analytics-kit.html	. Validate payloads and rate-limit on your server.
+packages/unified-analytics-kit.html	1 · Install
+packages/unified-analytics-kit.html	2 · Initialise
+packages/unified-analytics-kit.html	3 · Log events
+packages/unified-analytics-kit.html	4 · Ask for consent
+packages/unified-analytics-kit.html	A Flutter analytics toolkit that sends events to Firebase, Facebook App Events and your own backend through one API — with a persistent device ID, an offline queue and per-provider user consent.
+packages/unified-analytics-kit.html	Add it from GitHub and pin a tag so updates never break your app.
+packages/unified-analytics-kit.html	An event reaches a provider only when it is enabled in config, the user granted consent, and the call allows that destination. Priority:
+packages/unified-analytics-kit.html	AnalyticsManager.instance.logEvent('app_open'); AnalyticsManager.instance.logEvent('product_viewed', parameters: {'product_id': 'p_42', 'price': 9.5}); AnalyticsManager.instance.logScreenView(screenName: 'Home');
+packages/unified-analytics-kit.html	Automatic upload interval (min 5 s)
+packages/unified-analytics-kit.html	Backend
+packages/unified-analytics-kit.html	Call it once at startup, then log events anywhere.
+packages/unified-analytics-kit.html	Choose where data goes
+packages/unified-analytics-kit.html	Configuration
+packages/unified-analytics-kit.html	Consent first
+packages/unified-analytics-kit.html	Declare device-ID collection in the Google Play Data safety form.
+packages/unified-analytics-kit.html	Default
+packages/unified-analytics-kit.html	Denied by default and tracked per provider.
+packages/unified-analytics-kit.html	Description
+packages/unified-analytics-kit.html	Events per request (1–500)
+packages/unified-analytics-kit.html	FLUTTER PACKAGE · MIT LICENSE
+packages/unified-analytics-kit.html	Failures before pausing until next launch
+packages/unified-analytics-kit.html	Fault isolated
+packages/unified-analytics-kit.html	Firebase assigns its own event time; timestamp is kept only in your database.
+packages/unified-analytics-kit.html	Hive-backed batching, retry, backoff and Retry-After support.
+packages/unified-analytics-kit.html	Key options
+packages/unified-analytics-kit.html	Known limitations
+packages/unified-analytics-kit.html	Logging out offline uploads queued events later without user_id.
+packages/unified-analytics-kit.html	Names and parameters follow Firebase and Facebook rules.
+packages/unified-analytics-kit.html	Need analytics wired into your app?
+packages/unified-analytics-kit.html	Never pass emails or phone numbers as user IDs or parameters.
+packages/unified-analytics-kit.html	Offline queue
+packages/unified-analytics-kit.html	Oldest events dropped beyond this
+packages/unified-analytics-kit.html	On iOS, show the App Tracking Transparency prompt before enabling Facebook.
+packages/unified-analytics-kit.html	One API, many destinations
+packages/unified-analytics-kit.html	One failing provider never affects the others.
+packages/unified-analytics-kit.html	Per-request timeout
+packages/unified-analytics-kit.html	Persistent device ID
+packages/unified-analytics-kit.html	Privacy & store policies
+packages/unified-analytics-kit.html	Publish a privacy policy covering Firebase, Facebook and your backend.
+packages/unified-analytics-kit.html	Routing
+packages/unified-analytics-kit.html	Send to Facebook App Events
+packages/unified-analytics-kit.html	Send to Firebase Analytics
+packages/unified-analytics-kit.html	Send to your backend (needs databaseEndpoint)
+packages/unified-analytics-kit.html	Simple JSON contract
+packages/unified-analytics-kit.html	Survives reinstall where the OS allows it.
+packages/unified-analytics-kit.html	The
+packages/unified-analytics-kit.html	The database provider POSTs batches with
+packages/unified-analytics-kit.html	Validated events
+packages/unified-analytics-kit.html	We integrate, test and ship it for you — Firebase, Facebook and custom backends.
+packages/unified-analytics-kit.html	Why teams use it
+packages/unified-analytics-kit.html	apiKey
+packages/unified-analytics-kit.html	app default
+packages/unified-analytics-kit.html	await Firebase.initializeApp(); await AnalyticsManager.instance.initialize( AnalyticsConfig( enableFirebase: true, enableFacebook: true, enableDatabase: true, databaseEndpoint: Uri.parse('https://api.example.com/v1/events'), apiKey: 'your-public-app-key', ), );
+packages/unified-analytics-kit.html	batchSize
+packages/unified-analytics-kit.html	call
+packages/unified-analytics-kit.html	dependencies: unified_analytics_kit: git: url: https://github.com/psbmlabs/unified_analytics_kit.git ref: v0.0.1
+packages/unified-analytics-kit.html	device
+packages/unified-analytics-kit.html	device_id
+packages/unified-analytics-kit.html	enableDatabase
+packages/unified-analytics-kit.html	enableFacebook
+packages/unified-analytics-kit.html	enableFirebase
+packages/unified-analytics-kit.html	events[]
+packages/unified-analytics-kit.html	false
+packages/unified-analytics-kit.html	flushInterval
+packages/unified-analytics-kit.html	iOS cannot guarantee device-ID persistence after uninstall.
+packages/unified-analytics-kit.html	id
+packages/unified-analytics-kit.html	if (!analytics.hasConsentDecision) { await analytics.setConsent(const AnalyticsConsent.all()); }
+packages/unified-analytics-kit.html	info and
+packages/unified-analytics-kit.html	logEvent reaches Firebase, Facebook and your own backend.
+packages/unified-analytics-kit.html	logEvent('purchase', destinations: {AnalyticsDestination.facebook}); final screen = AnalyticsManager.instance.forScreen( 'ProductDetails', destinations: {AnalyticsDestination.database});
+packages/unified-analytics-kit.html	maxQueueSize
+packages/unified-analytics-kit.html	maxRetries
+packages/unified-analytics-kit.html	not a secret
+packages/unified-analytics-kit.html	requestTimeout
+packages/unified-analytics-kit.html	screen
+packages/unified-analytics-kit.html	ships inside your app, so it is
+packages/unified-analytics-kit.html	so you can ignore duplicates). 2xx removes events; 400/413/422 drops the batch; 429/5xx/timeouts retry with backoff (5 s → 5 min).
+packages/unified-analytics-kit.html	true
+packages/unified-analytics-kit.html	unified_analytics_kit — Flutter Package | PSBM Labs
+projects.html	AES-256
+projects.html	Agriculture · Mobile
+projects.html	All work
+projects.html	Barisal Health Connect
+projects.html	Bootstrap
+projects.html	Clinic appointment booking and patient record system for small healthcare providers, with SMS confirmations and a front-desk queue view.
+projects.html	Digital ledger app for small shop owners to record credit, dues, and daily cash flow in Bangla, with SMS reminders sent to customers on overdue balances.
+projects.html	Django
+projects.html	EduPortal
+projects.html	Education · Web platform
+projects.html	Enterprise systems
+projects.html	Finance · Mobile
+projects.html	Fleet and shipment tracking dashboard for regional logistics operators, with route history, driver alerts, and delay reporting.
+projects.html	FreightTrack BD
+projects.html	Healthcare · Web platform
+projects.html	Hive
+projects.html	In development
+projects.html	Jetpack
+projects.html	Krishi Bazar
+projects.html	Laravel
+projects.html	Logistics · Web dashboard
+projects.html	Marketplace app connecting farmers directly with local buyers, with price alerts, in-app messaging, and order tracking from listing to pickup.
+projects.html	Mobile apps
+projects.html	MongoDB
+projects.html	MySQL
+projects.html	Node.js
+projects.html	Notun Khata
+projects.html	ORGANIZATION PORTFOLIO
+projects.html	Point-of-sale and inventory system for small retail shops, with offline billing and stock sync back to a central dashboard once connectivity returns.
+projects.html	PostgreSQL
+projects.html	Productivity · Mobile
+projects.html	Products built by the
+projects.html	Projects — PSBM Labs— Professional Software & Business Solutions Labs
+projects.html	Retail · Mobile + Web
+projects.html	Role: architecture & ongoing build
+projects.html	Role: dashboard build & API integration
+projects.html	Role: full build & Play Store launch
+projects.html	Role: full build & staff training
+projects.html	Role: full build, in-store rollout & support
+projects.html	Role: full build, ongoing development
+projects.html	Role: product design, build & API
+projects.html	Room DB
+projects.html	SQLite
+projects.html	School management system covering attendance, results, and parent notifications for institutions, with a role-based portal for teachers and admins.
+projects.html	Setu POS
+projects.html	Seven products designed and engineered in-house, spanning retail, agriculture, finance, healthcare, logistics, and education. Filter by category to narrow the list.
+projects.html	Tell us about the product — we'll reply with next steps within one business day.
+projects.html	Text Studio
+projects.html	Text utility app with case conversion, encryption tools, and a reusable ads module built for a smooth free-tier experience ahead of a Play Store production release.
+projects.html	View case study →
+projects.html	Want something built like this?
+projects.html	Web platforms
+projects.html	jQuery
+projects.html	lab
+prothes.html	AI Projects
+prothes.html	AI tools
+prothes.html	After delivery, clients are shown how to edit, update and manage their website.
+prothes.html	Android & Flutter
+prothes.html	Android apps with Java/Kotlin and cross-platform builds with Flutter, taken through to release.
+prothes.html	Angkan Barai →
+prothes.html	Bug Fixing & Speed
+prothes.html	CSS3
+prothes.html	Co-founded the studio with Shreyasi Madhu.
+prothes.html	Completed Bachelor of Science in Computer Science & Engineering.
+prothes.html	Custom Web Design
+prothes.html	Custom backends, admin systems and first mobile apps.
+prothes.html	Customised WordPress, page-builder layouts and fully functional online stores, including Shopify.
+prothes.html	Database & Backend
+prothes.html	Database Expert
+prothes.html	Database design, REST APIs and admin systems built around how a business works.
+prothes.html	Experience & education
+prothes.html	FOUNDER · PSBM LABS
+prothes.html	Finds and fixes website issues and optimises slow-loading sites.
+prothes.html	GitHub
+prothes.html	HTML5
+prothes.html	Hand-coded HTML, CSS, JavaScript and jQuery sites for portfolios, business, company and landing pages.
+prothes.html	Handover & Guidance
+prothes.html	Have a project for Prothes?
+prothes.html	Hire / Contact
+prothes.html	Husband and wife, building PSBM Labs together. Meet
+prothes.html	Independent web work begins
+prothes.html	Journey
+prothes.html	Let’s work together
+prothes.html	LinkedIn
+prothes.html	Moved into software
+prothes.html	Phone
+prothes.html	Prothes Barai — Founder, PSBM Labs
+prothes.html	Reply within one business day, directly from the founder.
+prothes.html	Shopify
+prothes.html	Shreyasi Madhu →
+prothes.html	Software Engineer · WordPress · Database · AI
+prothes.html	Software engineer and co-founder of PSBM Labs. Builds websites, WordPress and WooCommerce stores, Android apps and backend systems — and teaches clients how to manage what he delivers.
+prothes.html	Started freelance web design and development.
+prothes.html	Tools & technologies
+prothes.html	What Prothes can build for you
+prothes.html	WooCommerce
+prothes.html	WordPress & WooCommerce
+prothes.html	WordPress Expert
+prothes.html	YouTube
+services.html	, not billing hours.
+services.html	30 days of post-launch bug fixes included
+services.html	A defined product with a clear start and finish. Best when requirements are already settled.
+services.html	A focused first version usually takes 6–10 weeks from signed scope to Play Store submission, depending on how many screens and integrations are involved. We'll give a firm estimate once requirements are written down.
+services.html	A scoped roadmap your in-house team or another vendor can build against
+services.html	A simple single-platform app with a handful of screens typically starts in the lower range, while a two-platform app with backend, payments, or real-time features costs more. We quote a fixed price after a short scoping call rather than a per-hour rate, so there are no surprises mid-build. See our
+services.html	A written technical assessment with trade-offs laid out
+services.html	Agreed monthly hours, rolled over if unused
+services.html	Android and cross-platform apps, designed and built from scratch or extended from an existing codebase — including Play Store submission and post-release maintenance.
+services.html	Before you reach out
+services.html	Bug triage with an agreed response window
+services.html	Can you take over an existing codebase?
+services.html	Cancel with 30 days' notice
+services.html	Code or infrastructure audits for existing products
+services.html	Common questions
+services.html	Crash monitoring and update releases after launch
+services.html	Custom software, internal tools, and backend systems shaped around how your business actually operates — not a generic template forced to fit.
+services.html	Database design across MySQL, PostgreSQL, or MongoDB
+services.html	Dedicated build partner
+services.html	Defined response time for critical bugs
+services.html	Direct access to both founders
+services.html	Do you work with clients outside Bangladesh?
+services.html	Documentation handed over at project close
+services.html	Fixed price, agreed before work starts
+services.html	Fixed-scope build
+services.html	Flexible scope, re-planned each cycle
+services.html	Flutter app development cost guide
+services.html	Flutter builds one codebase that ships to both Android and iOS, which usually costs less and moves faster for most business apps. Native (Kotlin/Swift) makes sense when an app leans heavily on device-specific hardware or needs the absolute smallest possible app size. We work in both and will recommend whichever fits your product.
+services.html	For a product already in production that needs steady upkeep rather than new development.
+services.html	For products already live — ours or someone else's — kept running with version updates, bug fixes, and monitoring so issues get caught before users report them.
+services.html	For teams that need a second opinion before committing budget — architecture reviews, build-vs-buy guidance, and technical due diligence.
+services.html	Four core services cover most engagements. Whichever you start with, the same two engineers stay on the project from planning through to post-launch support.
+services.html	Four stages, kept lean
+services.html	How an engagement runs
+services.html	How long does a typical app take to build?
+services.html	How much does it cost to build a mobile app in Bangladesh?
+services.html	How to work with us
+services.html	Maintenance retainer
+services.html	Monitoring and update patches
+services.html	Monthly, fixed hours
+services.html	Monthly, ongoing
+services.html	Most common
+services.html	Native Kotlin or cross-platform Flutter builds
+services.html	Not sure which service fits?
+services.html	OS and dependency updates on a regular cadence
+services.html	Offline-first data sync where connectivity is unreliable
+services.html	Often, yes. We start with a short code and infrastructure review to understand what's there before quoting ongoing work — this is usually billed as a small fixed-fee audit first.
+services.html	One round of design revisions included
+services.html	Play Store listing, screenshots, and submission handling
+services.html	Pricing is scoped per project — these are the three shapes an engagement usually takes.
+services.html	Priority response on issues
+services.html	Quoted per project
+services.html	REST APIs and admin dashboards (Laravel, Node.js)
+services.html	Requirements and data-model planning before build
+services.html	Role-based access for staff, admins, and customers
+services.html	Send a short description of what you're building — we'll point you to the right starting point.
+services.html	Services built around
+services.html	Services — PSBM Labs— Professional Software & Business Solutions Labs
+services.html	Small feature additions billed separately from the retainer
+services.html	Stack and vendor recommendations, cost estimates included
+services.html	That's the IT Consulting service — a scoped review and written recommendation, with no obligation to have us build the resulting roadmap.
+services.html	The same process applies whether the engagement is a two-week consulting review or a six-month app build.
+services.html	Three ways to engage
+services.html	Typically includes
+services.html	UI/UX design in Figma before any code is written
+services.html	Uptime and crash-rate monitoring
+services.html	WHAT WE DO
+services.html	We work as your embedded dev team on a product that keeps evolving — new features shipped in regular cycles.
+services.html	Weekly progress check-ins
+services.html	What if I only need a technical opinion, not a build?
+services.html	What's the difference between Flutter and native app development?
+services.html	Who owns the code once the project ships?
+services.html	Written scope and milestone schedule
+services.html	Yes. Most communication happens over email and video calls regardless of location, and we're comfortable working across time zones with async check-ins.
+services.html	You do. Source code, design files, and credentials are handed over in full at project close, or continuously if you'd prefer repository access from day one.
+services.html	for a detailed breakdown.
+services.html	shipping
+shreyasi.html	2022–Present
+shreyasi.html	B.Sc CSE
+shreyasi.html	BSMRSTU
+shreyasi.html	Client WordPress sites with page builders.
+shreyasi.html	Co-founded the studio with Prothes Barai.
+shreyasi.html	Computer Science & Engineering, Bangabandhu Sheikh Mujibur Rahman Science & Technology University.
+shreyasi.html	Creative Design
+shreyasi.html	Full-Stack Developer · WordPress · Mobile & Web Apps
+shreyasi.html	Full-Stack Web
+shreyasi.html	Full-stack web developer and co-founder of PSBM Labs. Focuses on clean, responsive websites, WordPress, Django web apps and SEO — and brings a second technical review to every build.
+shreyasi.html	Fully functional dynamic websites and web apps built with Django.
+shreyasi.html	Have a project for Shreyasi?
+shreyasi.html	Moved into full-stack development with back-end logic.
+shreyasi.html	On-page SEO and structure so your site is found on Google.
+shreyasi.html	Prothes Barai →
+shreyasi.html	Quick troubleshooting of website code and layout issues.
+shreyasi.html	Responsive sites with HTML5, CSS3, Bootstrap and JavaScript.
+shreyasi.html	Shreyasi Madhu — Founder, PSBM Labs
+shreyasi.html	Started learning and building websites.
+shreyasi.html	Themes, page builders and plugins to launch editable business sites quickly.
+shreyasi.html	UI ideas and problem solving applied across every project.
+shreyasi.html	Web Design
+shreyasi.html	Web Development
+shreyasi.html	Web design journey begins
+shreyasi.html	Web development
+shreyasi.html	What Shreyasi can build for you
+shreyasi.html	WordPress developer

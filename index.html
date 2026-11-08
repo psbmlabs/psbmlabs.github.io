@@ -49,7 +49,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/premium.css">
 </head>
-<body>
+<body data-bn="ready">
 
 <!-- ============ NAV ============ -->
 <div class="topbar"><a href="https://play.google.com/store/apps/dev?id=5400973174111764815" target="_blank" rel="noopener">▶ Get PSBM Labs apps on Google Play</a><a href="packages.html">⚙ Open-source Flutter packages</a></div>
@@ -77,6 +77,7 @@
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="founders.html">Founders</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><button type="button" class="lang-btn" id="langBtn" aria-label="Language">বাংলা</button></li>
       </ul>
       <a href="contact.html" class="btn btn-spl-primary d-inline-flex align-self-start align-self-lg-auto">Get in touch</a>
     </div>
@@ -252,7 +253,7 @@
 <!-- ============ APPS TEASER ============ -->
 <section id="apps"><div class="container-xl">
 <div class="section-head reveal"><span class="tag">Our apps</span><h2>Download &amp; try our products</h2><p>Install from Google Play or grab the direct APK — all apps are built and maintained by PSBM Labs.</p></div>
-<div class="row g-4"><div class="col-md-6 col-lg-3 reveal"><div class="app-card"><div class="app-icon" style="background:#5b5bf0">SP</div><h3>Setu POS</h3><div class="cat">Retail</div><p></p><a class="dl-btn apk" href="apps.html">⬇ Get the app</a></div></div><div class="col-md-6 col-lg-3 reveal"><div class="app-card"><div class="app-icon" style="background:#b45309">KB</div><h3>Krishi Bazar</h3><div class="cat">Agriculture</div><p></p><a class="dl-btn apk" href="apps.html">⬇ Get the app</a></div></div><div class="col-md-6 col-lg-3 reveal"><div class="app-card"><div class="app-icon" style="background:#4338ca">NK</div><h3>Notun Khata</h3><div class="cat">Finance</div><p></p><a class="dl-btn apk" href="apps.html">⬇ Get the app</a></div></div><div class="col-md-6 col-lg-3 reveal"><div class="app-card"><div class="app-icon" style="background:#be185d">TS</div><h3>Text Studio</h3><div class="cat">Productivity</div><p></p><a class="dl-btn apk" href="apps.html">⬇ Get the app</a></div></div></div><div class="text-center mt-4 reveal"><a href="apps.html" class="btn btn-spl-ghost">All apps &amp; download links →</a></div></div></section>
+<div class="row g-4" id="appTeaser"><div class="col-md-6 col-lg-3 reveal"><div class="app-card"><div class="app-icon" style="background:#5b5bf0">SP</div><h3>Setu POS</h3><div class="cat">Retail</div><p></p><a class="dl-btn apk" href="apps.html">⬇ Get the app</a></div></div><div class="col-md-6 col-lg-3 reveal"><div class="app-card"><div class="app-icon" style="background:#b45309">KB</div><h3>Krishi Bazar</h3><div class="cat">Agriculture</div><p></p><a class="dl-btn apk" href="apps.html">⬇ Get the app</a></div></div><div class="col-md-6 col-lg-3 reveal"><div class="app-card"><div class="app-icon" style="background:#4338ca">NK</div><h3>Notun Khata</h3><div class="cat">Finance</div><p></p><a class="dl-btn apk" href="apps.html">⬇ Get the app</a></div></div><div class="col-md-6 col-lg-3 reveal"><div class="app-card"><div class="app-icon" style="background:#be185d">TS</div><h3>Text Studio</h3><div class="cat">Productivity</div><p></p><a class="dl-btn apk" href="apps.html">⬇ Get the app</a></div></div></div><div class="text-center mt-4 reveal"><a href="apps.html" class="btn btn-spl-ghost">All apps &amp; download links →</a></div></div></section>
 
 <section id="oss"><div class="container-xl"><div class="row align-items-center g-4 reveal"><div class="col-lg-7"><span class="tag" style="color:#5b5bf0;font-weight:700">OPEN SOURCE · FLUTTER</span><h2 style="font-weight:800">unified_analytics_kit</h2><p style="color:var(--text-dim)">One API that sends events to Firebase, Facebook and your own backend — with consent control, a persistent device ID and an offline queue. Built and used by PSBM Labs.</p><a class="btn btn-spl-primary" href="packages.html">Explore the package</a> <a class="btn btn-spl-ghost" href="https://github.com/psbmlabs/unified_analytics_kit" target="_blank" rel="noopener">GitHub ↗</a></div><div class="col-lg-5"><div class="code">AnalyticsManager.instance.logEvent(
   'product_viewed',
@@ -472,6 +473,8 @@
   "sameAs": []
 }
 </script>
+<script src="js/i18n.js" defer></script>
+<script src="js/sheet.js" defer></script>
 <script src="js/fx.js" defer></script>
 </body>
 </html>

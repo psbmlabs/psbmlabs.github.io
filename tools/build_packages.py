@@ -7,6 +7,7 @@ ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)));os.chdir(ROOT)
 SITE='https://psbmlabs.github.io/'
 idx=open('index.html',encoding='utf-8').read()
 head=idx[:idx.find('<!-- ============ HERO')].replace('class="nav-link active"','class="nav-link"')
+head=head.replace(' data-bn="ready"','')
 foot=re.sub(r'<script type="application/ld\+json">.*?</script>\n','',idx[idx.find('<!-- ============ FOOTER'):],flags=re.S)
 WAVE=re.search(r'<div class="waves".*?</svg></div>',idx,re.S).group(0)
 def up(s): return re.sub(r'(href|src)="(?!https?:|#|mailto:|tel:|/|\.\./)([^"]+)"',r'\1="../\2"',s)
@@ -55,7 +56,7 @@ n=len([p for p in pk if p['status']!='planned'])
 chips=''.join(f'<button data-f="{k}"{" class=on" if k=="all" else ""}>{v}</button>' for k,v in [('all','All'),('stable','Stable'),('beta','Beta'),('planned','Planned')])
 B=HERO('OPEN SOURCE · BY PSBM LABS','Packages &amp; developer tools',f'Open-source Flutter packages we build for our own apps and share with the community. {n} available now, more on the way.')
 B+=f'<section><div class="container-xl"><div class="d-flex flex-wrap gap-3 align-items-center justify-content-between mb-4 reveal"><div class="seg" id="pkSeg" style="margin:0">{chips}</div><input id="pkQ" type="search" placeholder="Search packages…" class="form-control" style="max-width:280px;border-radius:99px"></div><div class="row g-4" id="pkGrid">{cards}</div></div></section>'+CTA('Need a custom package or integration?','We build reusable Flutter and backend modules for teams — tell us what you need.')
-B+='''<script>(function(){var f='all',q='',I=[].slice.call(document.querySelectorAll('.pk-item'));function r(){I.forEach(function(e){var s=e.dataset.s,ok=(f=='all'||s==f||s=='more')&&(!q||e.dataset.t.indexOf(q)>-1||s=='more'&&!q);e.style.display=ok?'':'none'})}document.querySelectorAll('#pkSeg button').forEach(function(b){b.onclick=function(){document.querySelectorAll('#pkSeg button').forEach(function(x){x.className=''});b.className='on';f=b.dataset.f;r()}});document.getElementById('pkQ').oninput=function(){q=this.value.toLowerCase().trim();r()}})();</script>'''
+B+='''<script>(function(){var f='all',q='';function r(){[].slice.call(document.querySelectorAll('.pk-item')).forEach(function(e){var s=e.dataset.s,ok=(f=='all'||s==f||s=='more')&&(!q||e.dataset.t.indexOf(q)>-1||s=='more'&&!q);e.style.display=ok?'':'none'})}window.pkRefilter=r;document.querySelectorAll('#pkSeg button').forEach(function(b){b.onclick=function(){document.querySelectorAll('#pkSeg button').forEach(function(x){x.className=''});b.className='on';f=b.dataset.f;r()}});document.getElementById('pkQ').oninput=function(){q=this.value.toLowerCase().trim();r()}})();</script>'''
 ld='<script type="application/ld+json">'+json.dumps({"@context":"https://schema.org","@type":"ItemList","name":"PSBM Labs open-source packages","itemListElement":[{"@type":"ListItem","position":i+1,"name":p['name'],"url":SITE+(f"packages/{p['slug']}.html" if p['status']!='planned' else 'packages.html')} for i,p in enumerate(pk)]})+'</script>\n'
 open('packages.html','w',encoding='utf-8').write(shell('Open-Source Flutter Packages & Developer Tools | PSBM Labs','Open-source Flutter packages by PSBM Labs — analytics, tooling and more. Install guides, code samples and GitHub links.','packages.html',B,ld,False))
 # ---- sitemap
@@ -64,3 +65,9 @@ sm=re.sub(r'\s*<url><loc>'+re.escape(SITE)+r'packages/[^<]*</loc></url>','',sm)
 add=''.join(f'  <url><loc>{SITE}packages/{p["slug"]}.html</loc></url>\n' for p in pk if p['status']!='planned')
 sm=sm.replace('</urlset>',add+'</urlset>');open('sitemap.xml','w',encoding='utf-8').write(sm)
 print('built',len(pk),'package(s)')
+
+# ---- package.html (detail page rendered from Google Sheet via js/sheet.js)
+PB=f'<div class="app-hero">{WAVE}<div class="container-xl" style="position:relative;z-index:1"><div class="eyebrow"><span class="dot"></span> FLUTTER PACKAGE</div><h1 id="pdName">Loading…</h1><p class="lead-spl" id="pdSummary" style="max-width:66ch"></p><div class="mt-3" id="pdActions"></div></div></div><div id="pkgDetail"><section><div class="container-xl">Loading…</div></section></div>'+CTA('Need this built for you?','We integrate and ship it.')
+ph=shell('Package — PSBM Labs','Open-source Flutter package by PSBM Labs.','package.html',PB,'',False)
+ph=re.sub(r'<link rel="canonical"[^>]*>\n?','',ph)
+open('package.html','w',encoding='utf-8').write(ph)
