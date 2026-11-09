@@ -19,7 +19,7 @@ section:nth-of-type(even){background:var(--bg-soft)}
 .btn-spl-primary:hover{color:#fff!important;box-shadow:0 14px 30px -10px rgba(14,159,110,.75)}
 .btn-spl-ghost{background:#fff;border-color:var(--line-bright);color:var(--text)}
 .hero-wrap,.footer-spl,.cta-banner,.status-card,.p-hero,.app-hero{--text:#fff;--text-dim:#c3cee3;--text-faint:#93a3c0;--line:rgba(255,255,255,.14);--line-bright:rgba(255,255,255,.3);color:#fff}
-.hero-wrap .btn-spl-ghost,.cta-banner .btn-spl-ghost,.p-hero .btn-spl-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.35)}
+.hero-wrap .btn-spl-ghost,.cta-banner .btn-spl-ghost,.p-hero .btn-spl-ghost,.app-hero .btn-spl-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.35)}
 .hero-overlay{background:linear-gradient(100deg,rgba(6,16,38,.94),rgba(6,16,38,.72) 55%,rgba(6,16,38,.5))!important}
 .hero h1 .grad{background:linear-gradient(90deg,#5eead4,#8fa8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .footer-spl{background:#07142b;border-top:0}
