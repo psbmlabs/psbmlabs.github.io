@@ -1,4 +1,3 @@
-/* PSBM Labs — loads Packages & Apps from a Google Sheet via Apps Script (apps-script/Code.gs). Falls back to built-in HTML if not configured/offline. */
 (function(){
 var base=document.currentScript.src.replace(/js\/sheet\.js.*$/,'');
 var lang=function(){return window.psbmLang?window.psbmLang():'en'};
@@ -9,7 +8,7 @@ var L=(function(){
   var map={pkGrid:'packages',pkgDetail:'packages',appGrid:'apps',prGrid:'projects',prDetail:'projects'},needs=[];
   Object.keys(map).forEach(function(id){if(document.getElementById(id)&&needs.indexOf(map[id])<0)needs.push(map[id])});
   var nop={stage:function(){},ok:function(){},bytes:function(){},finish:function(cb){cb&&cb()},fail:function(){}};if(!needs.length)return nop;
-  var NM={packages:'Packages',apps:'Apps',projects:'Projects'},LD={packages:[['G','I found our packages… loading them with love ♥'],['B','Bring them close, they’re ours ♥']],apps:[['G','I found our apps… loading them with love ♥'],['B','Bring them close, they’re ours ♥']],projects:[['G','I found our projects… loading them with love ♥'],['B','Bring them close, they’re ours ♥']]},LOVE=[[['G','Hey… are you coming to me?'],['B','Always. I’m already on my way ♥']],[['B','Can you feel how close I am now?'],['G','Yes… my heart is racing to meet you ♥']],[['G','Don’t stop walking, okay?'],['B','Never. Not until I’m beside you ♥']],[['B','What are you carrying for me?'],['G','Everything we built, wrapped in love ♥']]],lvi=0,rt,chat,DBG=/[?&]debug=1/.test(location.search),lv=0,el,stg,num,st,sub,act,li={},cur=0,tgt=4,fin=0,shownAt=0,tm,creep,got=0,ease=.12;
+  var NM={packages:'Packages',apps:'Apps',projects:'Projects'},LD={packages:[['G','I found our packages… loading them with love ♥'],['B','Bring them close, they’re ours ♥']],apps:[['G','I found our apps… loading them with love ♥'],['B','Bring them close, they’re ours ♥']],projects:[['G','I found our projects… loading them with love ♥'],['B','Bring them close, they’re ours ♥']]},LOVE=[[['G','Hey… are you coming to me?'],['B','Always. I’m already on my way ♥']],[['B','Can you feel how close I am now?'],['G','Yes… my heart is racing to meet you ♥']],[['G','Don’t stop walking, okay?'],['B','Never. Not until I’m beside you ♥']],[['B','What are you carrying for me?'],['G','Everything we built, wrapped in love ♥']]],HOLD=450,lvi=0,rt,chat,DBG=/[?&]debug=1/.test(location.search),lv=0,el,stg,num,st,sub,act,li={},cur=0,tgt=4,fin=0,shownAt=0,tm,creep,got=0,ease=.12;
   var rows=[['config','Hello'],['sheet','Connect']].concat(needs.map(function(k){return[k,NM[k]]})).concat([['page','Ready']]);
   var pin=function(c,src,alt){return '<div class="pl-pin '+c+'"><div class="pk"><div class="ph"><img src="'+base+'assets/'+src+'" alt="'+alt+'"></div></div></div>'};
   el=document.createElement('div');el.className='psbm-loader';el.setAttribute('role','status');el.setAttribute('aria-live','polite');
@@ -38,10 +37,11 @@ var L=(function(){
       if(s==='render'){setS('page','act');tgt=Math.max(tgt,94);talk([['B','Almost there… is the world ready for us?'],['G','It is. Meet me in the middle ♥']])}},
     bytes:function(n){if(fin)return;tgt=Math.max(tgt,Math.min(74,18+56*(1-Math.exp(-n/45000))));sub.textContent=DBG?(n<1024?n+' B':(n/1024).toFixed(1)+' KB')+' received':''},
     ok:function(k,n){if(fin||!li[k]||li[k].className==='ok')return;got++;setS(k,'ok',String(n));tgt=Math.max(tgt,78+16*got/needs.length);var nx=needs[got];if(nx){setS(nx,'act');talk(LD[nx])}},
-    finish:function(cb){if(fin){cb&&cb();return}fin=1;clearInterval(creep);clearInterval(lv);clearTimeout(tm);setS('page','ok');tgt=100;ease=.07;talk([['B','One more step, my love…'],['G','And we’ll be together forever ♥']]);sub.textContent='';
+    finish:function(cb){if(fin){cb&&cb();return}fin=1;clearInterval(creep);clearInterval(lv);clearTimeout(tm);clearTimeout(rt);setS('page','ok');tgt=100;ease=.4;sub.textContent='';
+      /* data is here: no more chat lines, no waiting - fill to 100% fast, flash Successful briefly, then hand over to the page */
       if(!shownAt){el.remove();window.__plActive=0;cb&&cb();return}
-      (function meet(){if(cur<99.5){setTimeout(meet,50);return}cur=100;stg.style.setProperty('--p',1);num.textContent=100;el.classList.add('love');say('Successful');
-        setTimeout(function(){el.classList.add('out');setTimeout(function(){close();cb&&cb()},380)},1500)})()},
+      (function meet(){if(cur<99.5){setTimeout(meet,30);return}cur=100;stg.style.setProperty('--p',1);num.textContent=100;el.classList.add('love');say('Successful');
+        setTimeout(function(){el.classList.add('out');setTimeout(function(){close();cb&&cb()},220)},HOLD)})()},
     fail:function(m){if(fin&&el.classList.contains('err'))return;fin=1;clearInterval(creep);clearInterval(lv);clearTimeout(rt);clearTimeout(tm);show();el.classList.add('err');say('Our hearts drifted apart for a moment ♥');sub.textContent=DBG?(m||''):'Please try again in a moment.';
       act.innerHTML='<button class="dl-btn apk" type="button">Retry</button><button class="dl-btn" type="button">Close</button>';
       act.children[0].onclick=function(){location.reload()};act.children[1].onclick=function(){close();render()}}}
