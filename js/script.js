@@ -169,18 +169,67 @@ $(function () {
   });
   updateEstimator();
 
-  /* ---- quick contact form (static, no backend) ---- */
+  /* ---- quick contact form: sends to Formspree (email) AND Google Sheet (Apps Script) ---- */
+  var FORMSPREE_URL = 'https://formspree.io/f/xwlldvyn';
+
+  function getScriptUrl() {
+    return fetch('data/site-config.json', { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (c) { return c.appsScript || ''; })
+      .catch(function () { return ''; });
+  }
+
+  function sendToFormspree(data) {
+    return fetch(FORMSPREE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) { if (!r.ok) throw new Error('Formspree ' + r.status); return true; });
+  }
+
+  function sendToSheet(data) {
+    return getScriptUrl().then(function (url) {
+      if (!url) throw new Error('no Apps Script url');
+      // text/plain + no-cors = no preflight; Apps Script still receives the body
+      return fetch(url, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(data)
+      }).then(function () { return true; });
+    });
+  }
+
   $('#quickContactForm').on('submit', function (e) {
     e.preventDefault();
-    var name = $('#cName').val().trim();
-    if (!this.checkValidity()) {
-      $(this).addClass('was-validated');
-      return;
-    }
+    var form = this, $form = $(form), $btn = $form.find('button[type=submit]'), $note = $('#formNote');
     var bn = document.documentElement.lang === 'bn';
-    $('#formNote').css('color', 'var(--teal)').text(bn ? 'ধন্যবাদ, ' + name + ' — আমরা এক কার্যদিবসের মধ্যে উত্তর দেব। জরুরি প্রয়োজনে সরাসরি ফোন বা ইমেইল করুন।' : 'Thanks, ' + name + ' — we\'ll reply within one business day. For urgent enquiries, call or email us directly.');
-    this.reset();
-    $(this).removeClass('was-validated');
+    if (!form.checkValidity()) { $form.addClass('was-validated'); return; }
+    if ($form.find('[name=_gotcha]').val()) { form.reset(); return; } // bot trap
+
+    var name = $('#cName').val().trim();
+    var data = {
+      name: name,
+      email: $('#cEmail').val().trim(),
+      message: $('#cMsg').val().trim(),
+      page: location.href
+    };
+
+    $btn.prop('disabled', true);
+    $note.css('color', 'var(--text-dim)').text(bn ? 'পাঠানো হচ্ছে…' : 'Sending…');
+
+    Promise.allSettled([sendToFormspree(data), sendToSheet(data)]).then(function (res) {
+      var okCount = res.filter(function (r) { return r.status === 'fulfilled'; }).length;
+      res.forEach(function (r, i) { if (r.status === 'rejected') console.warn(['Formspree', 'Sheet'][i] + ' failed:', r.reason); });
+      $btn.prop('disabled', false);
+      if (okCount > 0) {
+        $note.css('color', 'var(--teal)').text(bn ? 'ধন্যবাদ, ' + name + ' — আমরা এক কার্যদিবসের মধ্যে উত্তর দেব। জরুরি প্রয়োজনে সরাসরি ফোন বা ইমেইল করুন।' : 'Thanks, ' + name + ' — we\'ll reply within one business day. For urgent enquiries, call or email us directly.');
+        form.reset();
+        $form.removeClass('was-validated');
+      } else {
+        $note.css('color', '#b42318').text(bn ? 'দুঃখিত, মেসেজ পাঠানো যায়নি। অনুগ্রহ করে সরাসরি engr.prothes@gmail.com এ ইমেইল করুন।' : 'Sorry, we couldn\'t send your message. Please email us directly at engr.prothes@gmail.com.');
+      }
+    });
   });
 
 });

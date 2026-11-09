@@ -172,15 +172,16 @@
           <div class="row g-3">
             <div class="col-md-6">
               <label for="cName">Name</label>
-              <input type="text" class="form-control" id="cName" placeholder="Your full name" required>
+              <input type="text" class="form-control" id="cName" name="name" placeholder="Your full name" required maxlength="200">
             </div>
             <div class="col-md-6">
               <label for="cEmail">Email</label>
-              <input type="email" class="form-control" id="cEmail" placeholder="you@example.com" required>
+              <input type="email" class="form-control" id="cEmail" name="email" placeholder="you@example.com" required maxlength="200">
             </div>
             <div class="col-12">
               <label for="cMsg">Project details</label>
-              <textarea class="form-control" id="cMsg" rows="4" placeholder="What are you looking to build?" required></textarea>
+              <textarea class="form-control" id="cMsg" name="message" rows="4" placeholder="What are you looking to build?" required maxlength="5000"></textarea>
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
             </div>
             <div class="col-12 d-flex align-items-center gap-3 flex-wrap">
               <button type="submit" class="btn btn-spl-primary">Send message</button>
