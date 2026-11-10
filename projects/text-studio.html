@@ -12,10 +12,10 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Text Studio Case Study — Text Utility App With Encryption Flutter | PSBM Labs</title>
-<meta name="description" content="How PSBM Labs built Text Studio, a text utility app with encryption Flutter: the problem, the solution, the tech stack, and the result.">
+<title>Text Studio Case Study — 15 Text Tools With Encryption in Flutter | PSBM Labs</title>
+<meta name="description" content="How PSBM Labs built Text Studio, a Flutter text toolbox with 15 tools, AES-256 encryption and a reusable ads module: the problem, design decisions, tech stack and result.">
 
-<meta name="keywords" content="text utility app with encryption Flutter, PSBM Labs case study, Text Studio app">
+<meta name="keywords" content="text utility app with encryption Flutter, PSBM Labs case study, Text Studio app, Flutter ads module">
 <meta name="author" content="PSBM Labs">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://psbmlabs.github.io/projects/text-studio.html">
@@ -24,7 +24,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="Text Studio Case Study — PSBM Labs">
-<meta property="og:description" content="How PSBM Labs built Text Studio, a text utility app with encryption Flutter: the problem, the solution, the tech stack, and the result.">
+<meta property="og:description" content="How PSBM Labs built Text Studio, a Flutter text toolbox with 15 tools, AES-256 encryption and a reusable ads module: the problem, design decisions, tech stack and result.">
 <meta property="og:image" content="https://psbmlabs.github.io/assets/og-banner.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -35,7 +35,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Text Studio Case Study — PSBM Labs">
-<meta name="twitter:description" content="How PSBM Labs built Text Studio, a text utility app with encryption Flutter.">
+<meta name="twitter:description" content="How PSBM Labs built Text Studio, a Flutter text toolbox with 15 tools, AES-256 encryption and a reusable ads module: the problem, design decisions, tech stack and result.">
 <meta name="twitter:image" content="https://psbmlabs.github.io/assets/og-banner.jpg">
 <meta name="google-adsense-account" content="ca-pub-6887183666314442">
 
@@ -62,6 +62,23 @@
   .spec-row .k{ color:var(--text-faint); }
   .spec-row .v{ color:var(--text); text-align:right; }
   .spec-card{ border:1px solid var(--line); border-radius:var(--radius); padding:1.2rem 1.4rem; margin-bottom:2rem; background:rgba(255,255,255,.02); }
+
+  .cs-stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:.8rem; margin:0 0 2.2rem; }
+  .cs-stats div{ border:1px solid var(--line); border-radius:var(--radius); padding:.95rem 1rem; text-align:center; background:#fff; }
+  .cs-stats b{ display:block; font:800 1.6rem/1.1 'Sora',sans-serif; color:var(--text); }
+  .cs-stats span{ display:block; margin-top:.3rem; font-size:.76rem; color:var(--text-faint); }
+  .cs-two{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.2rem; }
+  @media(max-width:640px){ .cs-two{ grid-template-columns:1fr; } }
+  .cs-box{ border:1px solid var(--line); border-radius:var(--radius); padding:1rem 1.2rem; background:#fff; }
+  .cs-box h3{ font-size:.95rem; margin:0 0 .6rem; font-weight:800; }
+  .cs-box ul{ margin:0; padding-left:1.1rem; } .cs-box li{ margin-bottom:.3rem; }
+  .cs-table{ width:100%; border-collapse:collapse; font-size:.9rem; margin-bottom:1.2rem; }
+  .cs-table th,.cs-table td{ padding:.6rem .5rem; border-bottom:1px dashed var(--line); text-align:left; vertical-align:top; }
+  .cs-table th{ color:var(--text-faint); font-weight:600; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+  .cs-pill{ display:inline-block; font-size:.68rem; font-weight:700; padding:.12rem .55rem; border-radius:99px; white-space:nowrap; }
+  .cs-pill.score{ background:#e6faf6; color:#0b5d52; } .cs-pill.tool{ background:#eef2f7; color:#4d5d78; } .cs-pill.pro{ background:#fff4e0; color:#7a5200; }
+  .cs-note{ border-left:3px solid #5b5bf0; padding:.15rem 0 .15rem 1rem; color:var(--text-dim); margin:1.3rem 0; }
+  .cs-links{ display:flex; flex-wrap:wrap; gap:.6rem; margin:1.4rem 0 0; }
 </style>
 <script type="application/ld+json">
 {
@@ -83,7 +100,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Text Studio case study .",
+      "name": "Text Studio case study",
       "item": "https://psbmlabs.github.io/projects/text-studio.html"
     }
   ]
@@ -131,7 +148,7 @@
     <div class="crumbs reveal"><a href="../index.html">Home</a><span>/</span><a href="../projects.html">Projects</a><span>/</span><span>Text Studio</span></div>
     <div class="eyebrow reveal"><span class="dot"></span> PRODUCTIVITY · MOBILE</div>
     <h1 class="reveal">Text Studio <span class="grad">case study</span>.</h1>
-    <p class="lead-spl reveal">Text utility app with case conversion, encryption tools, and a reusable ads module built for a smooth free-tier experience ahead of a Play Store production release.</p>
+    <p class="lead-spl reveal">One Flutter app, fifteen text tools, and an ads system built so the free tier never gets in the way of the task.</p>
   </div>
 </div>
 
@@ -139,32 +156,71 @@
 <section style="border-top:none; padding-top:2.6rem;">
   <div class="container-xl">
     <div class="article-body reveal">
-
       <p class="article-meta">PSBM Labs · Live · Role: Full build, ongoing development</p>
-
       <div class="spec-card">
         <div class="spec-row"><span class="k">Category</span><span class="v">Productivity · Mobile</span></div>
-        <div class="spec-row"><span class="k">Tech stack</span><span class="v">Flutter, Hive, AES-256</span></div>
+        <div class="spec-row"><span class="k">Platform</span><span class="v">Android · Flutter</span></div>
+        <div class="spec-row"><span class="k">Tech stack</span><span class="v">Flutter, Hive, AES-256, Google AdMob, go_router, Provider</span></div>
         <div class="spec-row"><span class="k">Status</span><span class="v">Live</span></div>
         <div class="spec-row"><span class="k">Our role</span><span class="v">Full build, ongoing development</span></div>
       </div>
+      <div class="cs-stats"><div><b>15</b><span>tools in one app</span></div><div><b>6</b><span>free &amp; offline</span></div><div><b>9</b><span>unlock with a short ad</span></div><div><b>3</b><span>ad formats, one module</span></div></div>
 
       <h2>The problem</h2>
-      <p>Everyday text tasks — case conversion, quick encryption, format cleanup — were scattered across multiple single-purpose apps, most of them ad-heavy in ways that interrupted the actual task.</p>
+      <p>Small text jobs come up all day: counting words before a submission, fixing the case of a pasted paragraph, stripping duplicate lines, making a QR code, translating a sentence, locking a note.</p><p>Each job usually sends people to a different single-purpose app, and the free ones tend to put an ad in the middle of the task. We set two rules for ourselves: simple jobs must work with no connection, and ads must pay for the app without making people leave.</p>
 
       <h2>The solution</h2>
-      <p>Text Studio bundles common text utilities into one Flutter app with local Hive storage for saved snippets and AES-256 encryption for anything sensitive, paired with a reusable ads module engineered so the free tier stays fast and unobtrusive rather than interruption-driven.</p>
+      <p>Text Studio puts every tool one tap from a single home screen. Six core tools are free, work offline and open instantly with no ad gate. The other nine open after a short ad, and the app says so up front: a small video icon marks the tile, and when there is no internet those tools grey out with a clear label instead of failing after a tap.</p><p>Behind the screen sits a reusable ads module that owns consent, ad formats and reloads, so the app code stays about the tools, not about ads.</p>
 
-      <h2>Key features</h2>
+      <h2>The tools</h2>
+      <div class="cs-two">
+        <div class="cs-box"><h3>Free, offline, open instantly</h3><ul><li>Text Repeater</li><li>Word Counter</li><li>Case Converter</li><li>Text Reverser</li><li>Font Style</li><li>Remove Duplicate</li></ul></div>
+        <div class="cs-box"><h3>Unlock with a short ad (needs internet)</h3><ul><li>Find &amp; Replace</li><li>Text to Speech</li><li>Text Encryptor</li><li>Random Text</li><li>Diff Checker</li><li>Text to QR/Bar</li><li>Text Extract</li><li>Grammar Check</li><li>Text Translate</li></ul></div>
+      </div>
+
+      <h2>Designing the home screen</h2>
       <ul>
-        <li>Case conversion, formatting, and text-cleanup tools in one place</li>
-        <li>AES-256 local encryption for sensitive notes and snippets</li>
-        <li>Offline-first storage using Hive, so nothing depends on a network connection</li>
-        <li>Reusable, non-intrusive ads module designed around free-tier retention</li>
+        <li><strong>Pinned header.</strong> The branded header stays in place while the page scrolls, and its shadow deepens once you move, so it reads as a layer above the content.</li>
+        <li><strong>Featured carousel.</strong> Four featured tools sit in large gradient cards at the top, so the highlights are one tap away without scrolling.</li>
+        <li><strong>Colour-coded grid.</strong> Every tool has its own gradient and icon in a three-column grid. People learn a tool by colour before they read the label.</li>
+        <li><strong>Honest offline state.</strong> Tools that need the network grey out and say “No internet” when the connection drops, instead of opening a screen that cannot work.</li>
+        <li><strong>Visible ad marker.</strong> A small video icon on a tile means “short ad first”. Nothing about the free-tier deal is hidden.</li>
+        <li><strong>Light and dark themes.</strong> One toggle in the header; every colour comes from a central palette, so both themes stay consistent.</li>
+        <li><strong>Polite exit.</strong> On Android the back button asks before closing the app, so a stray swipe does not lose someone's place.</li>
+      </ul>
+
+      <h2>Ads that stay out of the way</h2>
+      <p>Ads are the app’s only revenue, so we treated them as a product feature, not an afterthought. The module is built once and reused across PSBM apps.</p>
+      <ul>
+        <li><strong>One guarded entry point.</strong> A single navigator checks the connection, shows the right ad (rewarded, rewarded-interstitial or interstitial, depending on the tool) and only then opens the tool.</li>
+        <li><strong>Consent first.</strong> A consent manager built on Google’s UMP flow handles GDPR choices, and a privacy policy screen is part of the app.</li>
+        <li><strong>Tunable without a release.</strong> Ad flags are read from a small JSON file hosted on our own site, so ad behaviour can be adjusted without publishing a new build.</li>
+        <li><strong>Recovers by itself.</strong> When the connection returns, listeners on the connectivity state and the module guard trigger ad reloads, so a tool does not stay locked after a temporary drop.</li>
+      </ul>
+
+      <h2>Engineering notes</h2>
+      <ul>
+        <li><strong>One model drives the screen.</strong> A single tool model (title, icon, gradient, needs-network, ad-gated, on-tap) feeds both the carousel and the grid. Adding a tool is one entry and one route, and the offline and ad behaviour come with it.</li>
+        <li><strong>Navigation from anywhere.</strong> Named routes with go_router, triggered through a small navigation service, so a tool can open from an ad callback without passing context around.</li>
+        <li><strong>State and sizing.</strong> Provider carries connectivity state; flutter_screenutil keeps spacing and type consistent from small phones to large ones.</li>
+        <li><strong>Local-first data.</strong> Hive stores saved data on the device, and text encryption uses AES-256, also on the device.</li>
+      </ul>
+
+      <div class="cs-note">The same ads module now runs the PRO tiles in <a href="dailyshield.html">DailyShield</a>, which is the point of building it as a module.</div>
+
+      <h2>What we took from it</h2>
+      <ul>
+        <li>Say what is free and what needs an ad on the tile itself. It costs nothing and removes surprise.</li>
+        <li>Decide early which tools need the network. The grey-out state is then a one-line rule, not a bug list.</li>
+        <li>Keep a single source of truth for the tool list, so UI changes never drift from behaviour.</li>
       </ul>
 
       <h2>The result</h2>
-      <p>The app is live with a smooth free-tier experience and continues to receive ongoing feature development ahead of its next production release milestone.</p>
+      <p>Text Studio is live with fifteen tools and keeps growing: a new tool is one model entry plus one route, and it inherits the offline and ad behaviour automatically. The ads module built here now also powers the PRO tiles in DailyShield, so the work was reused instead of rebuilt.</p>
+      <div class="cs-links">
+        <a class="btn btn-spl-primary" href="../apps.html">See it on the Apps page</a>
+        <a class="btn btn-spl-ghost" href="dailyshield.html">Read the DailyShield case study →</a>
+      </div>
 
       <div class="cta-banner reveal" style="margin-top:2.4rem;">
         <h3>Building something similar?</h3>
@@ -227,10 +283,13 @@
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Text Studio",
-  "description": "Text utility app with case conversion, encryption tools, and a reusable ads module built for a smooth free-tier experience ahead of a Play Store production release.",
-  "creator": { "@type": "Organization", "name": "PSBM Labs" },
+  "description": "A Flutter toolbox of 15 text tools — six free and fully offline, nine unlocked with a short ad — built on a reusable ads module that keeps the free tier calm.",
+  "creator": {
+    "@type": "Organization",
+    "name": "PSBM Labs"
+  },
   "url": "https://psbmlabs.github.io/projects/text-studio.html",
-  "keywords": "text utility app with encryption Flutter"
+  "keywords": "text utility app with encryption Flutter, PSBM Labs case study, Text Studio app, Flutter ads module"
 }
 </script>
 

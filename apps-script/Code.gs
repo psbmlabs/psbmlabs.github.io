@@ -1,17 +1,20 @@
 /**
  * PSBM Labs — Google Sheet -> JSON API (Apps Script Web App)
  * Tabs: "Packages", "Apps", "Projects" (row 1 = column names, see SHEET-SETUP.md)
+ * Plus "Reviews" (created automatically): visitor reviews / comments / suggestions for each app (see SHEET-SETUP.md)
  * Deploy: Deploy > New deployment > Web app > Execute as: Me > Who has access: Anyone
  */
 var TABS = { packages: 'Packages', apps: 'Apps', projects: 'Projects' };
 var CACHE_KEY = 'psbm_data_v2';
 
 function doGet(e) {
+  if (e && e.parameter && e.parameter.action === 'reviews') return reviewsList_(e); // paginated reviews for one app
   var cache = CacheService.getScriptCache();
   var body = cache.get(CACHE_KEY);
   if (!body) {
     var out = { updated: new Date().toISOString() };
     Object.keys(TABS).forEach(function (k) { out[k] = readTab_(TABS[k]); });
+    try { out.reviewCounts = reviewCounts_(); } catch (err) { out.reviewCounts = {}; } // { slug: [count, avgRating] } - no emails, no text
     body = JSON.stringify(out);
     try { cache.put(CACHE_KEY, body, 60); } catch (err) {} // 60s cache keeps the site fast
   }
@@ -37,15 +40,16 @@ function readTab_(name) {
     });
 }
 
-function onEdit() { CacheService.getScriptCache().remove(CACHE_KEY); }
+function onEdit() { var c = CacheService.getScriptCache(); c.remove(CACHE_KEY); c.put('rv_ver', String(Date.now()), 21600); }
 
 function onOpen() {
   SpreadsheetApp.getUi().createMenu('PSBM Site')
     .addItem('Create / fill Projects tab (first time)', 'setupSampleData')
+    .addItem('Create Reviews tab (first time)', 'setupReviews')
     .addToUi();
 }
 
-// Run once: creates the "Projects" tab with your current 7 case studies (only if the tab is empty)
+// Run once: creates the "Projects" tab with your current case studies (only if the tab is empty)
 function setupSampleData() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sh = ss.getSheetByName('Projects') || ss.insertSheet('Projects');
@@ -56,6 +60,161 @@ function setupSampleData() {
   sh.setFrozenRows(1);
   CacheService.getScriptCache().remove(CACHE_KEY);
   SpreadsheetApp.getUi().alert('Done. Projects tab created with ' + SEED_.length + ' projects.');
+}
+
+/* =====================================================================
+ * REVIEWS / COMMENTS / SUGGESTIONS  (Apps page -> "Review / Comment" button)
+ * Tab "Reviews" columns: id | created | app | parent | type | name | email | rating | message | visible | reply | reply_by
+ *  - visitors post from the site (doPost). Emails are stored here but NEVER sent back to the browser.
+ *  - YOU reply by typing in the "reply" column of that row (shown with a "PSBM Labs" badge).
+ *  - hide any row: visible = no   (or "pending" if AUTO_APPROVE is false, then change it to yes to publish)
+ * ===================================================================== */
+var REVIEWS_TAB = 'Reviews';
+var RV_HEAD = ['id', 'created', 'app', 'parent', 'type', 'name', 'email', 'rating', 'message', 'visible', 'reply', 'reply_by'];
+var RV_PER_PAGE = 30;          // threads per page (the site "Load more" button asks for the next page)
+var RV_AUTO_APPROVE = true;    // false = new posts wait as "pending" until you set visible = yes
+var RV_MAX_MSG = 1000, RV_MAX_NAME = 60, RV_MAX_EMAIL = 120;
+var RV_RATE_PER_HOUR = 5;      // posts per email per hour
+var RV_NOTIFY_EMAIL = '';      // optional: put your email here to get a mail for every new post ('' = off)
+var RV_RESERVED_NAME = /psbm/i; // visitors cannot sign as the studio
+
+function setupReviews() {
+  reviewsSheet_(true);
+  SpreadsheetApp.getUi().alert('Reviews tab is ready.');
+}
+
+function reviewsSheet_(create) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet(), sh = ss.getSheetByName(REVIEWS_TAB);
+  if (!sh && create) {
+    sh = ss.insertSheet(REVIEWS_TAB);
+    sh.getRange(1, 1, 1, RV_HEAD.length).setValues([RV_HEAD]).setFontWeight('bold');
+    sh.setFrozenRows(1);
+    sh.getRange(1, 1, 2000, RV_HEAD.length).setNumberFormat('@'); // plain text: nothing typed by a visitor can run as a formula
+    sh.setColumnWidth(9, 380); sh.setColumnWidth(11, 380); sh.setColumnWidth(7, 180);
+  }
+  return sh;
+}
+
+function rvIsHidden_(v) { return /^(no|false|0|hide|pending)$/i.test(String(v || '').trim()); }
+
+function readReviews_() {
+  var sh = reviewsSheet_(false);
+  if (!sh || sh.getLastRow() < 2) return [];
+  var v = sh.getDataRange().getDisplayValues();
+  var head = v[0].map(function (h) { return String(h).trim().toLowerCase(); });
+  return v.slice(1).filter(function (r) { return r.join('').trim(); }).map(function (r) {
+    var o = {}; head.forEach(function (h, i) { if (h) o[h] = String(r[i]).trim(); }); return o;
+  });
+}
+
+function rvTop_(r) { return !r.parent && r.type !== 'reply' && !rvIsHidden_(r.visible); }
+
+function reviewCounts_() {
+  var out = {}, sum = {}, rated = {};
+  readReviews_().filter(rvTop_).forEach(function (r) {
+    if (!r.app) return;
+    out[r.app] = out[r.app] || [0, 0]; out[r.app][0]++;
+    var n = parseInt(r.rating, 10);
+    if (r.type === 'review' && n >= 1 && n <= 5) { sum[r.app] = (sum[r.app] || 0) + n; rated[r.app] = (rated[r.app] || 0) + 1; }
+  });
+  Object.keys(out).forEach(function (k) { out[k][1] = rated[k] ? Math.round(sum[k] / rated[k] * 10) / 10 : 0; });
+  return out;
+}
+
+function rvPublic_(r, replies) {
+  var o = { id: r.id, created: r.created, type: r.type, name: r.name, message: r.message };
+  if (r.type === 'review' && r.rating) o.rating = parseInt(r.rating, 10) || 0;
+  if (r.reply) { o.reply = r.reply; o.reply_by = r.reply_by || 'PSBM Labs'; }
+  o.replies = (replies || []).map(function (x) { return { id: x.id, created: x.created, name: x.name, message: x.message }; });
+  return o; // email is intentionally not included
+}
+
+function jsonOut_(obj, cb) {
+  var body = JSON.stringify(obj);
+  if (cb && /^[A-Za-z_$][\w$.]*$/.test(cb)) return ContentService.createTextOutput(cb + '(' + body + ')').setMimeType(ContentService.MimeType.JAVASCRIPT);
+  return ContentService.createTextOutput(body).setMimeType(ContentService.MimeType.JSON);
+}
+
+function reviewsList_(e) {
+  var p = e.parameter || {}, app = String(p.app || '').trim().slice(0, 80), page = Math.max(1, parseInt(p.page, 10) || 1), cb = p.callback;
+  var cache = CacheService.getScriptCache(), key = 'rv_' + (cache.get('rv_ver') || '0') + '_' + app + '_' + page, body = cache.get(key);
+  if (!body) {
+    var rows = readReviews_(), tops = [], reps = {};
+    rows.forEach(function (r) {
+      if (r.app !== app || rvIsHidden_(r.visible)) return;
+      if (r.type === 'reply' && r.parent) { (reps[r.parent] = reps[r.parent] || []).push(r); }
+      else if (!r.parent) tops.push(r);
+    });
+    tops.sort(function (a, b) { return String(b.created).localeCompare(String(a.created)); });
+    var sum = 0, rated = 0;
+    tops.forEach(function (r) { var n = parseInt(r.rating, 10); if (r.type === 'review' && n >= 1 && n <= 5) { sum += n; rated++; } });
+    var total = tops.length, pages = Math.max(1, Math.ceil(total / RV_PER_PAGE));
+    var items = tops.slice((page - 1) * RV_PER_PAGE, page * RV_PER_PAGE).map(function (r) {
+      var rs = (reps[r.id] || []).sort(function (a, b) { return String(a.created).localeCompare(String(b.created)); });
+      return rvPublic_(r, rs);
+    });
+    body = JSON.stringify({ ok: true, app: app, page: page, per: RV_PER_PAGE, total: total, pages: pages, rated: rated, avg: rated ? Math.round(sum / rated * 10) / 10 : 0, items: items });
+    try { cache.put(key, body, 120); } catch (err) {}
+  }
+  if (cb && /^[A-Za-z_$][\w$.]*$/.test(cb)) return ContentService.createTextOutput(cb + '(' + body + ')').setMimeType(ContentService.MimeType.JAVASCRIPT);
+  return ContentService.createTextOutput(body).setMimeType(ContentService.MimeType.JSON);
+}
+
+function bad_(m) { var e = new Error(m); e.user = true; throw e; }
+function clean_(s, max) { return String(s == null ? '' : s).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '').replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim().slice(0, max); }
+
+function doPost(e) {
+  var res;
+  try {
+    var d = JSON.parse((e && e.postData && e.postData.contents) || '{}');
+    res = submitReview_(d);
+  } catch (err) {
+    if (!err.user) { try { console.error(err); } catch (x) {} }
+    res = { ok: false, error: err.user ? err.message : 'Something went wrong. Please try again in a moment.' };
+  }
+  return jsonOut_(res);
+}
+
+function submitReview_(d) {
+  if (d.website) return { ok: true, hidden: true };                       // honeypot: bots fill this hidden field
+  var type = String(d.type || '').toLowerCase();
+  if (['review', 'comment', 'suggestion', 'reply'].indexOf(type) < 0) bad_('Please choose what you want to send.');
+  var app = clean_(d.app, 80);
+  var apps = readTab_('Apps').filter(function (a) { return a.slug === app && !/^(no|false|0|hide)$/i.test(a.visible || '') && (a.status || '').toLowerCase() !== 'coming'; });
+  if (!apps.length) bad_('This app was not found.');
+  var name = clean_(d.name, RV_MAX_NAME), email = clean_(d.email, RV_MAX_EMAIL).toLowerCase(), msg = clean_(d.message, RV_MAX_MSG);
+  if (name.length < 2) bad_('Please enter your name.');
+  if (RV_RESERVED_NAME.test(name)) bad_('Please use your own name.');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) bad_('Please enter a valid email address.');
+  if (msg.length < 3) bad_('Please write a few words.');
+  var rating = '';
+  if (type === 'review') { var n = parseInt(d.rating, 10); if (!(n >= 1 && n <= 5)) bad_('Please give a star rating.'); rating = String(n); }
+  var parent = '';
+  if (type === 'reply') {
+    parent = clean_(d.parent, 40);
+    var par = readReviews_().filter(function (r) { return r.id === parent && r.app === app && !r.parent && !rvIsHidden_(r.visible); });
+    if (!par.length) bad_('The comment you are replying to was not found.');
+  }
+  var cache = CacheService.getScriptCache();
+  var rk = 'rl_' + email, used = parseInt(cache.get(rk) || '0', 10);
+  if (used >= RV_RATE_PER_HOUR) bad_('You are posting too fast. Please try again a bit later.');
+  var dk = 'dup_' + Utilities.base64EncodeWebSafe(Utilities.computeDigest(Utilities.DigestAlgorithm.MD5, email + '|' + app + '|' + msg));
+  if (cache.get(dk)) bad_('You already sent this message.');
+
+  var lock = LockService.getScriptLock(); lock.waitLock(10000);
+  var row, sh;
+  try {
+    sh = reviewsSheet_(true);
+    var id = 'r' + Date.now().toString(36) + Math.floor(Math.random() * 1296).toString(36);
+    row = [id, new Date().toISOString(), app, parent, type, name, email, rating, msg, RV_AUTO_APPROVE ? 'yes' : 'pending', '', ''];
+    var rg = sh.getRange(sh.getLastRow() + 1, 1, 1, RV_HEAD.length);
+    rg.setNumberFormat('@'); rg.setValues([row]);
+  } finally { lock.releaseLock(); }
+  cache.put(rk, String(used + 1), 3600); cache.put(dk, '1', 600);
+  cache.put('rv_ver', String(Date.now()), 21600); cache.remove(CACHE_KEY);
+  if (RV_NOTIFY_EMAIL) { try { MailApp.sendEmail(RV_NOTIFY_EMAIL, 'New ' + type + ' on ' + apps[0].name, name + ' <' + email + '>\n\n' + msg); } catch (err) {} }
+  var rec = { id: row[0], created: row[1], type: type, name: name, message: msg, rating: rating };
+  return { ok: true, pending: !RV_AUTO_APPROVE, item: type === 'reply' ? { id: rec.id, created: rec.created, name: name, message: msg } : rvPublic_(rec, []) };
 }
 
 var HEAD_ = ["slug", "title", "title_bn", "category", "category_bn", "type", "status", "letters", "color", "summary", "summary_bn", "role", "role_bn", "tech", "problem", "problem_bn", "solution", "solution_bn", "features", "features_bn", "result", "result_bn", "image", "case_url", "live_url", "play_url", "repo", "order", "visible"];
@@ -176,14 +335,34 @@ var SEED_ = [
   "status": "live",
   "letters": "TS",
   "color": "#7c3aed",
-  "summary": "Flutter text utility app with AES-256 encryption and an unobtrusive free tier.",
+  "summary": "A Flutter toolbox of 15 text tools — six free and fully offline, nine unlocked with a short ad — built on a reusable ads module that keeps the free tier calm.",
   "role": "Full build, ongoing development",
-  "tech": "Flutter, Hive, AES-256",
-  "problem": "Everyday text tasks — case conversion, quick encryption, format cleanup — were scattered across multiple single-purpose apps, most of them ad-heavy in ways that interrupted the actual task.",
-  "solution": "Text Studio bundles common text utilities into one Flutter app with local Hive storage for saved snippets and AES-256 encryption for anything sensitive, paired with a reusable ads module engineered so the free tier stays fast and unobtrusive rather than interruption-driven.",
-  "features": "Case conversion, formatting, and text-cleanup tools in one place\nAES-256 local encryption for sensitive notes and snippets\nOffline-first storage using Hive, so nothing depends on a network connection\nReusable, non-intrusive ads module designed around free-tier retention",
-  "result": "The app is live with a smooth free-tier experience and continues to receive ongoing feature development ahead of its next production release milestone.",
+  "tech": "Flutter, Hive, AES-256, Google AdMob, go_router, Provider",
+  "problem": "Small text jobs come up all day: counting words before a submission, fixing the case of a pasted paragraph, stripping duplicate lines, making a QR code, translating a sentence, locking a note. Each one usually sends people to a different single-purpose app, and the free ones tend to put an ad in the middle of the task. We wanted one app where simple jobs need no connection, and where ads pay for the app without making people leave.",
+  "solution": "Text Studio puts every tool one tap from a single home screen. Six core tools are free, work offline and open instantly with no ad gate. The other nine open after a short ad, and the app tells people up front which is which — a video icon on the tile, and a clear greyed-out state when there is no internet. A reusable ads module handles consent, ad formats and reloads, so the app itself stays simple.",
+  "features": "15 text tools in one app, from Case Converter and Word Counter to Diff Checker, Text to QR/Bar and Text Translate\nSix core tools are free, offline and open instantly; nine are unlocked with a short ad\nAES-256 text encryption that runs on the device\nHive-based local storage, so saved data never depends on a network\nFeatured carousel and a colour-coded 3-column tool grid with light and dark themes\nTools that need internet grey out with a clear “No internet” label instead of failing after a tap\nReusable ads module: UMP/GDPR consent, rewarded, rewarded-interstitial and interstitial formats, ad flags from a hosted JSON\nBack button asks before closing the app on Android",
+  "result": "Text Studio is live with fifteen tools and keeps growing: a new tool is one model entry plus one route, and it inherits the offline and ad behaviour automatically. The ads module built here now also powers the PRO tiles in DailyShield, so the work was reused instead of rebuilt.",
+  "case_url": "projects/text-studio.html",
   "order": "7",
+  "visible": "yes"
+ },
+ {
+  "slug": "dailyshield",
+  "title": "DailyShield",
+  "category": "Safety & Daily Routine · Mobile",
+  "type": "Mobile",
+  "status": "development",
+  "letters": "DS",
+  "color": "#1b3d6d",
+  "summary": "A Flutter app that gathers daily protection habits into one place: ten tools, five of which count toward a Shield Score that resets every midnight.",
+  "role": "Product design & full build",
+  "tech": "Flutter, Hive, Google ML Kit, Google AdMob, go_router, Provider",
+  "problem": "Looking after yourself and your things is a lot of small, repeating jobs: save the receipt before it fades, change the password that is due, write down what you need to remember, drink water, take the medicine, pray on time, keep the phone quiet where it matters, and know who to call when something goes wrong. People spread these over many apps, and nothing tells them at the end of the day whether they actually covered the basics.",
+  "solution": "DailyShield brings these jobs into one app built around a single idea, the Shield Score. Five daily tasks — scan a receipt, review passwords, write a note, reach your water goal, pray — fill a ring pinned to the top of the home screen, and it resets every midnight. Five more tools sit beside them without affecting the score: Auto Silent, Permission Audit, Medicine Reminder, Emergency Contacts and Shield Guard.",
+  "features": "Shield Score: an animated ring that fills as the five daily tasks are completed, resetting every midnight\nScore card pinned above the scrolling module grid, with one small icon per daily task\nTap-through bottom sheet that explains how to earn the score in plain language\nReceipt Scanner: photo crop and compress, on-device text recognition, saved to local storage\nPassword Expiry Tracker, Daily Notebook, Water, Medicine and Prayer reminders\nEmergency Contacts hub with emergency numbers for 190+ countries bundled in the app\nShield Guard: link scan, secure vault, fake call and intruder alert\nFree PRO tools opened by a rewarded ad, with an adaptive banner kept clear of tappable content",
+  "result": "The core loop is in place: ten modules, a score that stays accurate when modules are switched on or off, offline-capable tools, and an ad setup designed around Play Store policy. DailyShield is in active development, with new modules added through the same module model without touching the home screen layout.",
+  "case_url": "projects/dailyshield.html",
+  "order": "8",
   "visible": "yes"
  }
 ];

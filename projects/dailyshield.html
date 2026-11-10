@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6887183666314442" crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SFRV7S739"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3SFRV7S739');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>DailyShield Case Study — Daily Safety &amp; Routine App in Flutter | PSBM Labs</title>
+<meta name="description" content="How PSBM Labs built DailyShield, a Flutter app that turns daily safety habits into a Shield Score: design decisions, offline-first modules, ads policy and tech stack.">
+
+<meta name="keywords" content="daily safety app Flutter, Shield Score, PSBM Labs case study, DailyShield app, Flutter offline-first app">
+<meta name="author" content="PSBM Labs">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://psbmlabs.github.io/projects/dailyshield.html">
+<meta name="theme-color" content="#07142b">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="DailyShield Case Study — PSBM Labs">
+<meta property="og:description" content="How PSBM Labs built DailyShield, a Flutter app that turns daily safety habits into a Shield Score: design decisions, offline-first modules, ads policy and tech stack.">
+<meta property="og:image" content="https://psbmlabs.github.io/assets/og-banner.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://psbmlabs.github.io/projects/dailyshield.html">
+<meta property="og:site_name" content="PSBM Labs">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DailyShield Case Study — PSBM Labs">
+<meta name="twitter:description" content="How PSBM Labs built DailyShield, a Flutter app that turns daily safety habits into a Shield Score: design decisions, offline-first modules, ads policy and tech stack.">
+<meta name="twitter:image" content="https://psbmlabs.github.io/assets/og-banner.jpg">
+<meta name="google-adsense-account" content="ca-pub-6887183666314442">
+
+<link rel="icon" type="image/png" href="../assets/logo2.png">
+<link rel="apple-touch-icon" href="../assets/logo2.png">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://code.jquery.com">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/premium.css">
+<style>
+  .article-body{ max-width:72ch; margin:0 auto; }
+  .article-body h2{ font-size:1.4rem; margin:2.2rem 0 1rem; font-weight:700; }
+  .article-body p{ color:var(--text-dim); margin-bottom:1.1rem; }
+  .article-body ul{ color:var(--text-dim); margin-bottom:1.1rem; padding-left:1.4rem; }
+  .article-body li{ margin-bottom:.5rem; }
+  .article-meta{ font-family:'JetBrains Mono',monospace; font-size:.78rem; color:var(--text-faint); margin-bottom:1.6rem; }
+  .spec-row{ display:flex; justify-content:space-between; gap:16px; padding:.6rem 0; border-bottom:1px dashed var(--line); font-size:.9rem; }
+  .spec-row:last-child{ border-bottom:none; }
+  .spec-row .k{ color:var(--text-faint); }
+  .spec-row .v{ color:var(--text); text-align:right; }
+  .spec-card{ border:1px solid var(--line); border-radius:var(--radius); padding:1.2rem 1.4rem; margin-bottom:2rem; background:rgba(255,255,255,.02); }
+
+  .cs-stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:.8rem; margin:0 0 2.2rem; }
+  .cs-stats div{ border:1px solid var(--line); border-radius:var(--radius); padding:.95rem 1rem; text-align:center; background:#fff; }
+  .cs-stats b{ display:block; font:800 1.6rem/1.1 'Sora',sans-serif; color:var(--text); }
+  .cs-stats span{ display:block; margin-top:.3rem; font-size:.76rem; color:var(--text-faint); }
+  .cs-two{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.2rem; }
+  @media(max-width:640px){ .cs-two{ grid-template-columns:1fr; } }
+  .cs-box{ border:1px solid var(--line); border-radius:var(--radius); padding:1rem 1.2rem; background:#fff; }
+  .cs-box h3{ font-size:.95rem; margin:0 0 .6rem; font-weight:800; }
+  .cs-box ul{ margin:0; padding-left:1.1rem; } .cs-box li{ margin-bottom:.3rem; }
+  .cs-table{ width:100%; border-collapse:collapse; font-size:.9rem; margin-bottom:1.2rem; }
+  .cs-table th,.cs-table td{ padding:.6rem .5rem; border-bottom:1px dashed var(--line); text-align:left; vertical-align:top; }
+  .cs-table th{ color:var(--text-faint); font-weight:600; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+  .cs-pill{ display:inline-block; font-size:.68rem; font-weight:700; padding:.12rem .55rem; border-radius:99px; white-space:nowrap; }
+  .cs-pill.score{ background:#e6faf6; color:#0b5d52; } .cs-pill.tool{ background:#eef2f7; color:#4d5d78; } .cs-pill.pro{ background:#fff4e0; color:#7a5200; }
+  .cs-note{ border-left:3px solid #5b5bf0; padding:.15rem 0 .15rem 1rem; color:var(--text-dim); margin:1.3rem 0; }
+  .cs-links{ display:flex; flex-wrap:wrap; gap:.6rem; margin:1.4rem 0 0; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://psbmlabs.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://psbmlabs.github.io/projects.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "DailyShield case study",
+      "item": "https://psbmlabs.github.io/projects/dailyshield.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<div class="topbar"><a href="https://play.google.com/store/apps/dev?id=5400973174111764815" target="_blank" rel="noopener">▶ Get PSBM Labs apps on Google Play</a><a href="../packages.html">⚙ Open-source Flutter packages</a></div>
+<nav class="navbar navbar-expand-lg navbar-spl sticky-top" id="mainNav">
+  <div class="container-xl">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+      <img src="../assets/logo2.png" alt="PSBM Labs logo" class="brand-mark">
+      <span class="brand-name">
+        <span class="full">PSBM Labs</span>
+        <small>SOFTWARE STUDIO</small>
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto my-3 my-lg-0 gap-lg-2" id="navLinks">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="../apps.html">Apps</a></li>
+        <li class="nav-item"><a class="nav-link" href="../insights.html">Insights</a></li>
+        <li class="nav-item"><a class="nav-link" href="../packages.html">Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="../about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="../founders.html">Founders</a></li>
+        <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+        <li class="nav-item"><button type="button" class="lang-btn" id="langBtn" aria-label="Language">বাংলা</button></li>
+      </ul>
+      <a href="../contact.html" class="btn btn-spl-primary d-inline-flex align-self-start align-self-lg-auto">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ PAGE HEADER ============ -->
+<div class="page-header">
+  <div class="container-xl">
+    <div class="crumbs reveal"><a href="../index.html">Home</a><span>/</span><a href="../projects.html">Projects</a><span>/</span><span>DailyShield</span></div>
+    <div class="eyebrow reveal"><span class="dot"></span> SAFETY &amp; DAILY ROUTINE · MOBILE</div>
+    <h1 class="reveal">DailyShield <span class="grad">case study</span>.</h1>
+    <p class="lead-spl reveal">Ten tools for everyday protection, tied together by one idea: a Shield Score that fills as you look after the basics each day.</p>
+  </div>
+</div>
+
+<!-- ============ ARTICLE ============ -->
+<section style="border-top:none; padding-top:2.6rem;">
+  <div class="container-xl">
+    <div class="article-body reveal">
+      <p class="article-meta">PSBM Labs · In development · Role: Product design &amp; full build</p>
+      <div class="spec-card">
+        <div class="spec-row"><span class="k">Category</span><span class="v">Safety &amp; Daily Routine · Mobile</span></div>
+        <div class="spec-row"><span class="k">Platform</span><span class="v">Android · Flutter</span></div>
+        <div class="spec-row"><span class="k">Tech stack</span><span class="v">Flutter, Hive, Google ML Kit, Google AdMob, go_router, Provider</span></div>
+        <div class="spec-row"><span class="k">Status</span><span class="v">In development</span></div>
+        <div class="spec-row"><span class="k">Our role</span><span class="v">Product design &amp; full build</span></div>
+      </div>
+      <div class="cs-stats"><div><b>10</b><span>modules</span></div><div><b>5</b><span>daily tasks in the score</span></div><div><b>6</b><span>open without an internet check</span></div><div><b>00:00</b><span>score resets daily</span></div></div>
+
+      <h2>The problem</h2>
+      <p>Looking after yourself and your things is a lot of small, repeating jobs: save the receipt before it fades, change the password that is due, write down what you need to remember, drink water, take the medicine, pray on time, keep the phone quiet where it matters, and know who to call when something goes wrong.</p><p>People spread these jobs over many apps, and nothing tells them at the end of the day whether they actually covered the basics.</p>
+
+      <h2>The solution</h2>
+      <p>DailyShield brings these jobs into one app built around a single idea: the <strong>Shield Score</strong>. Five daily tasks fill a ring pinned to the top of the home screen, and it resets every midnight. Five more tools sit beside them and do not affect the score, so someone who only needs Emergency Contacts is never nagged about water.</p>
+
+      <h2>The ten modules</h2>
+      <div style="overflow-x:auto"><table class="cs-table"><tr><th>Module</th><th>Role</th><th>What it does</th></tr><tr><td><strong>Receipt Scanner</strong></td><td><span class="cs-pill score">Counts toward score</span></td><td>Scan and save one receipt. Crop and compress the photo, read it with on-device text recognition (Google ML Kit), and save the expense locally.</td></tr><tr><td><strong>Password Expiry Tracker</strong></td><td><span class="cs-pill score">Counts toward score</span> <span class="cs-pill pro">PRO</span></td><td>Mark a password as changed, or confirm that you reviewed your passwords today.</td></tr><tr><td><strong>Daily Notebook</strong></td><td><span class="cs-pill score">Counts toward score</span></td><td>Write and save a note or checklist. Stored on the phone.</td></tr><tr><td><strong>Water Reminder</strong></td><td><span class="cs-pill score">Counts toward score</span></td><td>Gentle nudges through the day; counts when you reach your water goal.</td></tr><tr><td><strong>Prayer Reminder</strong></td><td><span class="cs-pill score">Counts toward score</span></td><td>Counts when you complete at least 3 prayers (5 if your religion is Islam).</td></tr><tr><td><strong>Auto Silent</strong></td><td><span class="cs-pill tool">Always available</span> <span class="cs-pill pro">PRO</span></td><td>Keeps the phone quiet where it should be.</td></tr><tr><td><strong>Permission Audit</strong></td><td><span class="cs-pill tool">Always available</span> <span class="cs-pill pro">PRO</span></td><td>A privacy check of what your apps are allowed to access.</td></tr><tr><td><strong>Medicine Reminder</strong></td><td><span class="cs-pill tool">Always available</span></td><td>Reminders for medicines. Not counted in the score.</td></tr><tr><td><strong>Emergency Contacts</strong></td><td><span class="cs-pill tool">Always available</span></td><td>Quick call, SMS and location share, plus an offline hub with emergency numbers for 190+ countries and automatic country detection.</td></tr><tr><td><strong>Shield Guard</strong></td><td><span class="cs-pill tool">Always available</span> <span class="cs-pill pro">PRO</span></td><td>Link scan, secure vault, fake call and intruder alert.</td></tr></table></div>
+
+      <h2>Designing the Shield Score</h2>
+      <ul>
+        <li><strong>Always visible.</strong> The score card is pinned above the scrolling module grid, so progress never scrolls away. A row of small icons shows each daily task and fills with that module’s colour when it is done.</li>
+        <li><strong>Calculated, not hard-coded.</strong> The score is completed tasks divided by live daily tasks. Switch a module on or off and the percentage stays correct with no extra code.</li>
+        <li><strong>A ring that moves.</strong> The ring is custom-painted with a gradient sweep and animates to its new value, so finishing a task feels like progress.</li>
+        <li><strong>Plain-language labels.</strong> Not started, Warming up, Almost there, Fully shielded. People read a word faster than a number.</li>
+        <li><strong>Explains itself.</strong> Tapping the card opens a sheet listing every daily task, what counts as done, and a Start button that opens that module directly.</li>
+        <li><strong>Stays fresh.</strong> Progress reloads when the app resumes and when you come back from a module. Pull to refresh uses a branded indicator.</li>
+      </ul>
+
+      <h2>Designing the module grid</h2>
+      <ul>
+        <li><strong>Gradient-bordered cards.</strong> Each module has its own colour pair, a gloss highlight and a tick badge when its daily task is done. A smooth colour wash replaced radial blobs that looked smudgy on some screens.</li>
+        <li><strong>Calm entrance.</strong> Cards fade and rise in a short stagger, so the screen feels alive without slowing anyone down.</li>
+        <li><strong>One module model.</strong> Every card comes from a single model (title, subtitle, icon, gradient, needs-network, live, daily-task, shows-ad, on-tap). The home screen only renders the list, so adding a module does not touch the layout.</li>
+        <li><strong>Remote-ready availability.</strong> A single flags map decides which modules are live. It is the hook for switching a module on or off from a server later.</li>
+      </ul>
+
+      <h2>Local-first and offline-capable</h2>
+      <p>Personal data stays on the device: receipts, password dates, notes and emergency settings are stored in local Hive boxes. Six of the ten modules open without any internet check, and the four that need a connection go through a shared module guard that responds clearly when offline instead of failing silently.</p><p>The Emergency Contacts hub is a good example: emergency numbers for more than 190 countries ship inside the app as a JSON asset, and the country is detected automatically, so the numbers are there even with no signal.</p>
+
+      <h2>Ads, designed around Play policy</h2>
+      <ul>
+        <li><strong>Banner kept apart.</strong> The adaptive banner sits in a fixed slot at the bottom, outside the scrolling content, separated by a gap and a hairline divider, so it never overlaps or hides tappable controls.</li>
+        <li><strong>PRO means free, with an ad.</strong> Four tools open after a rewarded ad. A legend at the top of the grid says so: “PRO tools are free. Watch a short ad to open them.”</li>
+        <li><strong>No dead taps.</strong> While an ad is still loading, the PRO tile is disabled and shows a short countdown label, so a tap never leads to nothing.</li>
+        <li><strong>Reused module.</strong> The consent, guarded navigation and ad-readiness logic come from the same module that runs <a href="text-studio.html">Text Studio</a>.</li>
+      </ul>
+
+      <h2>Engineering notes</h2>
+      <ul>
+        <li><strong>Receipt pipeline.</strong> Pick the photo, crop it, compress it, run ML Kit text recognition, pull out the merchant and amount, and save to local storage.</li>
+        <li><strong>One daily tracker.</strong> A small service answers “which tasks are done today?” for all modules in a single call, so the score does not cause a read per card.</li>
+        <li><strong>Fast start.</strong> Push-notification setup is deferred until after the first frame, so it never delays the home screen.</li>
+        <li><strong>Stack.</strong> Flutter, Provider for connectivity state, go_router named routes, flutter_screenutil for consistent sizing, Hive for storage.</li>
+      </ul>
+
+      <h2>What we took from it</h2>
+      <ul>
+        <li>A single score gives a busy person one reason to open the app each day, without forcing them through every tool.</li>
+        <li>Derive numbers from live data. It removed a whole class of “score says 50% but shows 5 of 5” bugs.</li>
+        <li>Make the ad deal visible and the ad slot predictable. It is better for people and safer for store policy.</li>
+      </ul>
+
+      <h2>The result</h2>
+      <p>The core loop is in place: ten modules, a score that stays accurate when modules are switched on or off, offline-capable tools, and an ad setup designed around Play Store policy. DailyShield is in active development, with new modules added through the same module model without touching the home screen layout.</p>
+      <div class="cs-links">
+        <a class="btn btn-spl-primary" href="../apps.html">See it on the Apps page</a>
+        <a class="btn btn-spl-ghost" href="text-studio.html">Read the Text Studio case study →</a>
+      </div>
+
+      <div class="cta-banner reveal" style="margin-top:2.4rem;">
+        <h3>Building something similar?</h3>
+        <p>Tell us about your project — we'll reply with next steps within one business day.</p>
+        <a href="../contact.html" class="btn btn-spl-primary">Start a conversation</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-spl">
+  <div class="container-xl">
+    <div class="footer-cols">
+      <div class="footer-col" style="flex:2; min-width:220px;">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <img loading="lazy" decoding="async" src="../assets/logo2.png" alt="PSBM Labs" style="width:34px;height:34px;border-radius:9px;">
+          <strong style="font-family:'Sora',sans-serif;">PSBM Labs</strong>
+        </div>
+        <p style="color:var(--text-faint); font-size:.86rem; max-width:36ch;">Independent software and app development studio based in Barisal, Bangladesh — building products end to end, from first commit to release day.</p>
+        <p style="color:var(--text-faint); font-size:.8rem; max-width:36ch;">PSBM Labs (also written PSBMLabs) is a software company founded by Prothes Barai and Shreyasi Madhu Shampa.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <a href="../services.html">Services</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../apps.html">Download Apps</a>
+        <a href="../insights.html">Insights &amp; Guides</a>
+        <a href="../packages.html">Flutter Package</a>
+        <a href="../founders.html">Founders &amp; Our Story</a>
+        <a href="../about.html">About &amp; founders</a>
+        
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="https://play.google.com/store/apps/dev?id=5400973174111764815" target="_blank" rel="noopener">Play Store ↗</a>
+        <a href="tel:+8801870988995">+880 1870-988995</a>
+        <a href="mailto:engr.prothes@gmail.com">engr.prothes@gmail.com</a>
+        <a href="mailto:engr.shreyasimadhushampa@gmail.com">engr.shreyasimadhushampa@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+      <span>© <span id="year"></span> PSBM Labs · Prothes Barai & Shreyasi Madhu, Founders</span>
+      <span>Barisal, Bangladesh</span>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../js/script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "DailyShield",
+  "description": "A Flutter app that gathers daily protection habits into one place: ten tools, five of which count toward a Shield Score that resets every midnight.",
+  "creator": {
+    "@type": "Organization",
+    "name": "PSBM Labs"
+  },
+  "url": "https://psbmlabs.github.io/projects/dailyshield.html",
+  "keywords": "daily safety app Flutter, Shield Score, PSBM Labs case study, DailyShield app, Flutter offline-first app"
+}
+</script>
+
+<script src="../js/i18n.js" defer></script>
+<script src="../js/sheet.js" defer></script>
+<script src="../js/fx.js" defer></script>
+</body>
+</html>

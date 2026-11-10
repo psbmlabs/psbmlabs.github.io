@@ -24,7 +24,8 @@
 - [Krishi Bazar](https://psbmlabs.github.io/projects/krishi-bazar.html): Flutter marketplace connecting farmers directly with buyers, with price alerts and in-app messaging.
 - [Notun Khata](https://psbmlabs.github.io/projects/notun-khata.html): Bangla digital ledger for shop owners with automatic SMS reminders on overdue dues.
 - [Setu POS](https://psbmlabs.github.io/projects/setu-pos.html): Offline-first point-of-sale and inventory app for small retail shops, syncing to Firebase.
-- [Text Studio](https://psbmlabs.github.io/projects/text-studio.html): Flutter text utility app with AES-256 encryption and an unobtrusive free tier.
+- [DailyShield](https://psbmlabs.github.io/projects/dailyshield.html): A Flutter app that gathers daily protection habits into one place: ten tools, five of which count toward a Shield Score that resets every midnight.
+- [Text Studio](https://psbmlabs.github.io/projects/text-studio.html): A Flutter toolbox of 15 text tools — six free and fully offline, nine unlocked with a short ad — built on a reusable ads module that keeps the free tier calm.
 
 ## Guides and articles
 
