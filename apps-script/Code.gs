@@ -217,7 +217,7 @@ function submitReview_(d) {
   return { ok: true, pending: !RV_AUTO_APPROVE, item: type === 'reply' ? { id: rec.id, created: rec.created, name: name, message: msg } : rvPublic_(rec, []) };
 }
 
-var HEAD_ = ["slug", "title", "title_bn", "category", "category_bn", "type", "status", "letters", "color", "logo_path", "summary", "summary_bn", "role", "role_bn", "tech", "problem", "problem_bn", "solution", "solution_bn", "features", "features_bn", "result", "result_bn", "image", "case_url", "live_url", "play_url", "repo", "order", "visible"];
+var HEAD_ = ["slug", "title", "title_bn", "category", "category_bn", "type", "status", "letters", "color", "logo_path", "badge", "summary", "summary_bn", "role", "role_bn", "tech", "problem", "problem_bn", "solution", "solution_bn", "features", "features_bn", "result", "result_bn", "image", "case_url", "live_url", "play_url", "repo", "order", "visible"];
 var SEED_ = [
  {
   "slug": "barisal-health-connect",

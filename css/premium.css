@@ -216,3 +216,18 @@ html.pl-lock{overflow:auto}
 .pgn button:disabled{opacity:.4;cursor:not-allowed}.pgn span{border:0;background:none;min-width:auto}
 .pgn-info{width:100%;text-align:center;font-size:.8rem;color:var(--text-faint);margin-top:.3rem}
 #pkGrid,#appGrid,#prGrid{scroll-margin-top:110px}
+
+/* ---- ownership badges (Projects: badge = official | client | personal) ---- */
+.pb-row{margin:.9rem 0 0}.pb-row+p{margin-top:.7rem}
+.pbadge,.chips span.pbadge{display:inline-flex;align-items:center;gap:.42rem;padding:.34rem .8rem .34rem .6rem;border:0;border-radius:999px;font:800 .66rem/1 Inter,system-ui,sans-serif;letter-spacing:.11em;text-transform:uppercase;position:relative;overflow:hidden;white-space:nowrap;vertical-align:middle}
+.pbadge svg{width:15px;height:15px;flex:none;filter:drop-shadow(0 1px 0 rgba(0,0,0,.18))}
+.pbadge::after{content:"";position:absolute;top:0;bottom:0;width:45%;left:-60%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-18deg);pointer-events:none}
+@media(prefers-reduced-motion:no-preference){.pbadge::after{animation:pbshine 4.2s ease-in-out infinite}}
+@keyframes pbshine{0%,55%{left:-60%}100%{left:130%}}
+.pbadge.pb-official,.chips span.pbadge.pb-official{color:#4a2c00;background:linear-gradient(135deg,#fff6cf 0%,#f9d25b 38%,#e5a812 72%,#b87a05 100%);box-shadow:0 0 0 1px rgba(150,98,0,.45),0 8px 18px -8px rgba(229,168,18,.85),inset 0 1px 0 rgba(255,255,255,.85),inset 0 -1px 0 rgba(120,76,0,.25);text-shadow:0 1px 0 rgba(255,255,255,.45)}
+.pbadge.pb-client,.chips span.pbadge.pb-client{color:#fff;background:linear-gradient(135deg,#8b7cff 0%,#5b4be8 45%,#3a2fb3 100%);box-shadow:0 0 0 1px rgba(58,47,179,.6),0 8px 18px -8px rgba(91,75,232,.85),inset 0 1px 0 rgba(255,255,255,.4),inset 0 -1px 0 rgba(20,12,100,.35)}
+.pbadge.pb-personal,.chips span.pbadge.pb-personal{color:#fff;background:linear-gradient(135deg,#34e0c4 0%,#0fa58f 48%,#0a6a66 100%);box-shadow:0 0 0 1px rgba(10,106,102,.55),0 8px 18px -8px rgba(15,165,143,.85),inset 0 1px 0 rgba(255,255,255,.4),inset 0 -1px 0 rgba(0,60,56,.35)}
+.app-card.is-official{border-color:#efd07a;background:linear-gradient(180deg,#fffdf5 0,#fff 140px)}
+.app-card.is-official:hover{box-shadow:0 22px 44px -18px rgba(229,168,18,.5)}
+.app-card.is-client:hover{box-shadow:0 22px 44px -18px rgba(91,75,232,.4)}
+.app-card.is-personal:hover{box-shadow:0 22px 44px -18px rgba(15,165,143,.4)}
