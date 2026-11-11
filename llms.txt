@@ -44,6 +44,14 @@
 - [Web Application Development Cost in Bangladesh (2026)](https://psbmlabs.github.io/blog/web-application-development-cost-bangladesh.html): What a custom web application actually costs to build in Bangladesh — pricing by project type, the factors that move the number, and how to budget realistically.
 - [WordPress vs Custom Software: Which One Do You Need?](https://psbmlabs.github.io/blog/wordpress-vs-custom-software.html): A practical comparison of WordPress and custom-built software — when each one is the right call, and the signs you've outgrown a template.
 
+## Apps
+
+- [Setu POS](https://psbmlabs.github.io/apps/setu-pos.html): Point-of-sale and inventory for small shops — offline billing with stock sync back to the dashboard.
+- [Krishi Bazar](https://psbmlabs.github.io/apps/krishi-bazar.html): Connects farmers directly with local buyers, with price alerts, in-app messaging and order tracking.
+- [Notun Khata](https://psbmlabs.github.io/apps/notun-khata.html): Bangla digital ledger for shop owners to track credit, dues and cash flow, with SMS reminders.
+- [Text Studio](https://psbmlabs.github.io/apps/text-studio.html): Case conversion, text tools and AES-256 encryption in one fast, clean utility app.
+- [DailyShield](https://psbmlabs.github.io/apps/daily-shield.html): Scan receipts, track expenses, audit app permissions, auto-silent by location and get reminders — offline-first, no account needed.
+
 ## Packages
 
 - [unified_analytics_kit](https://psbmlabs.github.io/packages/unified-analytics-kit.html): One API that sends events to Firebase, Facebook and your own backend.
