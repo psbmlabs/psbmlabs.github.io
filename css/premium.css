@@ -45,6 +45,7 @@ input,textarea,select,.form-control{background:#fff!important;color:var(--text)!
 .app-hero p,.p-hero p{color:#c3cee3}
 .app-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);height:100%;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
 .app-icon{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;color:#fff;font:800 1.4rem Sora,sans-serif;margin-bottom:1rem}
+.app-icon.has-logo{background:transparent!important;overflow:hidden;font-size:0}.app-icon.has-logo img{width:100%;height:100%;object-fit:contain;display:block;border-radius:inherit}
 .app-card h3{font-size:1.15rem;font-weight:700;margin-bottom:.15rem}
 .app-card .cat{font-size:.78rem;color:var(--text-faint);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
 .app-card p{color:var(--text-dim);font-size:.92rem;flex:1;margin:.8rem 0 1rem}
