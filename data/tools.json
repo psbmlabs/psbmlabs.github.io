@@ -1,0 +1,119 @@
+[
+ {
+  "slug": "jina-reader",
+  "name": "Jina Reader",
+  "emoji": "📖",
+  "color": "#2FE0C4",
+  "category": "AI Helper",
+  "official": "https://jina.ai/reader",
+  "title": "Jina Reader: Convert Any Webpage to Clean Text for ChatGPT & Claude (Free)",
+  "title_bn": "জিনা রিডার: যেকোনো ওয়েবপেজ থেকে পরিষ্কার টেক্সট বের করুন (ফ্রি গাইড)",
+  "tagline": "Put r.jina.ai/ before any link and get the page as clean Markdown, with no ads, menus or scripts.",
+  "tagline_bn": "যেকোনো লিংকের আগে r.jina.ai/ বসান, বিজ্ঞাপন ও মেনু ছাড়া শুধু আসল লেখাটা পান।",
+  "keywords": [
+   "webpage to text",
+   "website to markdown",
+   "give link to chatgpt",
+   "extract text from website",
+   "jina reader",
+   "r.jina.ai",
+   "s.jina.ai",
+   "ওয়েবসাইট থেকে টেক্সট",
+   "লিংক থেকে লেখা বের করা",
+   "website theke text",
+   "chatgpt link reading",
+   "copy article without ads"
+  ],
+  "what_en": "Jina Reader is a free web service by Jina AI. It visits a page for you, removes the clutter and returns only the main content as plain Markdown, which AI tools such as ChatGPT and Claude read much more easily than raw HTML.",
+  "what_bn": "জিনা রিডার Jina AI-এর একটা ফ্রি ওয়েব সার্ভিস। আপনার হয়ে সে পেজটা ভিজিট করে, বাড়তি জিনিস ফেলে দিয়ে শুধু মূল লেখাটা Markdown-এ ফেরত দেয়। ChatGPT বা Claude-এর মতো AI এই ফরম্যাট সহজে বোঝে।",
+  "steps": [
+   [
+    "Copy the link",
+    "লিংক কপি করুন",
+    "Open the article or page you want to read and copy its full address (URL).",
+    "যে আর্টিকেল বা পেজের লেখা চান সেটা খুলে পুরো ঠিকানা (URL) কপি করুন।"
+   ],
+   [
+    "Add the prefix",
+    "আগে প্রিফিক্স বসান",
+    "Type https://r.jina.ai/ in front of the link. Nothing to install and no sign-up for normal use.",
+    "লিংকের ঠিক আগে https://r.jina.ai/ লিখুন। কিছু ইনস্টল করতে হয় না, সাধারণ ব্যবহারে সাইন-আপও লাগে না।"
+   ],
+   [
+    "Open or paste",
+    "খুলুন বা পেস্ট করুন",
+    "Open the new link in your browser to see clean text, or paste it to an AI assistant that can read links.",
+    "নতুন লিংকটা ব্রাউজারে খুললে পরিষ্কার লেখা দেখবেন, অথবা লিংক পড়তে পারে এমন AI-তে পেস্ট করুন।"
+   ],
+   [
+    "Search mode (optional)",
+    "সার্চ মোড (ঐচ্ছিক)",
+    "Use https://s.jina.ai/your question to search the web and get the top results' content together. This endpoint may ask for a free API key from jina.ai.",
+    "https://s.jina.ai/আপনার প্রশ্ন দিয়ে ওয়েবে সার্চ করে প্রথম রেজাল্টগুলোর লেখা একসাথে পেতে পারেন। এই অংশে jina.ai থেকে ফ্রি API key লাগতে পারে।"
+   ]
+  ],
+  "examples": [
+   [
+    "Read a page",
+    "https://r.jina.ai/https://example.com",
+    "একটা পেজ পড়ুন"
+   ],
+   [
+    "Read a Wikipedia article",
+    "https://r.jina.ai/https://en.wikipedia.org/wiki/Bangladesh",
+    "উইকিপিডিয়ার আর্টিকেল পড়ুন"
+   ],
+   [
+    "Search the web",
+    "https://s.jina.ai/best way to learn flutter",
+    "ওয়েবে সার্চ করুন"
+   ]
+  ],
+  "uses": [
+   [
+    "Students",
+    "স্টুডেন্ট",
+    "Turn long articles into text you can paste into an AI and ask for a summary or quiz.",
+    "লম্বা আর্টিকেল টেক্সট করে AI-তে দিয়ে সারাংশ বা প্রশ্ন বানিয়ে নিন।"
+   ],
+   [
+    "Content writers",
+    "কনটেন্ট রাইটার",
+    "Collect reference material from many pages without ads and popups.",
+    "বিজ্ঞাপন ও পপআপ ছাড়া অনেক পেজ থেকে রেফারেন্স জোগাড় করুন।"
+   ],
+   [
+    "Developers",
+    "ডেভেলপার",
+    "Feed web content into your own AI app or RAG pipeline with one HTTP call.",
+    "একটা HTTP কল দিয়ে নিজের AI অ্যাপে ওয়েব কনটেন্ট ঢোকান।"
+   ],
+   [
+    "Marketers",
+    "মার্কেটার",
+    "Read competitor pages as plain text and compare headings and wording quickly.",
+    "প্রতিযোগীর পেজ প্লেন টেক্সটে পড়ে হেডিং ও ভাষা দ্রুত তুলনা করুন।"
+   ]
+  ],
+  "faq": [
+   [
+    "Is Jina Reader free?",
+    "জিনা রিডার কি ফ্রি?",
+    "Basic use of the reader works without an account, with rate limits. Higher limits and the search endpoint can need a free key. Check jina.ai for current limits.",
+    "সাধারণ ব্যবহার অ্যাকাউন্ট ছাড়াই চলে, তবে রেট লিমিট আছে। বেশি লিমিট ও সার্চের জন্য ফ্রি key লাগতে পারে। বর্তমান নিয়ম jina.ai-তে দেখুন।"
+   ],
+   [
+    "Does it work on Bangla pages?",
+    "বাংলা পেজে কাজ করে?",
+    "Yes, it returns the page text as it is, including Bangla. Pages that need a login or block bots may not load.",
+    "হ্যাঁ, বাংলা সহ পেজের লেখা যেমন আছে তেমনই দেয়। লগইন লাগে বা বট আটকায় এমন পেজ নাও খুলতে পারে।"
+   ],
+   [
+    "Is it safe for private links?",
+    "প্রাইভেট লিংকে নিরাপদ?",
+    "No. The link is sent to a third-party server. Do not use it for private, paid or personal pages.",
+    "না। লিংকটা তৃতীয় পক্ষের সার্ভারে যায়, তাই ব্যক্তিগত, পেইড বা গোপন পেজে ব্যবহার করবেন না।"
+   ]
+  ]
+ }
+]

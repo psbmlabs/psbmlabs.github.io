@@ -56,3 +56,7 @@
 - Location: Barisal, Bangladesh
 - GitHub: https://github.com/psbmlabs
 - Google Play: https://play.google.com/store/apps/dev?id=5400973174111764815
+
+## Free tools
+
+- [Jina Reader](https://psbmlabs.github.io/free-tools/jina-reader.html): Put r.jina.ai/ before any link and get the page as clean Markdown, with no ads, menus or scripts.
