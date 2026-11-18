@@ -34,9 +34,10 @@ ICON = {
  'people': '<circle cx="160" cy="96" r="38"/><path d="M85 262c0-62 150-62 150 0"/><circle cx="62" cy="140" r="24"/><circle cx="258" cy="140" r="24"/><path d="M20 235c4-34 40-44 66-30M300 235c-4-34-40-44-66-30"/>',
  'warning': '<path d="M160 38L290 258H30z" stroke-linejoin="round"/><path d="M160 118v68"/><circle cx="160" cy="222" r="6" fill="url(#g)"/>',
  'pos': '<path d="M78 35h164v248l-27-18-27 18-28-18-28 18-27-18-27 18z" stroke-linejoin="round"/><path d="M112 95h96M112 138h96M112 181h52"/>',
+ 'cloud': '<path d="M95 215a55 55 0 0 1 8-108 75 75 0 0 1 143 20 45 45 0 0 1-6 88z"/><path d="M160 280v-82M128 228l32-32 32 32"/>',
  'doc': '<rect x="40" y="35" width="136" height="210" rx="20"/><path d="M70 85h76M70 120h76M70 155h50"/><path d="M196 140h84M250 112l30 28-30 28"/><rect x="190" y="205" width="90" height="52" rx="14"/><path d="M212 245v-26l12 14 12-14v26"/>',
 }
-RULES = [(r'bkash|nagad|payment', 'card'), (r'\bpos\b|point of sale|retail', 'pos'), (r'firebase|backend|tech stack|native vs', 'layers'),
+RULES = [(r'cloudflare|tunnel|localhost', 'cloud'), (r'bkash|nagad|payment', 'card'), (r'\bpos\b|point of sale|retail', 'pos'), (r'firebase|backend|tech stack|native vs', 'layers'),
          (r'maintenance|maintain', 'gear'), (r'ui/ux|\bux\b|design', 'layout'), (r'e-?commerce|shop|store', 'cart'),
          (r'wordpress|custom software|signs you', 'code'), (r'mistake|outsourc', 'warning'), (r'hiring|hire|team|company|choose', 'people'),
          (r'jina|reader|webpage|markdown', 'doc'), (r'flutter|mobile app|\bapp\b', 'phone'), (r'cost|price|pricing', 'chart')]

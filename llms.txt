@@ -43,6 +43,7 @@
 - [UI/UX Design Fundamentals for Bangladeshi Startups](https://psbmlabs.github.io/blog/ui-ux-design-fundamentals-bangladeshi-startups.html): Practical UI/UX fundamentals for startups building apps and websites for a Bangladeshi audience — clarity, trust, and local usability habits.
 - [Web Application Development Cost in Bangladesh (2026)](https://psbmlabs.github.io/blog/web-application-development-cost-bangladesh.html): What a custom web application actually costs to build in Bangladesh — pricing by project type, the factors that move the number, and how to budget realistically.
 - [WordPress vs Custom Software: Which One Do You Need?](https://psbmlabs.github.io/blog/wordpress-vs-custom-software.html): A practical comparison of WordPress and custom-built software — when each one is the right call, and the signs you've outgrown a template.
+- [Show localhost to a client with Cloudflare Quick Tunnels](https://psbmlabs.github.io/blog/share-localhost-website-cloudflare-quick-tunnel.html): one-command free tunnel, install steps, protected tunnels
 
 ## Packages
 
