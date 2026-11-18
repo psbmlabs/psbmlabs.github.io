@@ -35,9 +35,10 @@ ICON = {
  'warning': '<path d="M160 38L290 258H30z" stroke-linejoin="round"/><path d="M160 118v68"/><circle cx="160" cy="222" r="6" fill="url(#g)"/>',
  'pos': '<path d="M78 35h164v248l-27-18-27 18-28-18-28 18-27-18-27 18z" stroke-linejoin="round"/><path d="M112 95h96M112 138h96M112 181h52"/>',
  'cloud': '<path d="M95 215a55 55 0 0 1 8-108 75 75 0 0 1 143 20 45 45 0 0 1-6 88z"/><path d="M160 280v-82M128 228l32-32 32 32"/>',
+ 'route': '<circle cx="90" cy="235" r="22"/><path d="M90 213C90 140 230 190 230 110" stroke-dasharray="2 18"/><path d="M230 108c0 0-46-50-46-86a46 46 0 0 1 92 0c0 36-46 86-46 86z" transform="translate(-0 40) scale(.9) translate(14 8)"/><circle cx="230" cy="92" r="14"/><path d="M30 290h260"/>',
  'doc': '<rect x="40" y="35" width="136" height="210" rx="20"/><path d="M70 85h76M70 120h76M70 155h50"/><path d="M196 140h84M250 112l30 28-30 28"/><rect x="190" y="205" width="90" height="52" rx="14"/><path d="M212 245v-26l12 14 12-14v26"/>',
 }
-RULES = [(r'cloudflare|tunnel|localhost', 'cloud'), (r'bkash|nagad|payment', 'card'), (r'\bpos\b|point of sale|retail', 'pos'), (r'firebase|backend|tech stack|native vs', 'layers'),
+RULES = [(r'logistics|fleet|freight', 'route'), (r'marketplace|agricultur|farmer|krishi', 'cart'), (r'cloudflare|tunnel|localhost', 'cloud'), (r'bkash|nagad|payment', 'card'), (r'\bpos\b|point of sale|retail', 'pos'), (r'firebase|backend|tech stack|native vs', 'layers'),
          (r'maintenance|maintain', 'gear'), (r'ui/ux|\bux\b|design', 'layout'), (r'e-?commerce|shop|store', 'cart'),
          (r'wordpress|custom software|signs you', 'code'), (r'mistake|outsourc', 'warning'), (r'hiring|hire|team|company|choose', 'people'),
          (r'jina|reader|webpage|markdown', 'doc'), (r'flutter|mobile app|\bapp\b', 'phone'), (r'cost|price|pricing', 'chart')]
@@ -83,6 +84,11 @@ if os.path.exists('data/tools.json'):
     for t in json.load(open('data/tools.json', encoding='utf-8')):
         items.append(dict(slug=t['slug'], cat='Free Tool · ' + t['category'], title=t['name'], sub=t['tagline'], kind='tool'))
 
+home = rd('index.html'); HOME_RX = re.compile(r'(<div class="project-card">\s*)<div class="project-cover[^"]*"><span class="glyph">[^<]*</span><span class="status-pill">([^<]*)</span></div>(\s*<div class="project-body">\s*<div class="project-cat">(.*?)</div>\s*<h3>(.*?)</h3>\s*<p>(.*?)</p>)', re.S)
+def pslug(t): return 'project-' + re.sub(r'[^a-z0-9]+', '-', t.lower()).strip('-')
+for m in HOME_RX.finditer(home):
+    items.append(dict(slug=pslug(m.group(5)), cat=m.group(4).replace('&middot;', '·').strip(), title=re.sub(r'<[^>]+>', '', m.group(5)).strip(), sub=re.sub(r'<[^>]+>', '', m.group(6)).strip(), kind='project'))
+
 # ---------- render ----------
 os.makedirs('assets/thumbs', exist_ok=True)
 with sync_playwright() as p:
@@ -101,6 +107,10 @@ def card(m):
     return m.group(1) + '<div class="project-cover has-thumb" style="background-image:url(assets/thumbs/%s.jpg)" role="img" aria-label="%s"><span class="status-pill">%s</span></div>' % (slug, E(TITLES[slug], True), m.group(3))
 blog = re.sub(r'(href="blog/([\w-]+)\.html"[^>]*class="project-card[^>]*>\s*)<div class="project-cover[^"]*"><span class="glyph">[^<]*</span><span class="status-pill">([^<]*)</span></div>', card, blog)
 wr('blog.html', blog)
+def hcard(m):
+    t = re.sub(r'<[^>]+>', '', m.group(5)).strip(); sl = pslug(t)
+    return m.group(1) + '<div class="project-cover has-thumb" style="background-image:url(assets/thumbs/%s.jpg)" role="img" aria-label="%s"><span class="status-pill">%s</span></div>' % (sl, E(t, True), m.group(2)) + m.group(3)
+wr('index.html', HOME_RX.sub(hcard, home))
 # ---------- patch post pages: share image ----------
 for it in items:
     if it['kind'] != 'blog': continue
@@ -108,7 +118,7 @@ for it in items:
     if os.path.exists(f):
         s = rd(f); wr(f, s.replace(SITE + 'assets/og-banner.jpg', SITE + 'assets/thumbs/%s.jpg' % it['slug']))
 # ---------- css ----------
-css = '\r\n/* thumbs */\r\n.project-card.large .project-cover.has-thumb{height:auto;aspect-ratio:1200/630;background-size:cover;background-position:center;background-repeat:no-repeat}\r\n.project-cover.has-thumb .glyph{display:none}\r\n'
+css = '\r\n/* thumbs */\r\n.project-card .project-cover.has-thumb,.project-card.large .project-cover.has-thumb{height:auto;aspect-ratio:1200/630;background-size:cover;background-position:center;background-repeat:no-repeat}\r\n.project-cover.has-thumb .glyph{display:none}\r\n'
 pc = rd('css/premium.css')
 if '/* thumbs */' not in pc: wr('css/premium.css', pc.rstrip() + css)
 print('thumbs:', len(items))

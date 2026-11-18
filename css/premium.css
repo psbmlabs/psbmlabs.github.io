@@ -252,5 +252,5 @@ html.pl-lock{overflow:auto}
   .navbar-spl .nav-link.active::after{left:0;right:auto;width:2rem}
 }
 /* thumbs */
-.project-card.large .project-cover.has-thumb{height:auto;aspect-ratio:1200/630;background-size:cover;background-position:center;background-repeat:no-repeat}
+.project-card .project-cover.has-thumb,.project-card.large .project-cover.has-thumb{height:auto;aspect-ratio:1200/630;background-size:cover;background-position:center;background-repeat:no-repeat}
 .project-cover.has-thumb .glyph{display:none}
