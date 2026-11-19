@@ -115,5 +115,731 @@
     "না। লিংকটা তৃতীয় পক্ষের সার্ভারে যায়, তাই ব্যক্তিগত, পেইড বা গোপন পেজে ব্যবহার করবেন না।"
    ]
   ]
+ },
+ {
+  "slug": "edit-pdf",
+  "name": "Edit PDF",
+  "emoji": "✏️",
+  "color": "#4338ca",
+  "category": "PDF Tools",
+  "app": "pdf",
+  "tool": "editor",
+  "title": "Edit PDF Online Free: Change Text, Add Images & Signature, Remove Watermark (No Upload)",
+  "title_bn": "PDF এডিট করুন ফ্রি: লেখা বদলান, ছবি ও সিগনেচার যোগ করুন, ওয়াটারমার্ক সরান (আপলোড ছাড়া)",
+  "tagline": "Click any text to change it, add text, images and your signature on any page, and clean up watermarks. Free and private.",
+  "tagline_bn": "যেকোনো লেখায় ক্লিক করে বদলান, যেকোনো পেজে লেখা, ছবি ও সিগনেচার বসান, ওয়াটারমার্ক পরিষ্কার করুন। ফ্রি ও গোপনীয়।",
+  "keywords": [
+   "edit pdf",
+   "pdf editor free",
+   "edit pdf text online",
+   "add signature to pdf",
+   "sign pdf",
+   "replace image in pdf",
+   "remove watermark from pdf",
+   "pdf edit korbo",
+   "pdf e signature",
+   "পিডিএফ এডিট",
+   "পিডিএফে সিগনেচার",
+   "পিডিএফ ওয়াটারমার্ক সরানো",
+   "পিডিএফের লেখা বদলানো"
+  ],
+  "what_en": "Edit PDF opens your file in the browser. Click a line of text to rewrite it and change its font, size and color. Add new text, drop in images or a drawn signature, repeat an item on every page, cover things up, and remove tagged watermarks. Edits are placed on top of the original page content.",
+  "what_bn": "Edit PDF আপনার ফাইল ব্রাউজারে খোলে। যেকোনো লাইনে ক্লিক করে নতুন করে লিখুন, ফন্ট, সাইজ ও রঙ বদলান। নতুন লেখা, ছবি বা হাতে আঁকা সিগনেচার যোগ করুন, একটা জিনিস সব পেজে বসান, কিছু ঢেকে দিন, আর ট্যাগ করা ওয়াটারমার্ক সরান। সব এডিট আসল পেজের কনটেন্টের ওপরে বসে।",
+  "steps": [
+   [
+    "Open your PDF",
+    "PDF খুলুন",
+    "Drop the file in the editor. Pages appear on the left.",
+    "ফাইল এডিটরে ছাড়ুন। পেজগুলো বাঁ দিকে দেখা যাবে।"
+   ],
+   [
+    "Edit",
+    "এডিট করুন",
+    "Click text to change it, or use Add text, Add image, Signature and Cover / Erase. Tick \"Every page\" to repeat an item.",
+    "লেখায় ক্লিক করে বদলান, অথবা Add text, Add image, Signature, Cover / Erase ব্যবহার করুন। একই জিনিস সব পেজে বসাতে \"সব পেজে\" টিক দিন।"
+   ],
+   [
+    "Download",
+    "ডাউনলোড",
+    "Press Download PDF to save the edited file.",
+    "Download PDF চেপে এডিট করা ফাইল সেভ করুন।"
+   ]
+  ],
+  "uses": [
+   [
+    "Students and job seekers",
+    "স্টুডেন্ট ও চাকরিপ্রার্থী",
+    "Fix a typo in a form, add your signature and date, or add a photo.",
+    "ফর্মের ভুল শুধরান, সিগনেচার ও তারিখ বসান, বা ছবি যোগ করুন।"
+   ],
+   [
+    "Office and business",
+    "অফিস ও ব্যবসা",
+    "Update an invoice or quote, stamp your logo on every page, sign contracts.",
+    "ইনভয়েস বা কোটেশন আপডেট করুন, সব পেজে লোগো বসান, চুক্তিতে সই করুন।"
+   ],
+   [
+    "Teachers",
+    "শিক্ষক",
+    "Remove a leftover draft mark from your own handout and add notes.",
+    "নিজের হ্যান্ডআউট থেকে ড্রাফট মার্ক সরান ও নোট যোগ করুন।"
+   ]
+  ],
+  "faq": [
+   [
+    "Is it really editing the original text?",
+    "এটা কি আসল লেখাই বদলায়?",
+    "It places your new text over the original. The editor hides the old words with a matching background box, so the page looks edited, but the old text can still exist underneath. For sensitive redaction, print the result to a new PDF.",
+    "এটা আসল লেখার ওপর আপনার নতুন লেখা বসায়। পুরনো লেখা মিল-রঙের ব্যাকগ্রাউন্ড বক্স দিয়ে ঢাকা হয়, ফলে পেজ এডিট করা দেখায়, কিন্তু নিচে পুরনো লেখা থাকতে পারে। গোপন তথ্য মুছতে ফলাফল নতুন PDF হিসেবে প্রিন্ট করুন।"
+   ],
+   [
+    "Can I remove any watermark?",
+    "যেকোনো ওয়াটারমার্ক সরানো যায়?",
+    "Only watermarks stored as separate layers or tagged objects can be removed automatically. If a watermark is baked into the page, cover it with Cover / Erase and tick Every page. Remove watermarks only from files you own or have permission to edit.",
+    "শুধু আলাদা লেয়ার বা ট্যাগ করা ওয়াটারমার্ক নিজে থেকে সরে। পেজের সাথে মিশে থাকলে Cover / Erase দিয়ে ঢেকে \"সব পেজে\" টিক দিন। শুধু নিজের বা অনুমতি পাওয়া ফাইল থেকে ওয়াটারমার্ক সরান।"
+   ],
+   [
+    "Does it support Bangla text?",
+    "বাংলা লেখা সমর্থন করে?",
+    "Yes. Choose \"Custom font...\" and upload a Bangla .ttf font from your computer. Standard fonts cover English and Western European characters only.",
+    "হ্যাঁ। \"নিজের ফন্ট...\" বেছে আপনার কম্পিউটার থেকে বাংলা .ttf ফন্ট দিন। স্ট্যান্ডার্ড ফন্টে শুধু ইংরেজি ও পশ্চিম ইউরোপীয় অক্ষর আছে।"
+   ],
+   [
+    "Are my files uploaded?",
+    "ফাইল কি আপলোড হয়?",
+    "No. Everything runs in your browser and your file never leaves your device.",
+    "না। সবকিছু ব্রাউজারেই চলে, ফাইল ডিভাইসের বাইরে যায় না।"
+   ],
+   [
+    "Is it free? Any limit?",
+    "ফ্রি? কোনো লিমিট?",
+    "Yes. No signup, no watermark. The only limit is your device memory.",
+    "হ্যাঁ। সাইন-আপ বা ওয়াটারমার্ক নেই। একমাত্র সীমা আপনার ডিভাইসের মেমোরি।"
+   ]
+  ]
+ },
+ {
+  "slug": "pdf-toolkit",
+  "name": "PDF Tools",
+  "emoji": "📄",
+  "color": "#4338ca",
+  "category": "PDF Tools",
+  "app": "pdf",
+  "tool": "hub",
+  "title": "Free PDF Tools: Merge, Split, Compress, Convert & Organize PDFs (No Upload)",
+  "title_bn": "ফ্রি PDF টুলস: মার্জ, স্প্লিট, কমপ্রেস, কনভার্ট ও অর্গানাইজ (আপলোড ছাড়া)",
+  "tagline": "Six everyday PDF tools in one place. Free, no signup, and your files never leave your device.",
+  "tagline_bn": "দৈনন্দিন ছয়টা PDF টুল এক জায়গায়। ফ্রি, সাইন-আপ ছাড়া, আর ফাইল আপনার ডিভাইসের বাইরে যায় না।",
+  "keywords": [
+   "free pdf tools",
+   "pdf toolkit",
+   "pdf editor online free",
+   "pdf tools no upload",
+   "পিডিএফ টুলস",
+   "pdf er kaj",
+   "pdf online free bangla"
+  ],
+  "what_en": "PDF Tools bundles the PDF jobs people do most: join files, cut pages out, shrink big files, turn pages into pictures, turn pictures into a PDF, and reorder pages. It runs in your browser, so it is private and works without an account.",
+  "what_bn": "PDF Tools-এ মানুষ সবচেয়ে বেশি যে PDF কাজগুলো করে সেগুলো আছে: ফাইল জোড়া, পেজ কাটা, বড় ফাইল ছোট করা, পেজ থেকে ছবি, ছবি থেকে PDF, আর পেজ সাজানো। সবকিছু ব্রাউজারেই চলে, তাই ব্যক্তিগত থাকে এবং অ্যাকাউন্ট লাগে না।",
+  "steps": [
+   [
+    "Pick a tool",
+    "টুল বেছে নিন",
+    "Choose Merge, Split, Compress, PDF to Image, Image to PDF or Organize from the cards above.",
+    "উপরের কার্ড থেকে Merge, Split, Compress, PDF to Image, Image to PDF বা Organize বেছে নিন।"
+   ],
+   [
+    "Add your file",
+    "ফাইল দিন",
+    "Drop the file on the box or click to choose it. Nothing is uploaded.",
+    "ফাইল বক্সে ছাড়ুন বা ক্লিক করে বেছে নিন। কিছুই আপলোড হয় না।"
+   ],
+   [
+    "Download",
+    "ডাউনলোড করুন",
+    "Press the button and your result is ready in seconds.",
+    "বাটন চাপুন, কয়েক সেকেন্ডেই ফলাফল তৈরি।"
+   ]
+  ],
+  "uses": [
+   [
+    "Students",
+    "স্টুডেন্ট",
+    "Prepare assignments, scanned notes and application files for portals with strict size or format rules.",
+    "অ্যাসাইনমেন্ট, স্ক্যান করা নোট ও আবেদনের ফাইল সাইজ বা ফরম্যাটের নিয়ম মেনে তৈরি করুন।"
+   ],
+   [
+    "Office and business",
+    "অফিস ও ব্যবসা",
+    "Combine invoices, bills and contracts, or shrink big files before emailing them.",
+    "ইনভয়েস, বিল ও চুক্তি এক করুন, বা ইমেইলের আগে বড় ফাইল ছোট করুন।"
+   ],
+   [
+    "Job seekers",
+    "চাকরিপ্রার্থী",
+    "Get your CV and certificates into the single PDF an online form asks for.",
+    "অনলাইন ফর্মের চাওয়া একটা PDF-এ সিভি ও সার্টিফিকেট গুছিয়ে নিন।"
+   ]
+  ],
+  "faq": [
+   [
+    "Are my files uploaded to a server?",
+    "আমার ফাইল কি সার্ভারে আপলোড হয়?",
+    "No. Everything runs inside your browser, so your files never leave your device. Only the open-source PDF libraries are downloaded from a public CDN when needed.",
+    "না। সবকিছু আপনার ব্রাউজারের ভেতরেই চলে, তাই ফাইল ডিভাইসের বাইরে যায় না। শুধু প্রয়োজনের সময় ওপেন-সোর্স PDF লাইব্রেরি একটা পাবলিক CDN থেকে নামে।"
+   ],
+   [
+    "Is it really free? Any watermark or limit?",
+    "সত্যিই ফ্রি? ওয়াটারমার্ক বা লিমিট আছে?",
+    "Yes. No signup, no watermark and no daily limit. The only limit is your device's memory, so very large files can be slow.",
+    "হ্যাঁ। সাইন-আপ, ওয়াটারমার্ক বা দৈনিক লিমিট নেই। একমাত্র সীমা আপনার ডিভাইসের মেমোরি, তাই খুব বড় ফাইল ধীর হতে পারে।"
+   ],
+   [
+    "Does it work on my phone?",
+    "ফোনে কাজ করে?",
+    "Yes, in modern Android and iPhone browsers. For very large files a laptop or desktop is more comfortable.",
+    "হ্যাঁ, আধুনিক Android ও iPhone ব্রাউজারে চলে। খুব বড় ফাইলের জন্য ল্যাপটপ বা ডেস্কটপ ভালো।"
+   ]
+  ]
+ },
+ {
+  "slug": "merge-pdf",
+  "name": "Merge PDF",
+  "emoji": "🧩",
+  "color": "#2FE0C4",
+  "category": "PDF Tools",
+  "app": "pdf",
+  "tool": "merge",
+  "title": "Merge PDF Files Online Free: Combine PDFs, No Upload, No Signup",
+  "title_bn": "PDF মার্জ করুন ফ্রি: একাধিক PDF এক ফাইলে (আপলোড ছাড়া)",
+  "tagline": "Combine several PDFs into one file, in the order you choose.",
+  "tagline_bn": "একাধিক PDF নিজের পছন্দের ক্রমে এক ফাইলে জুড়ুন।",
+  "keywords": [
+   "merge pdf",
+   "combine pdf files",
+   "join pdf",
+   "pdf jorano",
+   "pdf merge free",
+   "একাধিক পিডিএফ এক করা",
+   "পিডিএফ মার্জ"
+  ],
+  "what_en": "Merge PDF joins two or more PDF files into a single document. You set the order, press one button, and download the result.",
+  "what_bn": "Merge PDF দুই বা তার বেশি PDF ফাইলকে একটা ডকুমেন্টে জোড়া লাগায়। ক্রম ঠিক করুন, এক বাটনে ডাউনলোড করুন।",
+  "steps": [
+   [
+    "Add your PDFs",
+    "PDF দিন",
+    "Drop two or more PDF files into the box.",
+    "দুই বা তার বেশি PDF বক্সে ছাড়ুন।"
+   ],
+   [
+    "Set the order",
+    "ক্রম ঠিক করুন",
+    "Use the arrows to move files up or down. They are joined top to bottom.",
+    "তীর চিহ্ন দিয়ে ফাইল উপরে-নিচে সরান। ফাইল উপর থেকে নিচে জোড়া লাগে।"
+   ],
+   [
+    "Merge and download",
+    "মার্জ করে ডাউনলোড",
+    "Press Merge PDFs. The combined file downloads automatically.",
+    "Merge PDFs চাপুন। জোড়া ফাইল নিজে থেকে ডাউনলোড হবে।"
+   ]
+  ],
+  "uses": [
+   [
+    "Students",
+    "স্টুডেন্ট",
+    "Prepare assignments, scanned notes and application files for portals with strict size or format rules.",
+    "অ্যাসাইনমেন্ট, স্ক্যান করা নোট ও আবেদনের ফাইল সাইজ বা ফরম্যাটের নিয়ম মেনে তৈরি করুন।"
+   ],
+   [
+    "Office and business",
+    "অফিস ও ব্যবসা",
+    "Combine invoices, bills and contracts, or shrink big files before emailing them.",
+    "ইনভয়েস, বিল ও চুক্তি এক করুন, বা ইমেইলের আগে বড় ফাইল ছোট করুন।"
+   ],
+   [
+    "Job seekers",
+    "চাকরিপ্রার্থী",
+    "Get your CV and certificates into the single PDF an online form asks for.",
+    "অনলাইন ফর্মের চাওয়া একটা PDF-এ সিভি ও সার্টিফিকেট গুছিয়ে নিন।"
+   ]
+  ],
+  "faq": [
+   [
+    "Can I merge password-protected PDFs?",
+    "পাসওয়ার্ড দেওয়া PDF মার্জ করা যায়?",
+    "Not directly. Remove the password first, then merge.",
+    "সরাসরি নয়। আগে পাসওয়ার্ড সরিয়ে তারপর মার্জ করুন।"
+   ],
+   [
+    "Are my files uploaded to a server?",
+    "আমার ফাইল কি সার্ভারে আপলোড হয়?",
+    "No. Everything runs inside your browser, so your files never leave your device. Only the open-source PDF libraries are downloaded from a public CDN when needed.",
+    "না। সবকিছু আপনার ব্রাউজারের ভেতরেই চলে, তাই ফাইল ডিভাইসের বাইরে যায় না। শুধু প্রয়োজনের সময় ওপেন-সোর্স PDF লাইব্রেরি একটা পাবলিক CDN থেকে নামে।"
+   ],
+   [
+    "Is it really free? Any watermark or limit?",
+    "সত্যিই ফ্রি? ওয়াটারমার্ক বা লিমিট আছে?",
+    "Yes. No signup, no watermark and no daily limit. The only limit is your device's memory, so very large files can be slow.",
+    "হ্যাঁ। সাইন-আপ, ওয়াটারমার্ক বা দৈনিক লিমিট নেই। একমাত্র সীমা আপনার ডিভাইসের মেমোরি, তাই খুব বড় ফাইল ধীর হতে পারে।"
+   ],
+   [
+    "Does it work on my phone?",
+    "ফোনে কাজ করে?",
+    "Yes, in modern Android and iPhone browsers. For very large files a laptop or desktop is more comfortable.",
+    "হ্যাঁ, আধুনিক Android ও iPhone ব্রাউজারে চলে। খুব বড় ফাইলের জন্য ল্যাপটপ বা ডেস্কটপ ভালো।"
+   ]
+  ]
+ },
+ {
+  "slug": "split-pdf",
+  "name": "Split PDF",
+  "emoji": "✂️",
+  "color": "#fb7185",
+  "category": "PDF Tools",
+  "app": "pdf",
+  "tool": "split",
+  "title": "Split PDF Online Free: Extract Pages or Separate Every Page",
+  "title_bn": "PDF স্প্লিট করুন ফ্রি: পেজ আলাদা করুন বা প্রতিটা পেজ ভাগ করুন",
+  "tagline": "Cut chosen pages out of a PDF, or save every page as its own file.",
+  "tagline_bn": "PDF থেকে নির্দিষ্ট পেজ কেটে নিন, বা প্রতিটা পেজ আলাদা ফাইলে রাখুন।",
+  "keywords": [
+   "split pdf",
+   "extract pages from pdf",
+   "pdf page separate",
+   "pdf bhag kora",
+   "pdf theke page alada kora",
+   "পিডিএফ থেকে পেজ আলাদা করা",
+   "পিডিএফ স্প্লিট"
+  ],
+  "what_en": "Split PDF lets you pull out the pages you need, such as 1-3, 5, 8-, into a new PDF, or break the whole document into one PDF per page.",
+  "what_bn": "Split PDF দিয়ে দরকারি পেজ (যেমন 1-3, 5, 8-) নতুন PDF-এ নিতে পারেন, বা পুরো ডকুমেন্টকে প্রতি পেজে একটা PDF করে ভাঙতে পারেন।",
+  "steps": [
+   [
+    "Add one PDF",
+    "একটা PDF দিন",
+    "Drop the PDF you want to cut.",
+    "যে PDF কাটতে চান সেটা দিন।"
+   ],
+   [
+    "Choose pages",
+    "পেজ বেছে নিন",
+    "Type a range like 1-3, 5, 8- or pick the one-file-per-page option.",
+    "1-3, 5, 8- এর মতো রেঞ্জ লিখুন বা প্রতি পেজে আলাদা ফাইলের অপশন নিন।"
+   ],
+   [
+    "Download",
+    "ডাউনলোড",
+    "Get one PDF, or a ZIP when there are many files.",
+    "একটা PDF পাবেন, ফাইল বেশি হলে ZIP।"
+   ]
+  ],
+  "uses": [
+   [
+    "Students",
+    "স্টুডেন্ট",
+    "Prepare assignments, scanned notes and application files for portals with strict size or format rules.",
+    "অ্যাসাইনমেন্ট, স্ক্যান করা নোট ও আবেদনের ফাইল সাইজ বা ফরম্যাটের নিয়ম মেনে তৈরি করুন।"
+   ],
+   [
+    "Office and business",
+    "অফিস ও ব্যবসা",
+    "Combine invoices, bills and contracts, or shrink big files before emailing them.",
+    "ইনভয়েস, বিল ও চুক্তি এক করুন, বা ইমেইলের আগে বড় ফাইল ছোট করুন।"
+   ],
+   [
+    "Job seekers",
+    "চাকরিপ্রার্থী",
+    "Get your CV and certificates into the single PDF an online form asks for.",
+    "অনলাইন ফর্মের চাওয়া একটা PDF-এ সিভি ও সার্টিফিকেট গুছিয়ে নিন।"
+   ]
+  ],
+  "faq": [
+   [
+    "What does the page range format mean?",
+    "পেজ রেঞ্জের ফরম্যাট কী?",
+    "1-3 means pages 1 to 3, 5 means page 5, and 8- means page 8 to the end. Separate parts with commas.",
+    "1-3 মানে ১ থেকে ৩ পেজ, 5 মানে ৫ নম্বর পেজ, আর 8- মানে ৮ থেকে শেষ পর্যন্ত। অংশগুলো কমা দিয়ে আলাদা করুন।"
+   ],
+   [
+    "Are my files uploaded to a server?",
+    "আমার ফাইল কি সার্ভারে আপলোড হয়?",
+    "No. Everything runs inside your browser, so your files never leave your device. Only the open-source PDF libraries are downloaded from a public CDN when needed.",
+    "না। সবকিছু আপনার ব্রাউজারের ভেতরেই চলে, তাই ফাইল ডিভাইসের বাইরে যায় না। শুধু প্রয়োজনের সময় ওপেন-সোর্স PDF লাইব্রেরি একটা পাবলিক CDN থেকে নামে।"
+   ],
+   [
+    "Is it really free? Any watermark or limit?",
+    "সত্যিই ফ্রি? ওয়াটারমার্ক বা লিমিট আছে?",
+    "Yes. No signup, no watermark and no daily limit. The only limit is your device's memory, so very large files can be slow.",
+    "হ্যাঁ। সাইন-আপ, ওয়াটারমার্ক বা দৈনিক লিমিট নেই। একমাত্র সীমা আপনার ডিভাইসের মেমোরি, তাই খুব বড় ফাইল ধীর হতে পারে।"
+   ],
+   [
+    "Does it work on my phone?",
+    "ফোনে কাজ করে?",
+    "Yes, in modern Android and iPhone browsers. For very large files a laptop or desktop is more comfortable.",
+    "হ্যাঁ, আধুনিক Android ও iPhone ব্রাউজারে চলে। খুব বড় ফাইলের জন্য ল্যাপটপ বা ডেস্কটপ ভালো।"
+   ]
+  ]
+ },
+ {
+  "slug": "compress-pdf",
+  "name": "Compress PDF",
+  "emoji": "🗜️",
+  "color": "#fbbf24",
+  "category": "PDF Tools",
+  "app": "pdf",
+  "tool": "compress",
+  "title": "Compress PDF Online Free: Reduce PDF File Size (No Upload)",
+  "title_bn": "PDF ছোট করুন ফ্রি: ফাইল সাইজ কমান (আপলোড ছাড়া)",
+  "tagline": "Shrink a heavy PDF so it is easy to email or upload.",
+  "tagline_bn": "ভারী PDF ছোট করুন, যাতে ইমেইল বা আপলোড সহজ হয়।",
+  "keywords": [
+   "compress pdf",
+   "reduce pdf size",
+   "pdf size komano",
+   "pdf chotto kora",
+   "pdf 1mb",
+   "পিডিএফ সাইজ কমানো",
+   "পিডিএফ কমপ্রেস"
+  ],
+  "what_en": "Compress PDF rebuilds each page as an optimised image at the quality you pick. It works best on scanned or photo-heavy files. Because pages become images, the text will no longer be selectable.",
+  "what_bn": "Compress PDF আপনার পছন্দের কোয়ালিটিতে প্রতিটা পেজ অপ্টিমাইজড ছবি হিসেবে নতুন করে বানায়। স্ক্যান করা বা ছবি-ভারী ফাইলে সবচেয়ে ভালো কাজ করে। পেজ ছবি হয়ে যায় বলে লেখা আর সিলেক্ট করা যায় না।",
+  "steps": [
+   [
+    "Add your PDF",
+    "PDF দিন",
+    "Drop the large PDF into the box.",
+    "বড় PDF বক্সে ছাড়ুন।"
+   ],
+   [
+    "Pick a level",
+    "লেভেল বেছে নিন",
+    "Light keeps quality, Strong makes the smallest file.",
+    "Light কোয়ালিটি রাখে, Strong সবচেয়ে ছোট ফাইল দেয়।"
+   ],
+   [
+    "Compare and download",
+    "তুলনা করে ডাউনলোড",
+    "See the before and after size, then download.",
+    "আগে-পরের সাইজ দেখে ডাউনলোড করুন।"
+   ]
+  ],
+  "uses": [
+   [
+    "Students",
+    "স্টুডেন্ট",
+    "Prepare assignments, scanned notes and application files for portals with strict size or format rules.",
+    "অ্যাসাইনমেন্ট, স্ক্যান করা নোট ও আবেদনের ফাইল সাইজ বা ফরম্যাটের নিয়ম মেনে তৈরি করুন।"
+   ],
+   [
+    "Office and business",
+    "অফিস ও ব্যবসা",
+    "Combine invoices, bills and contracts, or shrink big files before emailing them.",
+    "ইনভয়েস, বিল ও চুক্তি এক করুন, বা ইমেইলের আগে বড় ফাইল ছোট করুন।"
+   ],
+   [
+    "Job seekers",
+    "চাকরিপ্রার্থী",
+    "Get your CV and certificates into the single PDF an online form asks for.",
+    "অনলাইন ফর্মের চাওয়া একটা PDF-এ সিভি ও সার্টিফিকেট গুছিয়ে নিন।"
+   ]
+  ],
+  "faq": [
+   [
+    "Why did my file not get smaller?",
+    "আমার ফাইল ছোট হলো না কেন?",
+    "Files that are mostly text and vector graphics are already tiny, and turning them into images can make them larger. Try the Strong level or keep your original.",
+    "যে ফাইল মূলত লেখা ও ভেক্টর গ্রাফিক্সের, সেটা আগেই ছোট, আর ছবিতে বদলালে বড় হয়ে যেতে পারে। Strong লেভেল চেষ্টা করুন বা আসল ফাইল রাখুন।"
+   ],
+   [
+    "Are my files uploaded to a server?",
+    "আমার ফাইল কি সার্ভারে আপলোড হয়?",
+    "No. Everything runs inside your browser, so your files never leave your device. Only the open-source PDF libraries are downloaded from a public CDN when needed.",
+    "না। সবকিছু আপনার ব্রাউজারের ভেতরেই চলে, তাই ফাইল ডিভাইসের বাইরে যায় না। শুধু প্রয়োজনের সময় ওপেন-সোর্স PDF লাইব্রেরি একটা পাবলিক CDN থেকে নামে।"
+   ],
+   [
+    "Is it really free? Any watermark or limit?",
+    "সত্যিই ফ্রি? ওয়াটারমার্ক বা লিমিট আছে?",
+    "Yes. No signup, no watermark and no daily limit. The only limit is your device's memory, so very large files can be slow.",
+    "হ্যাঁ। সাইন-আপ, ওয়াটারমার্ক বা দৈনিক লিমিট নেই। একমাত্র সীমা আপনার ডিভাইসের মেমোরি, তাই খুব বড় ফাইল ধীর হতে পারে।"
+   ],
+   [
+    "Does it work on my phone?",
+    "ফোনে কাজ করে?",
+    "Yes, in modern Android and iPhone browsers. For very large files a laptop or desktop is more comfortable.",
+    "হ্যাঁ, আধুনিক Android ও iPhone ব্রাউজারে চলে। খুব বড় ফাইলের জন্য ল্যাপটপ বা ডেস্কটপ ভালো।"
+   ]
+  ]
+ },
+ {
+  "slug": "pdf-to-image",
+  "name": "PDF to Image",
+  "emoji": "🖼️",
+  "color": "#22d3ee",
+  "category": "PDF Tools",
+  "app": "pdf",
+  "tool": "pdf2img",
+  "title": "PDF to JPG & PNG Converter: Free, No Upload",
+  "title_bn": "PDF থেকে JPG ও PNG কনভার্টার: ফ্রি, আপলোড ছাড়া",
+  "tagline": "Turn every PDF page into a sharp JPG or PNG image.",
+  "tagline_bn": "PDF-এর প্রতিটা পেজ স্পষ্ট JPG বা PNG ছবিতে বদলান।",
+  "keywords": [
+   "pdf to jpg",
+   "pdf to png",
+   "pdf to image",
+   "pdf theke chobi",
+   "pdf to photo",
+   "পিডিএফ থেকে ছবি",
+   "পিডিএফ টু জেপিজি"
+  ],
+  "what_en": "PDF to Image renders each page of your PDF as a picture you can share, post or edit. Choose PNG for sharp text or JPG for smaller files.",
+  "what_bn": "PDF to Image আপনার PDF-এর প্রতিটা পেজকে এমন ছবি বানায় যা শেয়ার, পোস্ট বা এডিট করা যায়। স্পষ্ট লেখার জন্য PNG, ছোট ফাইলের জন্য JPG নিন।",
+  "steps": [
+   [
+    "Add your PDF",
+    "PDF দিন",
+    "Drop the PDF into the box.",
+    "PDF বক্সে ছাড়ুন।"
+   ],
+   [
+    "Choose format and quality",
+    "ফরম্যাট ও কোয়ালিটি",
+    "Pick PNG or JPG and a resolution from 96 to 220 dpi.",
+    "PNG বা JPG আর ৯৬ থেকে ২২০ dpi রেজোলিউশন বেছে নিন।"
+   ],
+   [
+    "Download images",
+    "ছবি ডাউনলোড",
+    "Download pages one by one or all together as a ZIP.",
+    "পেজগুলো একটা একটা করে বা ZIP হিসেবে একসাথে নামান।"
+   ]
+  ],
+  "uses": [
+   [
+    "Students",
+    "স্টুডেন্ট",
+    "Prepare assignments, scanned notes and application files for portals with strict size or format rules.",
+    "অ্যাসাইনমেন্ট, স্ক্যান করা নোট ও আবেদনের ফাইল সাইজ বা ফরম্যাটের নিয়ম মেনে তৈরি করুন।"
+   ],
+   [
+    "Office and business",
+    "অফিস ও ব্যবসা",
+    "Combine invoices, bills and contracts, or shrink big files before emailing them.",
+    "ইনভয়েস, বিল ও চুক্তি এক করুন, বা ইমেইলের আগে বড় ফাইল ছোট করুন।"
+   ],
+   [
+    "Job seekers",
+    "চাকরিপ্রার্থী",
+    "Get your CV and certificates into the single PDF an online form asks for.",
+    "অনলাইন ফর্মের চাওয়া একটা PDF-এ সিভি ও সার্টিফিকেট গুছিয়ে নিন।"
+   ]
+  ],
+  "faq": [
+   [
+    "Which format should I choose?",
+    "কোন ফরম্যাট নেব?",
+    "PNG keeps text crisp. JPG gives smaller files and suits photos.",
+    "PNG লেখা ঝকঝকে রাখে। JPG ফাইল ছোট করে আর ছবির জন্য ভালো।"
+   ],
+   [
+    "Are my files uploaded to a server?",
+    "আমার ফাইল কি সার্ভারে আপলোড হয়?",
+    "No. Everything runs inside your browser, so your files never leave your device. Only the open-source PDF libraries are downloaded from a public CDN when needed.",
+    "না। সবকিছু আপনার ব্রাউজারের ভেতরেই চলে, তাই ফাইল ডিভাইসের বাইরে যায় না। শুধু প্রয়োজনের সময় ওপেন-সোর্স PDF লাইব্রেরি একটা পাবলিক CDN থেকে নামে।"
+   ],
+   [
+    "Is it really free? Any watermark or limit?",
+    "সত্যিই ফ্রি? ওয়াটারমার্ক বা লিমিট আছে?",
+    "Yes. No signup, no watermark and no daily limit. The only limit is your device's memory, so very large files can be slow.",
+    "হ্যাঁ। সাইন-আপ, ওয়াটারমার্ক বা দৈনিক লিমিট নেই। একমাত্র সীমা আপনার ডিভাইসের মেমোরি, তাই খুব বড় ফাইল ধীর হতে পারে।"
+   ],
+   [
+    "Does it work on my phone?",
+    "ফোনে কাজ করে?",
+    "Yes, in modern Android and iPhone browsers. For very large files a laptop or desktop is more comfortable.",
+    "হ্যাঁ, আধুনিক Android ও iPhone ব্রাউজারে চলে। খুব বড় ফাইলের জন্য ল্যাপটপ বা ডেস্কটপ ভালো।"
+   ]
+  ]
+ },
+ {
+  "slug": "image-to-pdf",
+  "name": "Image to PDF",
+  "emoji": "📑",
+  "color": "#8b5cf6",
+  "category": "PDF Tools",
+  "app": "pdf",
+  "tool": "img2pdf",
+  "title": "Image to PDF Converter: JPG, PNG, WebP to PDF Free",
+  "title_bn": "ছবি থেকে PDF কনভার্টার: JPG, PNG, WebP থেকে PDF ফ্রি",
+  "tagline": "Put one or many images into a single PDF, one image per page.",
+  "tagline_bn": "এক বা একাধিক ছবি একটা PDF-এ রাখুন, প্রতি পেজে একটা ছবি।",
+  "keywords": [
+   "image to pdf",
+   "jpg to pdf",
+   "png to pdf",
+   "photo to pdf",
+   "chobi theke pdf",
+   "ছবি থেকে পিডিএফ",
+   "জেপিজি টু পিডিএফ"
+  ],
+  "what_en": "Image to PDF turns photos and scans into a tidy PDF. Pick A4, Letter or the image's own size, and set the margin and page order.",
+  "what_bn": "Image to PDF ছবি ও স্ক্যানকে গোছানো PDF বানায়। A4, Letter বা ছবির নিজের মাপ বেছে নিন, মার্জিন ও পেজের ক্রমও ঠিক করুন।",
+  "steps": [
+   [
+    "Add images",
+    "ছবি দিন",
+    "Drop JPG, PNG or WebP files into the box.",
+    "JPG, PNG বা WebP ফাইল বক্সে ছাড়ুন।"
+   ],
+   [
+    "Set order and page",
+    "ক্রম ও পেজ ঠিক করুন",
+    "Reorder with the arrows, then choose page size and margin.",
+    "তীর দিয়ে ক্রম ঠিক করুন, তারপর পেজের মাপ ও মার্জিন নিন।"
+   ],
+   [
+    "Create PDF",
+    "PDF বানান",
+    "Press Create PDF and it downloads at once.",
+    "Create PDF চাপুন, সাথে সাথে ডাউনলোড হবে।"
+   ]
+  ],
+  "uses": [
+   [
+    "Students",
+    "স্টুডেন্ট",
+    "Prepare assignments, scanned notes and application files for portals with strict size or format rules.",
+    "অ্যাসাইনমেন্ট, স্ক্যান করা নোট ও আবেদনের ফাইল সাইজ বা ফরম্যাটের নিয়ম মেনে তৈরি করুন।"
+   ],
+   [
+    "Office and business",
+    "অফিস ও ব্যবসা",
+    "Combine invoices, bills and contracts, or shrink big files before emailing them.",
+    "ইনভয়েস, বিল ও চুক্তি এক করুন, বা ইমেইলের আগে বড় ফাইল ছোট করুন।"
+   ],
+   [
+    "Job seekers",
+    "চাকরিপ্রার্থী",
+    "Get your CV and certificates into the single PDF an online form asks for.",
+    "অনলাইন ফর্মের চাওয়া একটা PDF-এ সিভি ও সার্টিফিকেট গুছিয়ে নিন।"
+   ]
+  ],
+  "faq": [
+   [
+    "Will phone photos come out sideways?",
+    "ফোনের ছবি কি কাত হয়ে যাবে?",
+    "No. Photos are straightened using their orientation data before they are placed on the page.",
+    "না। পেজে বসানোর আগে ছবির orientation তথ্য দিয়ে সোজা করা হয়।"
+   ],
+   [
+    "Are my files uploaded to a server?",
+    "আমার ফাইল কি সার্ভারে আপলোড হয়?",
+    "No. Everything runs inside your browser, so your files never leave your device. Only the open-source PDF libraries are downloaded from a public CDN when needed.",
+    "না। সবকিছু আপনার ব্রাউজারের ভেতরেই চলে, তাই ফাইল ডিভাইসের বাইরে যায় না। শুধু প্রয়োজনের সময় ওপেন-সোর্স PDF লাইব্রেরি একটা পাবলিক CDN থেকে নামে।"
+   ],
+   [
+    "Is it really free? Any watermark or limit?",
+    "সত্যিই ফ্রি? ওয়াটারমার্ক বা লিমিট আছে?",
+    "Yes. No signup, no watermark and no daily limit. The only limit is your device's memory, so very large files can be slow.",
+    "হ্যাঁ। সাইন-আপ, ওয়াটারমার্ক বা দৈনিক লিমিট নেই। একমাত্র সীমা আপনার ডিভাইসের মেমোরি, তাই খুব বড় ফাইল ধীর হতে পারে।"
+   ],
+   [
+    "Does it work on my phone?",
+    "ফোনে কাজ করে?",
+    "Yes, in modern Android and iPhone browsers. For very large files a laptop or desktop is more comfortable.",
+    "হ্যাঁ, আধুনিক Android ও iPhone ব্রাউজারে চলে। খুব বড় ফাইলের জন্য ল্যাপটপ বা ডেস্কটপ ভালো।"
+   ]
+  ]
+ },
+ {
+  "slug": "organize-pdf",
+  "name": "Organize PDF Pages",
+  "emoji": "🗂️",
+  "color": "#34d399",
+  "category": "PDF Tools",
+  "app": "pdf",
+  "tool": "organize",
+  "title": "Organize PDF Pages Online: Reorder, Rotate & Delete Pages Free",
+  "title_bn": "PDF পেজ সাজান অনলাইনে: ক্রম বদল, ঘোরানো ও মুছুন ফ্রি",
+  "tagline": "See every page as a thumbnail, then reorder, rotate or delete them.",
+  "tagline_bn": "প্রতিটা পেজ থাম্বনেইলে দেখুন, তারপর ক্রম বদলান, ঘোরান বা মুছুন।",
+  "keywords": [
+   "reorder pdf pages",
+   "rotate pdf pages",
+   "delete pdf pages",
+   "pdf page organizer",
+   "pdf page sajano",
+   "পিডিএফ পেজ সাজানো",
+   "পিডিএফ পেজ ডিলিট"
+  ],
+  "what_en": "Organize PDF Pages shows your document as page thumbnails. Drag to reorder, rotate sideways pages, delete the ones you do not need, then save a new PDF.",
+  "what_bn": "Organize PDF Pages আপনার ডকুমেন্টকে পেজের থাম্বনেইল হিসেবে দেখায়। টেনে সাজান, কাত পেজ ঘোরান, অপ্রয়োজনীয় পেজ মুছুন, তারপর নতুন PDF সেভ করুন।",
+  "steps": [
+   [
+    "Add your PDF",
+    "PDF দিন",
+    "Drop the PDF and wait a moment for the thumbnails.",
+    "PDF ছাড়ুন, থাম্বনেইল আসা পর্যন্ত একটু অপেক্ষা করুন।"
+   ],
+   [
+    "Arrange",
+    "সাজান",
+    "Drag pages, use the arrows, rotate or delete.",
+    "পেজ টানুন, তীর ব্যবহার করুন, ঘোরান বা মুছুন।"
+   ],
+   [
+    "Download",
+    "ডাউনলোড",
+    "Press the button to download the organized PDF.",
+    "বাটন চাপুন, সাজানো PDF ডাউনলোড হবে।"
+   ]
+  ],
+  "uses": [
+   [
+    "Students",
+    "স্টুডেন্ট",
+    "Prepare assignments, scanned notes and application files for portals with strict size or format rules.",
+    "অ্যাসাইনমেন্ট, স্ক্যান করা নোট ও আবেদনের ফাইল সাইজ বা ফরম্যাটের নিয়ম মেনে তৈরি করুন।"
+   ],
+   [
+    "Office and business",
+    "অফিস ও ব্যবসা",
+    "Combine invoices, bills and contracts, or shrink big files before emailing them.",
+    "ইনভয়েস, বিল ও চুক্তি এক করুন, বা ইমেইলের আগে বড় ফাইল ছোট করুন।"
+   ],
+   [
+    "Job seekers",
+    "চাকরিপ্রার্থী",
+    "Get your CV and certificates into the single PDF an online form asks for.",
+    "অনলাইন ফর্মের চাওয়া একটা PDF-এ সিভি ও সার্টিফিকেট গুছিয়ে নিন।"
+   ]
+  ],
+  "faq": [
+   [
+    "Can I undo a deleted page?",
+    "মুছে ফেলা পেজ ফেরানো যায়?",
+    "Yes, before you download. Press the restore arrow on the faded page.",
+    "হ্যাঁ, ডাউনলোডের আগে। ঝাপসা পেজের restore তীরে চাপ দিন।"
+   ],
+   [
+    "Are my files uploaded to a server?",
+    "আমার ফাইল কি সার্ভারে আপলোড হয়?",
+    "No. Everything runs inside your browser, so your files never leave your device. Only the open-source PDF libraries are downloaded from a public CDN when needed.",
+    "না। সবকিছু আপনার ব্রাউজারের ভেতরেই চলে, তাই ফাইল ডিভাইসের বাইরে যায় না। শুধু প্রয়োজনের সময় ওপেন-সোর্স PDF লাইব্রেরি একটা পাবলিক CDN থেকে নামে।"
+   ],
+   [
+    "Is it really free? Any watermark or limit?",
+    "সত্যিই ফ্রি? ওয়াটারমার্ক বা লিমিট আছে?",
+    "Yes. No signup, no watermark and no daily limit. The only limit is your device's memory, so very large files can be slow.",
+    "হ্যাঁ। সাইন-আপ, ওয়াটারমার্ক বা দৈনিক লিমিট নেই। একমাত্র সীমা আপনার ডিভাইসের মেমোরি, তাই খুব বড় ফাইল ধীর হতে পারে।"
+   ],
+   [
+    "Does it work on my phone?",
+    "ফোনে কাজ করে?",
+    "Yes, in modern Android and iPhone browsers. For very large files a laptop or desktop is more comfortable.",
+    "হ্যাঁ, আধুনিক Android ও iPhone ব্রাউজারে চলে। খুব বড় ফাইলের জন্য ল্যাপটপ বা ডেস্কটপ ভালো।"
+   ]
+  ]
  }
 ]

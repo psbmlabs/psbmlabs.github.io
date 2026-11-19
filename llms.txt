@@ -61,3 +61,11 @@
 ## Free tools
 
 - [Jina Reader](https://psbmlabs.github.io/free-tools/jina-reader.html): Put r.jina.ai/ before any link and get the page as clean Markdown, with no ads, menus or scripts.
+- [Edit PDF](https://psbmlabs.github.io/free-tools/edit-pdf.html): Click any text to change it, add text, images and your signature on any page, and clean up watermarks. Free and private.
+- [PDF Tools](https://psbmlabs.github.io/free-tools/pdf-toolkit.html): Six everyday PDF tools in one place. Free, no signup, and your files never leave your device.
+- [Merge PDF](https://psbmlabs.github.io/free-tools/merge-pdf.html): Combine several PDFs into one file, in the order you choose.
+- [Split PDF](https://psbmlabs.github.io/free-tools/split-pdf.html): Cut chosen pages out of a PDF, or save every page as its own file.
+- [Compress PDF](https://psbmlabs.github.io/free-tools/compress-pdf.html): Shrink a heavy PDF so it is easy to email or upload.
+- [PDF to Image](https://psbmlabs.github.io/free-tools/pdf-to-image.html): Turn every PDF page into a sharp JPG or PNG image.
+- [Image to PDF](https://psbmlabs.github.io/free-tools/image-to-pdf.html): Put one or many images into a single PDF, one image per page.
+- [Organize PDF Pages](https://psbmlabs.github.io/free-tools/organize-pdf.html): See every page as a thumbnail, then reorder, rotate or delete them.
