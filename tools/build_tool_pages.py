@@ -97,10 +97,11 @@ def img(t):
     return SITE + ('assets/thumbs/%s.jpg' % t['slug'] if os.path.exists('assets/thumbs/%s.jpg' % t['slug']) else 'assets/og-banner.jpg')
 
 PDF = [x for x in T if x.get('app') == 'pdf']
-PDF_ORDER = ['editor', 'merge', 'split', 'compress', 'pdf2img', 'img2pdf', 'organize']
+PDF_ORDER = ['editor', 'pdf2word', 'merge', 'split', 'compress', 'pdf2img', 'img2pdf', 'organize']
 PDF_HUB = next((x for x in PDF if x['tool'] == 'hub'), None)
 PICON = {
  'editor': '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',
+ 'pdf2word': '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/>',
  'merge': '<path d="M8 6H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2M16 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2M12 3v18M9 8l3-3 3 3M9 16l3 3 3-3"/>',
  'split': '<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/>',
  'compress': '<path d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7"/>',

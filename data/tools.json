@@ -219,6 +219,111 @@
   ]
  },
  {
+  "slug": "pdf-to-word",
+  "name": "PDF to Word",
+  "emoji": "📝",
+  "color": "#2563eb",
+  "category": "PDF Tools",
+  "app": "pdf",
+  "tool": "pdf2word",
+  "title": "PDF to Word Converter Free: Convert PDF to Editable DOCX (No Upload)",
+  "title_bn": "PDF থেকে Word কনভার্টার ফ্রি: PDF-কে এডিট করা যায় এমন DOCX-এ (আপলোড ছাড়া)",
+  "tagline": "Turn a PDF into an editable Word document with text, headings, tables and pictures kept in place. Free and private.",
+  "tagline_bn": "PDF-কে এডিট করা যায় এমন Word ডকুমেন্টে বদলান, লেখা, হেডিং, টেবিল ও ছবি জায়গামতো থাকে। ফ্রি ও গোপনীয়।",
+  "keywords": [
+   "pdf to word",
+   "pdf to docx",
+   "convert pdf to word free",
+   "pdf to doc",
+   "pdf to word converter online",
+   "pdf theke word",
+   "pdf to word bangla",
+   "পিডিএফ থেকে ওয়ার্ড",
+   "পিডিএফ টু ডক",
+   "পিডিএফ থেকে ওয়ার্ড ফাইল"
+  ],
+  "what_en": "PDF to Word reads the text layer of your PDF and rebuilds it as a Word (.docx) file. It keeps fonts, sizes, bold and italic, paragraph alignment, bullet lists, simple tables and pictures, reads two-column pages in the right order, and gives every PDF page its own matching page size. Scanned pages are placed in the document as pictures so nothing is lost.",
+  "what_bn": "PDF to Word আপনার PDF-এর লেখার স্তর পড়ে সেটাকে Word (.docx) ফাইল হিসেবে নতুন করে সাজায়। ফন্ট, সাইজ, বোল্ড-ইটালিক, প্যারাগ্রাফ অ্যালাইনমেন্ট, বুলেট তালিকা, সাধারণ টেবিল ও ছবি ঠিক রাখে, দুই কলামের পেজ সঠিক ক্রমে পড়ে, আর প্রতিটা PDF পেজের মাপ মিলিয়ে দেয়। স্ক্যান করা পেজ ছবি হিসেবে ডকুমেন্টে বসে, তাই কিছু হারায় না।",
+  "steps": [
+   [
+    "Add your PDF",
+    "PDF দিন",
+    "Drop the PDF into the box. Nothing is uploaded.",
+    "PDF বক্সে ছাড়ুন। কিছুই আপলোড হয় না।"
+   ],
+   [
+    "Convert",
+    "রূপান্তর করুন",
+    "Press Convert to Word. Large files take a little longer.",
+    "Convert to Word চাপুন। বড় ফাইলে একটু সময় লাগে।"
+   ],
+   [
+    "Download and edit",
+    "ডাউনলোড ও এডিট",
+    "The .docx downloads automatically. Open it in Word, Google Docs or LibreOffice.",
+    ".docx নিজে থেকে ডাউনলোড হবে। Word, Google Docs বা LibreOffice-এ খুলুন।"
+   ]
+  ],
+  "uses": [
+   [
+    "Students",
+    "স্টুডেন্ট",
+    "Prepare assignments, scanned notes and application files for portals with strict size or format rules.",
+    "অ্যাসাইনমেন্ট, স্ক্যান করা নোট ও আবেদনের ফাইল সাইজ বা ফরম্যাটের নিয়ম মেনে তৈরি করুন।"
+   ],
+   [
+    "Office and business",
+    "অফিস ও ব্যবসা",
+    "Combine invoices, bills and contracts, or shrink big files before emailing them.",
+    "ইনভয়েস, বিল ও চুক্তি এক করুন, বা ইমেইলের আগে বড় ফাইল ছোট করুন।"
+   ],
+   [
+    "Job seekers",
+    "চাকরিপ্রার্থী",
+    "Get your CV and certificates into the single PDF an online form asks for.",
+    "অনলাইন ফর্মের চাওয়া একটা PDF-এ সিভি ও সার্টিফিকেট গুছিয়ে নিন।"
+   ]
+  ],
+  "faq": [
+   [
+    "Will the Word file look exactly like my PDF?",
+    "Word ফাইল কি হুবহু PDF-এর মতো দেখাবে?",
+    "Very close for normal documents, but not always identical. A PDF stores where each word sits, while Word reflows text, so complex designs, special fonts, text boxes and multi-column pages can shift a little (columns are placed one after another). Check the file after converting.",
+    "সাধারণ ডকুমেন্টে খুব কাছাকাছি, তবে সবসময় হুবহু নয়। PDF-এ প্রতিটা শব্দের অবস্থান ঠিক করা থাকে, আর Word লেখা নতুন করে সাজায়, তাই জটিল ডিজাইন, বিশেষ ফন্ট, টেক্সট বক্স ও একাধিক কলামের পেজ একটু সরে যেতে পারে (কলামগুলো একটার পর একটা বসে)। রূপান্তরের পর ফাইলটা দেখে নিন।"
+   ],
+   [
+    "What about scanned PDFs?",
+    "স্ক্যান করা PDF-এর কী হবে?",
+    "Scanned pages have no real text, so they are placed in the Word file as pictures. This tool does not do text recognition (OCR) yet.",
+    "স্ক্যান করা পেজে আসল লেখা থাকে না, তাই সেগুলো ছবি হিসেবে Word ফাইলে বসে। এই টুল এখনো লেখা চেনা (OCR) করে না।"
+   ],
+   [
+    "Does it work with Bangla PDFs?",
+    "বাংলা PDF-এ কাজ করে?",
+    "It works when the PDF was made with a Unicode Bangla font. PDFs made with old Bijoy-style (ANSI) fonts store the text in a code that no converter can read correctly, so the words may look scrambled.",
+    "PDF Unicode বাংলা ফন্টে বানানো হলে কাজ করে। পুরনো বিজয় ধরনের (ANSI) ফন্টে বানানো PDF-এ লেখা এমন কোডে থাকে যা কোনো কনভার্টারই ঠিকমতো পড়তে পারে না, তাই শব্দ এলোমেলো দেখাতে পারে।"
+   ],
+   [
+    "Are my files uploaded?",
+    "ফাইল কি আপলোড হয়?",
+    "No. The conversion runs in your browser and your file never leaves your device.",
+    "না। রূপান্তর আপনার ব্রাউজারেই হয়, ফাইল ডিভাইসের বাইরে যায় না।"
+   ],
+   [
+    "Is it free? Any limit?",
+    "ফ্রি? কোনো লিমিট?",
+    "Yes. No signup, no watermark and no page limit. The only limit is your device memory.",
+    "হ্যাঁ। সাইন-আপ, ওয়াটারমার্ক বা পেজ লিমিট নেই। একমাত্র সীমা আপনার ডিভাইসের মেমোরি।"
+   ],
+   [
+    "Can I convert a password-protected PDF?",
+    "পাসওয়ার্ড দেওয়া PDF কনভার্ট করা যায়?",
+    "Not directly. Remove the password first, then convert.",
+    "সরাসরি নয়। আগে পাসওয়ার্ড সরিয়ে তারপর কনভার্ট করুন।"
+   ]
+  ]
+ },
+ {
   "slug": "pdf-toolkit",
   "name": "PDF Tools",
   "emoji": "📄",
