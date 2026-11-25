@@ -228,8 +228,8 @@
   "tool": "pdf2word",
   "title": "PDF to Word Converter Free: Convert PDF to Editable DOCX (No Upload)",
   "title_bn": "PDF থেকে Word কনভার্টার ফ্রি: PDF-কে এডিট করা যায় এমন DOCX-এ (আপলোড ছাড়া)",
-  "tagline": "Turn a PDF into an editable Word document with text, headings, tables and pictures kept in place. Free and private.",
-  "tagline_bn": "PDF-কে এডিট করা যায় এমন Word ডকুমেন্টে বদলান, লেখা, হেডিং, টেবিল ও ছবি জায়গামতো থাকে। ফ্রি ও গোপনীয়।",
+  "tagline": "Turn a PDF into an editable Word document with text, colours, links, tables, lists and pictures kept in place. Free and private.",
+  "tagline_bn": "PDF-কে এডিট করা যায় এমন Word ডকুমেন্টে বদলান, লেখা, রঙ, লিংক, টেবিল, তালিকা ও ছবি জায়গামতো থাকে। ফ্রি ও গোপনীয়।",
   "keywords": [
    "pdf to word",
    "pdf to docx",
@@ -242,8 +242,8 @@
    "পিডিএফ টু ডক",
    "পিডিএফ থেকে ওয়ার্ড ফাইল"
   ],
-  "what_en": "PDF to Word reads the text layer of your PDF and rebuilds it as a Word (.docx) file. It keeps fonts, sizes, bold and italic, paragraph alignment, bullet lists, simple tables and pictures, reads two-column pages in the right order, and gives every PDF page its own matching page size. Scanned pages are placed in the document as pictures so nothing is lost.",
-  "what_bn": "PDF to Word আপনার PDF-এর লেখার স্তর পড়ে সেটাকে Word (.docx) ফাইল হিসেবে নতুন করে সাজায়। ফন্ট, সাইজ, বোল্ড-ইটালিক, প্যারাগ্রাফ অ্যালাইনমেন্ট, বুলেট তালিকা, সাধারণ টেবিল ও ছবি ঠিক রাখে, দুই কলামের পেজ সঠিক ক্রমে পড়ে, আর প্রতিটা PDF পেজের মাপ মিলিয়ে দেয়। স্ক্যান করা পেজ ছবি হিসেবে ডকুমেন্টে বসে, তাই কিছু হারায় না।",
+  "what_en": "PDF to Word reads your PDF and rebuilds it as a Word (.docx) file. Tables drawn with lines become real Word tables with the same borders, cell colours, merged cells and column widths. It also keeps fonts, sizes, bold, italic, underline, strikethrough, superscript and subscript, text colours and highlights, inline code backgrounds, clickable web and email links, paragraph alignment, bullet lists, headings with underline rules, real two-column layouts and pictures, and gives every page its own matching page size. Everything stays editable text. Scanned pages are placed in the document as pictures so nothing is lost.",
+  "what_bn": "PDF to Word আপনার PDF পড়ে সেটাকে Word (.docx) ফাইল হিসেবে নতুন করে সাজায়। লাইন দিয়ে আঁকা টেবিল Word-এর আসল টেবিল হয়, একই বর্ডার, ঘরের রঙ, মার্জ করা ঘর ও কলামের মাপসহ। আরও ঠিক থাকে ফন্ট, সাইজ, বোল্ড, ইটালিক, আন্ডারলাইন, স্ট্রাইক, সুপারস্ক্রিপ্ট-সাবস্ক্রিপ্ট, লেখার রঙ ও হাইলাইট, ইনলাইন কোডের ব্যাকগ্রাউন্ড, ক্লিক করা যায় এমন লিংক, অ্যালাইনমেন্ট, বুলেট তালিকা, আন্ডারলাইন-রেখাসহ হেডিং, সত্যিকারের দুই কলাম ও ছবি, আর প্রতিটা পেজের মাপ। সবকিছু এডিট করা যায় এমন লেখা থাকে। স্ক্যান করা পেজ ছবি হিসেবে বসে, তাই কিছু হারায় না।",
   "steps": [
    [
     "Add your PDF",
@@ -288,8 +288,8 @@
    [
     "Will the Word file look exactly like my PDF?",
     "Word ফাইল কি হুবহু PDF-এর মতো দেখাবে?",
-    "Very close for normal documents, but not always identical. A PDF stores where each word sits, while Word reflows text, so complex designs, special fonts, text boxes and multi-column pages can shift a little (columns are placed one after another). Check the file after converting.",
-    "সাধারণ ডকুমেন্টে খুব কাছাকাছি, তবে সবসময় হুবহু নয়। PDF-এ প্রতিটা শব্দের অবস্থান ঠিক করা থাকে, আর Word লেখা নতুন করে সাজায়, তাই জটিল ডিজাইন, বিশেষ ফন্ট, টেক্সট বক্স ও একাধিক কলামের পেজ একটু সরে যেতে পারে (কলামগুলো একটার পর একটা বসে)। রূপান্তরের পর ফাইলটা দেখে নিন।"
+    "Very close for normal documents, but not always identical. A PDF stores where each word sits, while Word reflows text, so complex designs, special fonts, text boxes and charts can shift or be left out. Not carried over: headers and footers (they appear as normal text), links that jump inside the document, drawings and charts made of vector lines, form fields, and automatic list numbering (typed numbers stay as text). Check the file after converting.",
+    "সাধারণ ডকুমেন্টে খুব কাছাকাছি, তবে সবসময় হুবহু নয়। PDF-এ প্রতিটা শব্দের অবস্থান ঠিক করা থাকে, আর Word লেখা নতুন করে সাজায়, তাই জটিল ডিজাইন, বিশেষ ফন্ট, টেক্সট বক্স ও চার্ট সরে যেতে বা বাদ পড়তে পারে। যা আসে না: হেডার-ফুটার (সাধারণ লেখা হিসেবে আসে), ডকুমেন্টের ভেতরের জাম্প লিংক, ভেক্টর লাইনে আঁকা ছবি ও চার্ট, ফর্মের ঘর, আর অটো তালিকা নম্বর (লেখা নম্বর টেক্সট হিসেবেই থাকে)। রূপান্তরের পর ফাইলটা দেখে নিন।"
    ],
    [
     "What about scanned PDFs?",
@@ -300,8 +300,8 @@
    [
     "Does it work with Bangla PDFs?",
     "বাংলা PDF-এ কাজ করে?",
-    "It works when the PDF was made with a Unicode Bangla font. PDFs made with old Bijoy-style (ANSI) fonts store the text in a code that no converter can read correctly, so the words may look scrambled.",
-    "PDF Unicode বাংলা ফন্টে বানানো হলে কাজ করে। পুরনো বিজয় ধরনের (ANSI) ফন্টে বানানো PDF-এ লেখা এমন কোডে থাকে যা কোনো কনভার্টারই ঠিকমতো পড়তে পারে না, তাই শব্দ এলোমেলো দেখাতে পারে।"
+    "Yes, when the PDF has a healthy text layer. PDFs printed from a browser (for example Chrome) often have a damaged Bangla text layer, so some letters go missing. The tool fixes letter order automatically, counts the unreadable letters, and its OCR option (Bangla + English, a one-time download of about 10 MB) can repair those lines. PDFs made with old Bijoy-style (ANSI) fonts cannot be read correctly by any converter.",
+    "হ্যাঁ, যখন PDF-এর লেখার স্তর ঠিক থাকে। ব্রাউজার (যেমন Chrome) থেকে প্রিন্ট করা PDF-এ বাংলা লেখার স্তর প্রায়ই নষ্ট থাকে, তাই কিছু অক্ষর হারিয়ে যায়। টুলটা অক্ষরের ক্রম নিজে ঠিক করে, পড়া যায়নি এমন অক্ষর গুনে দেখায়, আর OCR অপশন (বাংলা + ইংরেজি, প্রথমবার প্রায় ১০ MB ডাউনলোড) ওই লাইনগুলো ঠিক করতে পারে। পুরনো বিজয় ধরনের (ANSI) ফন্টের PDF কোনো কনভার্টারই ঠিকমতো পড়তে পারে না।"
    ],
    [
     "Are my files uploaded?",
