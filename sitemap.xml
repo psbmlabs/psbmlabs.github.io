@@ -35,7 +35,6 @@
   <url><loc>https://psbmlabs.github.io/packages.html</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://psbmlabs.github.io/founders.html</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://psbmlabs.github.io/angkan.html</loc><lastmod>2026-11-09</lastmod></url>
-  <url><loc>https://psbmlabs.github.io/packages/unified-analytics-kit.html</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://psbmlabs.github.io/blog/share-localhost-website-cloudflare-quick-tunnel.html</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://psbmlabs.github.io/free-tools.html</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://psbmlabs.github.io/free-tools/jina-reader.html</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -49,4 +48,11 @@
   <url><loc>https://psbmlabs.github.io/free-tools/pdf-to-image.html</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://psbmlabs.github.io/free-tools/image-to-pdf.html</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://psbmlabs.github.io/free-tools/organize-pdf.html</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/packages/unified-analytics-kit.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/apps/setu-pos.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/apps/krishi-bazar.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/apps/notun-khata.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/apps/text-studio.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/apps/daily-shield.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://psbmlabs.github.io/apps/tvhub.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
