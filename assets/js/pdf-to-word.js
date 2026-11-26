@@ -40,8 +40,8 @@
     function findGrids() {
       var minLen = Math.max(14, Math.round(9 * K)), HS = [], VS = [], R4 = CW * 4, mid = function (a, b) { return Math.round((a + b) / 2); };
       function dd(i, j) { return Math.abs(D[i] - D[j]) + Math.abs(D[i + 1] - D[j + 1]) + Math.abs(D[i + 2] - D[j + 2]); }
-      for (var y = 3; y < CH - 3; y++) { var run = -1, base = y * R4; for (var x = 0; x <= CW; x++) { var on = false; if (x < CW) { var i = base + x * 4, u = i - 3 * R4, dn = i + 3 * R4; on = dd(i, u) >= 45 && dd(i, dn) >= 45 && dd(u, dn) <= 60; } if (on) { if (run < 0) run = x; } else if (run >= 0) { HS.push({ k: y, a: run, b: x - 1 }); run = -1; } } }
-      for (var x2 = 3; x2 < CW - 3; x2++) { var run2 = -1; for (var y2 = 0; y2 <= CH; y2++) { var on2 = false; if (y2 < CH) { var j = (y2 * CW + x2) * 4, l = j - 12, r = j + 12; on2 = dd(j, l) >= 45 && dd(j, r) >= 45 && dd(l, r) <= 60; } if (on2) { if (run2 < 0) run2 = y2; } else if (run2 >= 0) { VS.push({ k: x2, a: run2, b: y2 - 1 }); run2 = -1; } } }
+      for (var y = 3; y < CH - 3; y++) { var run = -1, base = y * R4; for (var x = 0; x <= CW; x++) { var on = false; if (x < CW) { var i = base + x * 4, u = i - 3 * R4, dn = i + 3 * R4; on = dd(i, u) >= 45 && dd(i, dn) >= 45 && dd(u, dn) <= 400; } if (on) { if (run < 0) run = x; } else if (run >= 0) { HS.push({ k: y, a: run, b: x - 1 }); run = -1; } } }
+      for (var x2 = 3; x2 < CW - 3; x2++) { var run2 = -1; for (var y2 = 0; y2 <= CH; y2++) { var on2 = false; if (y2 < CH) { var j = (y2 * CW + x2) * 4, l = j - 12, r = j + 12; on2 = dd(j, l) >= 45 && dd(j, r) >= 45 && dd(l, r) <= 400; } if (on2) { if (run2 < 0) run2 = y2; } else if (run2 >= 0) { VS.push({ k: x2, a: run2, b: y2 - 1 }); run2 = -1; } } }
       function clean2(list) {
         list.sort(function (p, q) { return p.k - q.k || p.a - q.a; }); var out = []; list.forEach(function (s) { var l = out[out.length - 1]; if (l && l.k === s.k && s.a <= l.b + 3) l.b = Math.max(l.b, s.b); else out.push({ k: s.k, a: s.a, b: s.b }); });
         out = out.filter(function (s) { return s.b - s.a + 1 >= minLen; }); var res = []; out.forEach(function (s) { var hit = null; for (var q = res.length - 1; q >= 0 && s.k - res[q].k2 <= 2; q--) { var o = res[q], ov = Math.min(o.b, s.b) - Math.max(o.a, s.a); if (ov >= .5 * Math.min(o.b - o.a, s.b - s.a)) { hit = o; break; } } if (hit) { hit.k2 = s.k; hit.a = Math.min(hit.a, s.a); hit.b = Math.max(hit.b, s.b); } else res.push({ k: s.k, k2: s.k, a: s.a, b: s.b }); });
@@ -98,7 +98,7 @@
         var a = idx[q], b = idx[q + 1], p0 = { s: o.s.slice(a, b), x: o.x + o.w * cum[a], y: o.y, w: o.w * (cum[b] - cum[a]), size: o.size, fam: o.fam, b: o.b, i: o.i, bg: bg, bad: o.bad };
         if (!p0.s.trim()) { if (res.length) { res[res.length - 1].s += p0.s; res[res.length - 1].w += p0.w; } continue; }
         var px1 = Math.round(p0.x * K), px2 = Math.round((p0.x + p0.w) * K), cc = {}, topc = null, n = 0, wcol = 0; for (var xx = px1; xx <= px2; xx++) { var c = sm[xx - x1]; if (c) { cc[c] = (cc[c] || 0) + 1; wcol++; if (cc[c] > n) { n = cc[c]; topc = c; } } }
-        if (topc && topc !== 'k') { var bd = 0, bp = null; for (var yy = y1; yy <= y2; yy += 2) for (var xx2 = px1; xx2 <= px2; xx2 += 2) { var pp = px(xx2, yy), dd = dist(pp, bg); if (dd > bd) { bd = dd; bp = pp; } } if (bp && !(bp[0] < 115 && bp[1] < 115 && bp[2] < 115)) p0.col = hex(bp); }
+        if (topc && topc !== 'k') { var bd = 0, bp = null; for (var yy = y1; yy <= y2; yy += 2) for (var xx2 = px1; xx2 <= px2; xx2 += 2) { var pp = px(xx2, yy), dd = dist(pp, bg); if (dd > bd) { bd = dd; bp = pp; } } if (bp && !(bp[0] < 115 && bp[1] < 115 && bp[2] < 115) && !(Math.max(bp[0], bp[1], bp[2]) - Math.min(bp[0], bp[1], bp[2]) < 40 && p0.s.trim().length <= 3)) p0.col = hex(bp); }
         var cover = function (arr) { var w2 = Math.max(1, px2 - px1), c2 = 0; arr.forEach(function (s) { c2 += Math.max(0, Math.min(px2, s[1]) - Math.max(px1, s[0])); }); return c2 / w2 >= .7; }; if (cover(us)) p0.u = 1; if (cover(ss)) p0.st = 1;
         var cxm = p0.x + p0.w / 2, cym = o.y - o.size * .3; links.some(function (l) { if (cxm >= l.x1 && cxm <= l.x2 && cym >= l.y1 && cym <= l.y2) { p0.link = l.url; return true; } }); res.push(p0);
       } return res.length ? res : [o];
@@ -329,5 +329,5 @@
     var blob = await z.generateAsync({ type: 'blob', mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', compression: 'DEFLATE' });
     return { blob: blob, pages: n, scanned: ctx.scanned, tables: ctx.tables, images: ctx.images, links: ctx.links.length, unreadable: ctx.bad || 0, ocr: ocrFixed };
   }
-  window.PSBMPdf2Word = { convert: convert };
+  window.PSBMPdf2Word = { convert: convert, analyse: analyse, tableAt: tableAt, flow: flow };
 })();

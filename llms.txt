@@ -62,7 +62,8 @@
 
 - [Jina Reader](https://psbmlabs.github.io/free-tools/jina-reader.html): Put r.jina.ai/ before any link and get the page as clean Markdown, with no ads, menus or scripts.
 - [Edit PDF](https://psbmlabs.github.io/free-tools/edit-pdf.html): Click any text to change it, add text, images and your signature on any page, and clean up watermarks. Free and private.
-- [PDF to Word](https://psbmlabs.github.io/free-tools/pdf-to-word.html): Turn a PDF into an editable Word document with text, headings, tables and pictures kept in place. Free and private.
+- [PDF to Word](https://psbmlabs.github.io/free-tools/pdf-to-word.html): Turn a PDF into an editable Word document with text, colours, links, tables, lists and pictures kept in place. Free and private.
+- [PDF to Excel](https://psbmlabs.github.io/free-tools/pdf-to-excel.html): Turn PDF tables into an editable Excel workbook with real numbers, merged cells, colours and borders. Free and private.
 - [PDF Tools](https://psbmlabs.github.io/free-tools/pdf-toolkit.html): Six everyday PDF tools in one place. Free, no signup, and your files never leave your device.
 - [Merge PDF](https://psbmlabs.github.io/free-tools/merge-pdf.html): Combine several PDFs into one file, in the order you choose.
 - [Split PDF](https://psbmlabs.github.io/free-tools/split-pdf.html): Cut chosen pages out of a PDF, or save every page as its own file.

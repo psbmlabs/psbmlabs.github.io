@@ -324,6 +324,105 @@
   ]
  },
  {
+  "slug": "pdf-to-excel",
+  "name": "PDF to Excel",
+  "emoji": "📊",
+  "color": "#16a34a",
+  "category": "PDF Tools",
+  "app": "pdf",
+  "tool": "pdf2excel",
+  "title": "PDF to Excel Converter Free: Extract Tables to XLSX (No Upload)",
+  "title_bn": "PDF থেকে Excel কনভার্টার ফ্রি: টেবিল XLSX-এ বের করুন (আপলোড ছাড়া)",
+  "tagline": "Turn PDF tables into an editable Excel workbook with real numbers, merged cells, colours and borders. Free and private.",
+  "tagline_bn": "PDF-এর টেবিলকে এডিট করা যায় এমন Excel ওয়ার্কবুকে বদলান, আসল সংখ্যা, মার্জ করা ঘর, রঙ ও বর্ডারসহ। ফ্রি ও গোপনীয়।",
+  "keywords": [
+   "pdf to excel",
+   "pdf to xlsx",
+   "convert pdf to excel free",
+   "extract table from pdf",
+   "pdf table to excel",
+   "pdf theke excel",
+   "pdf to csv",
+   "পিডিএফ থেকে এক্সেল",
+   "পিডিএফ টু এক্সেল",
+   "পিডিএফ টেবিল এক্সেলে"
+  ],
+  "what_en": "PDF to Excel finds the tables in your PDF and writes them to a real Excel (.xlsx) file. Tables drawn with lines keep their cell borders, fill colours, merged cells and column widths, and tables without lines are detected from how the columns line up. Numbers, percentages and currency become real numbers you can calculate with, text keeps its font, colour and links, and every page can become its own sheet or every table its own sheet.",
+  "what_bn": "PDF to Excel আপনার PDF-এর টেবিল খুঁজে সেটাকে আসল Excel (.xlsx) ফাইলে লেখে। লাইন দিয়ে আঁকা টেবিলে ঘরের বর্ডার, রঙ, মার্জ করা ঘর ও কলামের মাপ ঠিক থাকে, আর লাইন ছাড়া টেবিল কলাম মিলিয়ে ধরা হয়। সংখ্যা, শতাংশ ও টাকার অঙ্ক হিসাব করা যায় এমন আসল সংখ্যা হয়, লেখা ফন্ট, রঙ ও লিংকসহ থাকে, আর প্রতি পেজ বা প্রতি টেবিল আলাদা শিটে নেওয়া যায়।",
+  "steps": [
+   [
+    "Add your PDF",
+    "PDF দিন",
+    "Drop the PDF into the box. Nothing is uploaded.",
+    "PDF বক্সে ছাড়ুন। কিছুই আপলোড হয় না।"
+   ],
+   [
+    "Choose the layout",
+    "সাজানো বেছে নিন",
+    "One sheet per page keeps tables and text together. One sheet per table gives you only the tables.",
+    "প্রতি পেজে একটা শিটে টেবিল ও লেখা একসাথে থাকে। প্রতি টেবিলে একটা শিটে শুধু টেবিল আসে।"
+   ],
+   [
+    "Convert and download",
+    "রূপান্তর ও ডাউনলোড",
+    "Press Convert to Excel. The .xlsx downloads automatically and opens in Excel, Google Sheets or LibreOffice.",
+    "Convert to Excel চাপুন। .xlsx নিজে থেকে ডাউনলোড হবে, Excel, Google Sheets বা LibreOffice-এ খুলবে।"
+   ]
+  ],
+  "uses": [
+   [
+    "Accountants and office staff",
+    "হিসাবরক্ষক ও অফিস স্টাফ",
+    "Move invoice, statement and price-list tables into a sheet you can total and sort.",
+    "ইনভয়েস, স্টেটমেন্ট ও দামের তালিকার টেবিল এমন শিটে আনুন যেখানে যোগ ও সাজানো যায়।"
+   ],
+   [
+    "Students and researchers",
+    "স্টুডেন্ট ও গবেষক",
+    "Pull data tables out of reports and papers for charts and analysis.",
+    "রিপোর্ট ও পেপার থেকে ডেটা টেবিল বের করে চার্ট ও বিশ্লেষণ করুন।"
+   ],
+   [
+    "Business owners",
+    "ব্যবসায়ী",
+    "Turn supplier price lists and sales reports into editable spreadsheets.",
+    "সাপ্লায়ারের দামের তালিকা ও বিক্রির রিপোর্টকে এডিট করা যায় এমন স্প্রেডশিটে বদলান।"
+   ]
+  ],
+  "faq": [
+   [
+    "Will the Excel file match my PDF exactly?",
+    "Excel ফাইল কি হুবহু PDF-এর মতো হবে?",
+    "For clearly ruled tables it is very close: same cells, merges, colours and widths. PDFs store text by position, so tables without lines or with unusual layouts may need a little tidying. Check the file after converting.",
+    "লাইন দিয়ে স্পষ্ট আঁকা টেবিলে খুব কাছাকাছি: একই ঘর, মার্জ, রঙ ও মাপ। PDF-এ লেখা অবস্থান ধরে থাকে, তাই লাইনহীন বা অদ্ভুত লেআউটের টেবিল একটু গোছাতে হতে পারে। রূপান্তরের পর ফাইলটা দেখে নিন।"
+   ],
+   [
+    "Do numbers become real numbers?",
+    "সংখ্যা কি আসল সংখ্যা হয়?",
+    "Yes. Values like 1,250.00, $4,400.00, 12% and (45.50) become numbers with matching formats. Codes with leading zeros such as 007 and very long numbers stay as text on purpose.",
+    "হ্যাঁ। 1,250.00, $4,400.00, 12% বা (45.50)-এর মতো মান মিলিয়ে ফরম্যাটসহ সংখ্যা হয়। 007-এর মতো শূন্য দিয়ে শুরু কোড আর খুব লম্বা সংখ্যা ইচ্ছে করেই টেক্সট থাকে।"
+   ],
+   [
+    "What about scanned PDFs?",
+    "স্ক্যান করা PDF-এর কী হবে?",
+    "Scanned pages have no real text, so there is nothing to put in cells. This tool does not do OCR yet and will tell you when no text is found.",
+    "স্ক্যান করা পেজে আসল লেখা নেই, তাই ঘরে বসানোর কিছু নেই। এই টুল এখনো OCR করে না, লেখা না পেলে জানিয়ে দেয়।"
+   ],
+   [
+    "Are my files uploaded?",
+    "ফাইল কি আপলোড হয়?",
+    "No. The conversion runs in your browser and your file never leaves your device.",
+    "না। রূপান্তর আপনার ব্রাউজারেই হয়, ফাইল ডিভাইসের বাইরে যায় না।"
+   ],
+   [
+    "Is it free? Any limit?",
+    "ফ্রি? কোনো লিমিট?",
+    "Yes. No signup, no watermark and no page limit. The only limit is your device memory.",
+    "হ্যাঁ। সাইন-আপ, ওয়াটারমার্ক বা পেজ লিমিট নেই। একমাত্র সীমা আপনার ডিভাইসের মেমোরি।"
+   ]
+  ]
+ },
+ {
   "slug": "pdf-toolkit",
   "name": "PDF Tools",
   "emoji": "📄",
