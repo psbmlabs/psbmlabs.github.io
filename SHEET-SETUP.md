@@ -20,7 +20,7 @@ If you change `Code.gs` later: Deploy > Manage deployments > Edit (pencil) > Ver
 **Apps:** slug, name, category, status (live | beta | coming), letters, color (#hex), description, tags (comma separated), play_url, apk_url, case_url, order, visible. (`slug` is required for the Review / Comment button.)
 **Bangla:** add `_bn` columns (`tagline_bn`, `summary_bn`, `features_bn`, `details_bn`, `name_bn`, `category_bn`, `description_bn`). Used when a visitor selects Bangla; empty = English.
 
-**Projects:** slug, title, category, type (e.g. Mobile / Web), status (live | development), letters, color, summary, role, tech (comma separated), problem, solution, features (one per line), result, image (URL), case_url, live_url, play_url, repo, order, visible. Bangla: `title_bn`, `summary_bn`, `problem_bn` ...
+**Projects:** slug, title, category, type (e.g. Mobile / Web), status (live | development), letters, color, summary, role, tech (comma separated), problem, solution, features (one per line), result, image (URL), logo_path (logo image URL), badge (official | client | personal), case_url, live_url, play_url, **apk_url (direct download link, shows a "⬇ Direct APK" button)**, repo, order, visible. Bangla: `title_bn`, `summary_bn`, `problem_bn` ...
 Tip: in the sheet menu **PSBM Site > Create / fill Projects tab** creates the Projects tab with your 7 current case studies (run once).
 
 **packages.html, apps.html, projects.html (+ package.html, project.html) contain no data — everything comes from the sheet.**
