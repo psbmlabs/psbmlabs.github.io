@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T12:12:26.968Z",
+ "updated": "2026-11-28T11:41:12.676Z",
  "packages": [
   {
    "slug": "unified-analytics-kit",
@@ -138,7 +138,7 @@
    "tags": "Movies, Web Series, Music, Live Stream",
    "logo_path": "https://www.image2url.com/r2/default/images/1795692004422-25238fc4-e61c-42ab-ab6a-add5559e1782.jpeg",
    "play_url": "",
-   "apk_url": "",
+   "apk_url": "https://github.com/psbmlabs/new_app_releases/releases/download/v1.0.0/tvhub_official_v1.0.0.apk",
    "case_url": "project.html?p=tvhub",
    "order": "6",
    "visible": "yes"
